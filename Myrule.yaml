@@ -21,6 +21,3 @@
   - DOMAIN-SUFFIX,nyahentai.com
   - DOMAIN-SUFFIX,mgstage.com
   - DOMAIN-SUFFIX,hembed.com
-  #-------------------------------
-  - DOMAIN-SUFFIX,op.gg,DIRECT
-  - DOAMIN,opgg-static.akamaized.net,DIRECT
