@@ -1,0 +1,10 @@
+payload:
+#-------------------op.gg----------------------------------
+  - DOMAIN-SUFFIX,op.gg
+  - DOAMIN,opgg-static.akamaized.net
+#-------------------dandanplay----------------------------------
+  - DOMAIN,dandanplay.dandanplay-blacksheepwall.workers.dev
+#-------------------videocardz----------------------------------
+  - DOMAIN-SUFFIX,videocardz.com
+#-------------------iacg----------------------------------  
+  - DOMAIN-SUFFIX,iacg.site
