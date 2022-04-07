@@ -6,8 +6,6 @@ payload:
   - DOMAIN,dandanplay.dandanplay-blacksheepwall.workers.dev
 #-------------------videocardz----------------------------------
   - DOMAIN-SUFFIX,videocardz.com
-#-------------------iacg----------------------------------  
-  - DOMAIN-SUFFIX,iacg.site
 #-------------------gov----------------------------------  
   - DOMAIN-KEYWORD,gov
 #-------------------ipv6---------------------------------- 
