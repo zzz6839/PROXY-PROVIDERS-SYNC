@@ -11,3 +11,5 @@ payload:
 #-------------------ipv6---------------------------------- 
   - DOMAIN-KEYWORD,ipv6
   - DOMAIN,speed.neu6.edu.cn
+#-------------------amazon----------------------------------
+  - DOMAIN-SUFFIX,amazon.com
