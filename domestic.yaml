@@ -13,3 +13,9 @@ payload:
   - DOMAIN,speed.neu6.edu.cn
 #-------------------amazon----------------------------------
   - DOMAIN-SUFFIX,amazon.com
+#-------------------League of Legend AU----------------------------------
+  - DOMAIN-SUFFIX,riotgames.com
+  - DOMAIN-SUFFIX,riotcdn.net
+  - DOMAIN-SUFFIX,oce-blue.lol.sgp.pvp.net
+  - DOMAIN-SUFFIX,lolstatic-a.akamaihd.net
+  - DOMAIN-SUFFIX,oce.leagueoflegends.com
