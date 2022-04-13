@@ -1,6 +1,8 @@
 TBA
-1. add proxy switcher support for javdb monitoring
-2. regional proxy filtering
+1. add proxy switcher support for javdb monitoring (solved by Meta kernel) 
+2. regional proxy filtering 'jp','US','HK(native)','native online game unlock','AE86(for the fastest response time)' #apply emoji
 3. URL-test for regional proxy
 
- 
+Remain issues:
+1. rules for DIRECT connect trackers unreachable (DNS pollution maybe)
+2. possible solution for ipv6 traffic policies (with ipv6 proxies filter)
