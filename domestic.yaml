@@ -13,3 +13,5 @@ payload:
   - DOMAIN,speed.neu6.edu.cn
 #-------------------amazon----------------------------------
   - DOMAIN-SUFFIX,amazon.com
+#-------------------wegame----------------------------------
+  - DOMAIN,hera.qq.com
