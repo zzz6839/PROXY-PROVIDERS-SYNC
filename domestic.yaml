@@ -15,3 +15,7 @@ payload:
   - DOMAIN-SUFFIX,amazon.com
 #-------------------wegame----------------------------------
   - DOMAIN,hera.qq.com
+#-------------------rockstar launcher----------------------------------
+  - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
+  - DOMAIN,gamedownloads.rockstargames.com
+  - DOMAIN,app-rgl-prod.ros.rockstargames.com
