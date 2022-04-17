@@ -17,5 +17,4 @@ payload:
   - DOMAIN,hera.qq.com
 #-------------------rockstar launcher----------------------------------
   - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
-  - DOMAIN,gamedownloads.rockstargames.com
-  - DOMAIN,app-rgl-prod.ros.rockstargames.com
+  - DOMAIN-SUFFIX,rockstargames.com
