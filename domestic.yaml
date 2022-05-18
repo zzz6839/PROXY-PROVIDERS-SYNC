@@ -3,7 +3,7 @@ payload:
   - DOMAIN-SUFFIX,op.gg
   - DOMAIN,opgg-static.akamaized.net
 #-------------------dandanplay----------------------------------
-  - DOMAIN,disco.dandanplay-blacksheepwall.workers.dev
+  - DOMAIN,dany.dandanplay-blacksheepwall.workers.dev
 #-------------------videocardz----------------------------------
   - DOMAIN-SUFFIX,videocardz.com
 #-------------------gov----------------------------------  
