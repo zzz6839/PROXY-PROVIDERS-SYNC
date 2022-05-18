@@ -20,3 +20,9 @@ payload:
 #  - DOMAIN-SUFFIX,skystudioapps.com 
 #--------------------parsec---------------------------------
   - DOMAIN-SUFFIX,parsec.app
+#-------------------league of legend AU----------------------------------
+  - DOMAIN-SUFFIX,riotgames.com
+  - DOMAIN-SUFFIX,riotcdn.net
+  - DOMAIN-SUFFIX,oce-blue.lol.sgp.pvp.net
+  - DOMAIN-SUFFIX,lolstatic-a.akamaihd.net
+  - DOMAIN-SUFFIX,oce.leagueoflegends.com
