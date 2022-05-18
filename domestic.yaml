@@ -21,4 +21,4 @@ payload:
 #  - DOMAIN-SUFFIX,scoresaber.com
 #  - DOMAIN-SUFFIX,skystudioapps.com 
 #--------------------parsec---------------------------------
-   - DOMAIN-SUFFIX,parsec.app
+  - DOMAIN-SUFFIX,parsec.app
