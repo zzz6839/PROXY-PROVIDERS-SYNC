@@ -6,3 +6,11 @@ payload:
 #  - '1.0.32.0/19'
 #  - '1.1.0.0/24'
 #-------------------league of legend AU----------------------------------
+  #- DOMAIN-SUFFIX,riotgames.com,DIRECT
+  #- DOMAIN-SUFFIX,riotcdn.net,DIRECT
+  #- DOMAIN-SUFFIX,oce-blue.lol.sgp.pvp.net,DIRECT
+  #- DOMAIN-SUFFIX,lolstatic-a.akamaihd.net,DIRECT
+  #- DOMAIN-SUFFIX,oce.leagueoflegends.com,DIRECT
+  - '103.240.226.0/24'
+  - '103.240.226.255/24'
+#-------------------Nintendo switch server---------------------------------- 
