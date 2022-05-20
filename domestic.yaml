@@ -29,3 +29,8 @@ payload:
   - DOMAIN-SUFFIX,store.leagueoflegends.com
 #-------------------IMDB----------------------------------
   - DOMAIN-SUFFIX,imdb.com
+#-------------------EPICGAME----------------------------------
+  - DOMAIN-SUFFIX,epicgames.com
+  - DOMAIN-SUFFIX,helpshift.com
+  - DOMAIN-SUFFIX,paragon.com
+  - DOMAIN-SUFFIX,unrealengine.com
