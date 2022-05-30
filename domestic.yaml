@@ -33,6 +33,7 @@ payload:
   - DOMAIN-SUFFIX,epicgames.com
   - DOMAIN-SUFFIX,helpshift.com
   - DOMAIN-SUFFIX,paragon.com
-#-------------------DOCKER----------------------------------  
-  - DOMAIN,hub.docker.com
   - DOMAIN-SUFFIX,unrealengine.com
+#-------------------DOCKER----------------------------------  
+  - DOMAIN-SUFFIX,docker.com
+  
