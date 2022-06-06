@@ -34,6 +34,5 @@ payload:
   - DOMAIN-SUFFIX,helpshift.com
   - DOMAIN-SUFFIX,paragon.com
   - DOMAIN-SUFFIX,unrealengine.com
-#-------------------DOCKER----------------------------------  
-  - DOMAIN-SUFFIX,docker.com
+
   
