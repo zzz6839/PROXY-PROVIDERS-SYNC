@@ -8,8 +8,8 @@ payload:
   - DOMAIN-KEYWORD,gov
 #-------------------amazon----------------------------------
   - DOMAIN-SUFFIX,amazon.com
-#-------------------wegame----------------------------------
-  - DOMAIN,hera.qq.com
+#-------------------figma----------------------------------
+  - DOMAIN-SUFFIX,figma.cool
 #-------------------rockstar launcher----------------------------------
   - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
   - DOMAIN-SUFFIX,rockstargames.com
