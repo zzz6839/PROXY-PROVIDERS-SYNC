@@ -32,5 +32,7 @@ payload:
   - DOMAIN-SUFFIX,helpshift.com
   - DOMAIN-SUFFIX,paragon.com
   - DOMAIN-SUFFIX,unrealengine.com
+#-------------------techpowerup---------------------------------- 
+  - DOMAIN-SUFFIX,techpowerup.com
 
   
