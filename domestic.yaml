@@ -13,11 +13,6 @@ payload:
 #-------------------rockstar launcher----------------------------------
   - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
   - DOMAIN-SUFFIX,rockstargames.com
-#-------------------beat saber---------------------------------
-#  - DOMAIN-SUFFIX,beatsaver.com
-#  - DOMAIN-SUFFIX,bsaber.com
-#  - DOMAIN-SUFFIX,scoresaber.com
-#  - DOMAIN-SUFFIX,skystudioapps.com 
 #--------------------parsec---------------------------------
   - DOMAIN-SUFFIX,parsec.app
 #-------------------league of legend AU----------------------------------
