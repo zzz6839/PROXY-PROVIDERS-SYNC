@@ -31,3 +31,15 @@ payload:
   - DOMAIN-SUFFIX,techpowerup.com
 #-------------------pyncmd---------------------------------- 
   - DOMAIN,pyncmd.vercel.app
+#-------------------不规则tracker---------------------------------- 
+  - DOMAIN,1337.abcvg.info
+  - DOMAIN,fxtt.ru
+  - DOMAIN,torrent-team.net
+  - DOMAIN,vps02.net.orel.ru
+  - DOMAIN,carbon-bonsai-621.appspot.com
+  - DOMAIN,tr.abiir.top
+  - DOMAIN,tr.burnabyhighstar.com
+  - DOMAIN,tr.ready4.icu
+  - DOMAIN,trackme.theom.nz
+  - DOMAIN,open.stealth.si
+  - DOMAIN,hub.bugout.link
