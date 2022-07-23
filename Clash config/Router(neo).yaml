@@ -497,7 +497,6 @@ proxy-groups:
     type: select
     use:
       - SSRCLOUD CNIX 
-      - Cordcloud
     filter: '游戏'
 
   # Beat Saber/e-hentai
@@ -505,7 +504,6 @@ proxy-groups:
     type:  select
     use:
      - SSRCLOUD CNIX
-     - Cordcloud 
     filter: '美国'
 
   # DMM/mgstage
