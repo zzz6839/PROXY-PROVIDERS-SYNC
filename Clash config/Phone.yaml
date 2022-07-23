@@ -1,0 +1,69 @@
+# Shadowrocket: 2022-07-21 17:24:08
+[General]
+yaml = true
+bypass-system = true
+skip-proxy = 192.168.0.0/16, 193.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 127.0.0.1, 17.0.0.0/8, localhost, *.local
+tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32, 239.255.255.250/32
+dns-server = 119.29.29.29, 223.5.5.5, 223.6.6.6
+update-url = https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Clash%20config/Phone.yaml
+
+[Proxy Group]
+🎵 网易云音乐 = select,🎵 网易云音乐,use=true,interval=86400,timeout=5,select=0,url=http://www.gstatic.com/generate_204
+✈️PROXY = select,Auto,Manual
+Auto = fallback,main(Auto),backup(Auto)
+main(Auto) = url-test,SSRCLOUD CNIX,use=true,policy-regex-filter=港 | HK
+backup(Auto) = url-test,Cordcloud,use=true,policy-regex-filter=港
+Manual = select,main (Manual),backup (Manual)
+main (Manual) = select,SSRCLOUD CNIX,use=true
+backup (Manual) = select,Cordcloud,use=true
+Streaming = select,✈️PROXY,DIRECT
+StreamingSE = select,DIRECT,✈️PROXY
+TikTok = url-test,SSRCLOUD CNIX,use=true,policy-regex-filter=台湾|TW
+Microsoft = select,DIRECT,✈️PROXY
+myrule = select,✈️PROXY,DIRECT
+domestic = select,DIRECT,✈️PROXY
+DMM = select,SSRCLOUD CNIX,use=true,policy-regex-filter=日本
+javselect = select,javauto,Manual
+javauto = url-test,SSRCLOUD CNIX,use=true
+DST-PORT = select,DIRECT,✈️PROXY
+
+[Rule]
+DOMAIN-SUFFIX,music.desperadoj.com,DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml,REJECT#classical
+RULE-SET,https://raw.githubusercontent.com/DesperadoJ/Rules-for-UnblockNeteaseMusic/master/Clash/RuleSet/NeteaseMusic.yaml,🎵 网易云音乐#classical
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml,DIRECT#classical
+RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml,MICROSOFT#classical
+DOMAIN-KEYWORD,dmm,DMM
+DOMAIN-SUFFIX,javdb.com,JAVSELECT
+RULE-SET,https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Myrule.yaml,MYRULE#classical
+RULE-SET,https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml,DOMESTIC#classical
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml,TIKTOK#classical
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml,STREAMING#classical
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml,STREAMINGSE#classical
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml,✈️PROXY#classical
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml,DIRECT#classical
+IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,172.16.0.0/12,DIRECT
+IP-CIDR,127.0.0.0/8,DIRECT
+IP-CIDR,100.64.0.0/10,DIRECT
+IP-CIDR,224.0.0.0/4,DIRECT
+IP-CIDR,FE80::/10,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt,DIRECT#ipcidr
+IP-CIDR,119.28.28.28/32,DIRECT
+IP-CIDR,182.254.116.0/24,DIRECT
+IP-CIDR,203.205.236.0/24,DIRECT
+IP-CIDR,121.51.40.0/24,DIRECT
+IP-CIDR,101.91.92.0/24,DIRECT
+GEOIP,CN,DIRECT
+RULE-SET,https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt,✈️PROXY#domain
+RULE-SET,https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt,✈️PROXY#domain
+FINAL,DIRECT
+
+[Host]
+localhost = 127.0.0.1
+
+[URL Rewrite]
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+
