@@ -391,6 +391,15 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
+  
+  # Bilibili国台
+  - name: "Bilibili国台"
+    type: select
+    proxies:
+      - DIRECT
+    use:
+      - SSRCLOUD CNIX
+    filter: "台湾|TW"
 
   # 中国流媒体服务（面向海外版本）
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
@@ -400,12 +409,6 @@ proxy-groups:
       - DIRECT
       - ✈️PROXY
 
-  # LOL国际服
-  #- name: "League of Legend (AU)"
-  #  type: select
-  #  use:    
-  #   - SSRCLOUD CNIX
-  
   # tiktok服务
   - name: "TikTok"
     type: url-test
@@ -431,26 +434,12 @@ proxy-groups:
      - ✈️PROXY
      
 
-  # epicgame 服务（openclash下载不出来.list文件，暂时不用）
-  #- name: "Epicgame"
-  #  type: select
-  #  proxies:
-  #   - DIRECT 
-  #   - ✈️PROXY
-
   # 个人向gfwlist名单
   - name: "myrule"
     type: select
     proxies:
      - ✈️PROXY
      - DIRECT
-  
-  # 个人向直连访问名单
-  - name: "domestic"
-    type: select
-    proxies:
-     - DIRECT
-     - ✈️PROXY
   
   # 外服游戏
   - name: "🎮online game"
@@ -466,7 +455,7 @@ proxy-groups:
     use:
      - SSRCLOUD CNIX
      - Cordcloud 
-    filter: '美国'
+    #filter: '美国'
   
 
   # DMM/mgstage
@@ -498,8 +487,8 @@ proxy-groups:
   - name: "DST-PORT"
     type: select
     proxies:
-     - ✈️PROXY
      - DIRECT
+     - ✈️PROXY
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
@@ -599,14 +588,26 @@ rule-providers:
     url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml
     interval: 86400  
   
-  #openclash下载不出来.list文件，暂时不用
-  #Epicgame:
-  #  type: http
-  #  behavior: classical
-  #  path: ./RuleSet/Extra/Epicgame.yaml
-  #  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
-  #  interval: 86400  
-
+  🧱gfw:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  
+  🧱greatfire:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  
+  BILIBILIHMT:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/BILIBILIHMT.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
+    interval: 86400 
   
 
 # 规则
@@ -685,13 +686,10 @@ rules:
   - RULE-SET,myrule,myrule
 
   # myrule(but domestic)
-  - RULE-SET,domestic,domestic
+  - RULE-SET,domestic,DIRECT
   
   #Tiktok
   - RULE-SET,TikTok,TikTok 
-
-  # Epicgames（openclash下载不出来.list文件，暂时不用）
-  #- RULE-SET,Epicgame,Epicgame
 
   # 外服游戏
   - RULE-SET,🎮online game,🎮online game
@@ -702,6 +700,9 @@ rules:
   - DOMAIN-SUFFIX,playstation.org,REJECT
   - DOMAIN,playstation.sony.akadns.net,REJECT
   - DOMAIN,a192.d.akamai.net,REJECT
+
+  #Bilibili国台
+  - RULE-SET,BILIBILIHMT,Bilibili国台
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
@@ -740,7 +741,9 @@ rules:
 
   #- GeoIP China
   - GEOIP,CN,DIRECT
-
+#————————————————————————————————————————————————————————————————————loyalsoldier  
+  - RULE-SET,🧱gfw,✈️PROXY
+  - RULE-SET,🧱greatfire,✈️PROXY
 #————————————————————————————————————————————————————————————————————openclash
   - DST-PORT,80,DST-PORT
   - DST-PORT,443,DST-PORT
