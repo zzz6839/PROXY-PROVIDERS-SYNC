@@ -354,7 +354,7 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
-    filter: '港 | HK '
+    filter: '香港 | HK '
    #lazy: true
    #disable-udp: true
 
@@ -424,7 +424,7 @@ proxy-groups:
     type: url-test
     use:
      - SSRCLOUD CNIX
-    #filter: '新加坡|SG'
+    filter: 'IEPL|IPLC'
     url: 'https://github.com'
     interval: 900
     tolerance: 50 
