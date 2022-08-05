@@ -419,6 +419,16 @@ proxy-groups:
     interval: 900
     tolerance: 50  
 
+  # GITHUB
+  - name: "GITHUB"
+    type: url-test
+    use:
+     - SSRCLOUD CNIX
+    #filter: '新加坡|SG'
+    url: 'https://github.com'
+    interval: 900
+    tolerance: 50 
+
   # 巨硬服务
   - name: "Microsoft"
     type: select
@@ -608,6 +618,13 @@ rule-providers:
     path: ./RuleSet/Extra/BILIBILIHMT.yaml
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
     interval: 86400 
+
+  GITHUB:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/GITHUB.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
+    interval: 86400 
   
 
 # 规则
@@ -703,6 +720,9 @@ rules:
 
   #Bilibili国台
   - RULE-SET,BILIBILIHMT,Bilibili国台
+
+  # github
+  - RULE-SET,GITHUB,GITHUB
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
