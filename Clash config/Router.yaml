@@ -424,6 +424,8 @@ proxy-groups:
     type: url-test
     use:
      - SSRCLOUD CNIX
+    proxies:
+     - DIRECT
     filter: 'IEPL|IPLC'
     url: 'https://github.com'
     interval: 900
