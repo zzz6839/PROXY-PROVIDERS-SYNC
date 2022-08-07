@@ -691,11 +691,11 @@ rules:
   - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
 
   # Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,beatsaver.com,Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,bsaber.com,Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,scoresaber.com,Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,skystudioapps.com,Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,e-hentai.org,Beat Saber/e-hentai
+  - DOMAIN-SUFFIX,beatsaver.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,bsaber.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,scoresaber.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,skystudioapps.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,e-hentai.org,B.Saber/e-hentai
   
   # javdb
   - DOMAIN-SUFFIX,javdb.com,javdb
