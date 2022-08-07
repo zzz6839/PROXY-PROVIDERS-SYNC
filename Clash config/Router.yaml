@@ -410,12 +410,12 @@ proxy-groups:
       - ✈️PROXY
 
   # tiktok服务
-  - name: "TikTok"
+  - name: "🇹🇼TikTok"
     type: url-test
     use:
      - SSRCLOUD CNIX
     filter: '台湾|TW'
-    url: 'https://t.co/Dau0v71Hh7/'
+    url: 'https://www.tiktok.com/@minami_aizawa_'
     interval: 900
     tolerance: 50  
 
@@ -462,7 +462,7 @@ proxy-groups:
     filter: '游戏'
 
   # Beat Saber/e-hentai
-  - name: "Beat Saber/e-hentai"
+  - name: "B.Saber/e-hentai"
     type:  select
     use:
      - SSRCLOUD CNIX
@@ -471,7 +471,7 @@ proxy-groups:
   
 
   # DMM/mgstage
-  - name: "DMM/mgstage"
+  - name: "🇯🇵DMM/mgstage"
     type: select
     use:
       - SSRCLOUD CNIX
@@ -687,8 +687,8 @@ rules:
   - RULE-SET,Microsoft,Microsoft
 
   # DMM/mgstage
-  - DOMAIN-KEYWORD,DMM,DMM/mgstage
-  - DOMAIN-SUFFIX,mgstage.com,DMM/mgstage
+  - DOMAIN-KEYWORD,DMM,🇯🇵DMM/mgstage
+  - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
 
   # Beat Saber/e-hentai
   - DOMAIN-SUFFIX,beatsaver.com,Beat Saber/e-hentai
@@ -708,7 +708,7 @@ rules:
   - RULE-SET,domestic,DIRECT
   
   #Tiktok
-  - RULE-SET,TikTok,TikTok 
+  - RULE-SET,TikTok,🇹🇼TikTok 
 
   # 外服游戏
   - RULE-SET,🎮online game,🎮online game
