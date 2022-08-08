@@ -426,7 +426,7 @@ proxy-groups:
      - SSRCLOUD CNIX
     proxies:
      - DIRECT
-    filter: 'IEPL|IPLC'
+    filter: '日IEPL|日IPLC'
     url: 'https://github.com'
     interval: 900
     tolerance: 50 
