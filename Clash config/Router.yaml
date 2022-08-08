@@ -686,20 +686,20 @@ rules:
   # Microsoft
   - RULE-SET,Microsoft,Microsoft
 
-  # DMM/mgstage
-  - DOMAIN-KEYWORD,DMM,🇯🇵DMM/mgstage
-  - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
-
   # Beat Saber/e-hentai
   - DOMAIN-SUFFIX,beatsaver.com,B.Saber/e-hentai
   - DOMAIN-SUFFIX,bsaber.com,B.Saber/e-hentai
   - DOMAIN-SUFFIX,scoresaber.com,B.Saber/e-hentai
   - DOMAIN-SUFFIX,skystudioapps.com,B.Saber/e-hentai
   - DOMAIN-SUFFIX,e-hentai.org,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,hath.network,B.Saber/e-hentai
+  
+  # DMM/mgstage
+  - DOMAIN-KEYWORD,DMM,🇯🇵DMM/mgstage
+  - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
   
   # javdb
   - DOMAIN-SUFFIX,javdb.com,javdb
-  
   
   # myrule
   - RULE-SET,myrule,myrule
