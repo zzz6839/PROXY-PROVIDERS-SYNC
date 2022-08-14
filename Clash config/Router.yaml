@@ -409,8 +409,8 @@ proxy-groups:
       - DIRECT
       - ✈️PROXY
 
-  # tiktok服务
-  - name: "🇹🇼TikTok"
+  # tiktok服务/baha
+  - name: "🇹🇼TikTok/baha"
     type: url-test
     use:
      - SSRCLOUD CNIX
@@ -628,6 +628,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
     interval: 86400 
   
+  baha:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/baha.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml"
+    interval: 86400 
 
 # 规则
 rules:
@@ -708,7 +714,7 @@ rules:
   - RULE-SET,domestic,DIRECT
   
   #Tiktok
-  - RULE-SET,TikTok,🇹🇼TikTok 
+  - RULE-SET,TikTok,🇹🇼TikTok/baha 
 
   # 外服游戏
   - RULE-SET,🎮online game,🎮online game
@@ -725,6 +731,9 @@ rules:
 
   # github
   - RULE-SET,GITHUB,GITHUB
+
+  # baha
+  - RULE-SET,baha,🇹🇼TikTok/baha
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
