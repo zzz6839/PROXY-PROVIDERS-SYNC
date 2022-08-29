@@ -499,8 +499,8 @@ proxy-groups:
   - name: "DST-PORT"
     type: select
     proxies:
-     - DIRECT
      - ✈️PROXY
+     - DIRECT
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
@@ -634,6 +634,13 @@ rule-providers:
     path: ./RuleSet/Extra/baha.yaml
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml"
     interval: 86400 
+  
+  🍎Apple:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Apple.yaml
+    url: "https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml"
+    interval: 86400 
 
 # 规则
 rules:
@@ -734,6 +741,9 @@ rules:
 
   # baha
   - RULE-SET,baha,🇹🇼TikTok/baha
+
+  # Apple
+  - RULE-SET,🍎Apple,DIRECT
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
@@ -774,7 +784,6 @@ rules:
   - GEOIP,CN,DIRECT
 #————————————————————————————————————————————————————————————————————loyalsoldier  
   - RULE-SET,🧱gfw,✈️PROXY
-  - RULE-SET,🧱greatfire,✈️PROXY
 #————————————————————————————————————————————————————————————————————openclash
   - DST-PORT,80,DST-PORT
   - DST-PORT,443,DST-PORT
