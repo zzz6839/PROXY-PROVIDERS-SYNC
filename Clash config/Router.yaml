@@ -607,12 +607,12 @@ rule-providers:
     path: ./ruleset/gfw.yaml
     interval: 86400
   
-  🧱greatfire:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
-    path: ./ruleset/greatfire.yaml
-    interval: 86400
+  #🧱greatfire:
+  #  type: http
+  #  behavior: domain
+  #  url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+  #  path: ./ruleset/greatfire.yaml
+  #  interval: 86400
   
   BILIBILIHMT:
     type: http
