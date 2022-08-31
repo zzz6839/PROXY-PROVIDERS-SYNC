@@ -43,3 +43,5 @@ payload:
   - DOMAIN,hub.bugout.link
  #弹弹
   - DOMAIN,dany.dandanplay-blacksheepwall.workers.dev
+  #iplocation
+  - DOMAIN-SUFFIX,iplocation.io
