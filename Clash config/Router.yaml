@@ -640,7 +640,14 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Extra/Apple.yaml
     url: "https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml"
-    interval: 86400 
+    interval: 86400
+  
+  bt-trackers:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/bt_trackers.txt"
+    path: ./ruleset/bt-trackers.yaml
+    interval: 86400
 
 # 规则
 rules:
@@ -687,6 +694,7 @@ rules:
   - DOMAIN-KEYWORD,announce,DIRECT
   - DOMAIN-KEYWORD,torrent,DIRECT
   - DOMAIN-KEYWORD,tracker,DIRECT
+  - RULE-SET,bt-trackers,DIRECT
 #——————————————————————————————————————————神机规则
 
 
