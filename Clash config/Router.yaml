@@ -776,7 +776,7 @@ rules:
   - RULE-SET,Steam,✈️PROXY
  
   # Telegram
-  - RULE-SET.Telegram,✈️PROXY
+  - RULE-SET,Telegram,✈️PROXY
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
