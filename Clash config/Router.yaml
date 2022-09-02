@@ -386,11 +386,11 @@ proxy-groups:
      - Cordcloud 
 
   # 国际流媒体服务
-  - name: "Streaming"
-    type: select
-    proxies:
-      - ✈️PROXY
-      - DIRECT
+  #- name: "Streaming"
+  #  type: select
+  #  proxies:
+  #    - ✈️PROXY
+  #    - DIRECT
   
   # Bilibili国台
   - name: "Bilibili国台"
@@ -403,11 +403,11 @@ proxy-groups:
 
   # 中国流媒体服务（面向海外版本）
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
-  - name: "StreamingSE"
-    type: select
-    proxies:
-      - DIRECT
-      - ✈️PROXY
+  #- name: "StreamingSE"
+  #  type: select
+  #  proxies:
+  #    - DIRECT
+  #    - ✈️PROXY
 
   # tiktok服务/baha
   - name: "🇹🇼TikTok/baha"
@@ -432,11 +432,11 @@ proxy-groups:
     tolerance: 50 
 
   # 巨硬服务
-  - name: "Microsoft"
-    type: select
-    proxies:
-     - DIRECT
-     - ✈️PROXY  
+  #- name: "Microsoft"
+  #  type: select
+  #  proxies:
+  #   - DIRECT
+  #   - ✈️PROXY  
 
   # Steam 服务
   #- name: "Steam"
@@ -447,11 +447,11 @@ proxy-groups:
      
 
   # 个人向gfwlist名单
-  - name: "myrule"
-    type: select
-    proxies:
-     - ✈️PROXY
-     - DIRECT
+  #- name: "myrule"
+  #  type: select
+  #  proxies:
+  #   - ✈️PROXY
+  #   - DIRECT
   
   # 外服游戏
   - name: "🎮online game"
@@ -478,11 +478,11 @@ proxy-groups:
     filter: '日本'
   
   # JAVDB manual
-  - name: "javdb"
-    type: select
-    proxies:
-     - "✈️PROXY"
-     - "Manual"
+  #- name: "javdb"
+  #  type: select
+  #  proxies:
+  #   - "✈️PROXY"
+  #   - "Manual"
      
     
 
@@ -722,7 +722,7 @@ rules:
   
   # ----------------------------------------------------------------------------CUSTOM RULE
   # Microsoft
-  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Microsoft,DIRECT
 
   # Beat Saber/e-hentai
   - DOMAIN-SUFFIX,beatsaver.com,B.Saber/e-hentai
@@ -737,10 +737,10 @@ rules:
   - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
   
   # javdb
-  - DOMAIN-SUFFIX,javdb.com,javdb
+  - DOMAIN-SUFFIX,javdb.com,✈️PROXY
   
   # myrule
-  - RULE-SET,myrule,myrule
+  - RULE-SET,myrule,✈️PROXY
 
   # myrule(but domestic)
   - RULE-SET,domestic,DIRECT
@@ -780,10 +780,10 @@ rules:
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
-  - RULE-SET,Streaming,Streaming
+  - RULE-SET,Streaming,✈️PROXY
 
   # (StreamingSE)
-  - RULE-SET,StreamingSE,StreamingSE
+  - RULE-SET,StreamingSE,DIRECT
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,✈️PROXY
