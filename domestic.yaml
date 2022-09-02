@@ -30,6 +30,6 @@ payload:
 #-------------------pyncmd---------------------------------- 
   - DOMAIN,pyncmd.vercel.app
 #-------------------不规则tracker---------------------------------- 
-  - DOMAIN,mediaclub.tv
-  #iplocation
+  - DOMAIN-SUFFIX,mediaclub.tv
+#iplocation
   - DOMAIN-SUFFIX,iplocation.io
