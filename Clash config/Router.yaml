@@ -439,11 +439,11 @@ proxy-groups:
      - ✈️PROXY  
 
   # Steam 服务
-  - name: "Steam"
-    type: select
-    proxies:
-     - DIRECT
-     - ✈️PROXY
+  #- name: "Steam"
+  #  type: select
+  #  proxies:
+  #   - DIRECT
+  #   - ✈️PROXY
      
 
   # 个人向gfwlist名单
@@ -568,7 +568,16 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Extra/Steam.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Game/Steam.yaml
-    interval: 86400    
+    interval: 86400
+
+  #Steam CN domain
+  SteamCN:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/SteamCN.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
+
   
   #myrule
   myrule:
@@ -648,6 +657,14 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/anime_trackers.txt"
     path: ./ruleset/bt-trackers.yaml
     interval: 86400
+  
+  Telegram:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Telegram.list"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
 
 # 规则
 rules:
@@ -752,6 +769,14 @@ rules:
 
   # Apple
   - RULE-SET,🍎Apple,DIRECT
+
+  # Steam Service
+  - RULE-SET,SteamCN,DIRECT
+
+  - RULE-SET,Steam,✈️PROXY
+ 
+  # Telegram
+  - RULE-SET.Telegram,✈️PROXY
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
@@ -762,10 +787,7 @@ rules:
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,✈️PROXY
-  
-  # Steam Service
-  - RULE-SET,Steam,Steam
-
+ 
   # China Area Network
   - RULE-SET,China,DIRECT
 
