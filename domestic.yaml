@@ -28,7 +28,7 @@ payload:
   - DOMAIN-SUFFIX,paragon.com
   - DOMAIN-SUFFIX,unrealengine.com
 #-------------------pyncmd---------------------------------- 
-  - DOMAIN,pyncmd.vercel.app
+  #- DOMAIN,pyncmd.vercel.app
 #-------------------不规则tracker---------------------------------- 
   - DOMAIN-SUFFIX,mediaclub.tv
 #iplocation
