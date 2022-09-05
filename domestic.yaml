@@ -33,5 +33,3 @@ payload:
   - DOMAIN-SUFFIX,mediaclub.tv
 #iplocation
   - DOMAIN-SUFFIX,iplocation.io
-#docker
-  - DOMAIN-SUFFIX,docker.com
