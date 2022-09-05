@@ -33,5 +33,4 @@ payload:
   - DOMAIN-SUFFIX,mediaclub.tv
 #iplocation
   - DOMAIN-SUFFIX,iplocation.io
-#WEBRTC
-  - DOMAIN,stun.l.google.com
+
