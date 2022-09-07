@@ -260,7 +260,7 @@ proxy-providers:
   SSRCLOUD CNIX: 
     type: http
     url:  " "
-    interval: 3600
+    interval: 21600
     path: ./Proxy/main.yaml
     health-check:
       enable: true
