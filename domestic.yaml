@@ -11,8 +11,8 @@ payload:
 #-------------------figma----------------------------------
   - DOMAIN-SUFFIX,figma.cool
 #-------------------rockstar launcher----------------------------------
-  - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
-  - DOMAIN-SUFFIX,rockstargames.com
+#  - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
+#  - DOMAIN-SUFFIX,rockstargames.com
 #--------------------parsec---------------------------------
   - DOMAIN-SUFFIX,parsec.app
 #-------------------league of legend AU----------------------------------
@@ -23,10 +23,10 @@ payload:
   - DOMAIN-SUFFIX,oce.leagueoflegends.com
   - DOMAIN-SUFFIX,store.leagueoflegends.com
 #-------------------EPICGAME----------------------------------
-  - DOMAIN-SUFFIX,epicgames.com
-  - DOMAIN-SUFFIX,helpshift.com
-  - DOMAIN-SUFFIX,paragon.com
-  - DOMAIN-SUFFIX,unrealengine.com
+#  - DOMAIN-SUFFIX,epicgames.com
+#  - DOMAIN-SUFFIX,helpshift.com
+#  - DOMAIN-SUFFIX,paragon.com
+#  - DOMAIN-SUFFIX,unrealengine.com
 #-------------------pyncmd---------------------------------- 
   #- DOMAIN,pyncmd.vercel.app
 #-------------------不规则tracker---------------------------------- 
