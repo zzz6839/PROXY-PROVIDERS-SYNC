@@ -267,66 +267,84 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
   
+  bihai:      
+    type: http
+    url:  "https://proxies.bihai.cf/clash/proxies?c=HK,TW,KR,JP"  
+    interval: 3600
+    path: ./Proxy/free.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204    
   
-  free1:      
+  lonxin:      
     type: http
-    url:  "http://ss.pythonic.life/full/subscribe" 
+    url:  "https://fq.lonxin.net/clash/proxies?c=HK,TW,KR,JP"   
     interval: 3600
-    path: ./Proxy/free1.yaml 
+    path: ./Proxy/free2.yaml
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204  
-  
-  free2:      
-    type: http
-    url:  "https://raw.githubusercontent.com/learnhard-cn/free_proxy_ss/main/clash/clash.provider.yaml" 
-    interval: 3600
-    path: ./Proxy/free2.yaml 
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204  
-  
-  free3:      
-    type: http
-    url:  "https://raw.githubusercontent.com/zhlx2835/freefq/main/clash.yaml" 
-    interval: 3600
-    path: ./Proxy/free3.yaml 
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204  
-  
-  free4:      
-    type: http
-    url:  "https://raw.githubusercontent.com/kxswa/k/k/clash" 
-    interval: 3600
-    path: ./Proxy/free4.yaml 
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204  
-
-  free5:      
-    type: http
-    url:  "https://raw.githubusercontent.com/freefq/free/master/v2" 
-    interval: 3600
-    path: ./Proxy/free5.yaml 
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204  
-  
-  free6:      
-    type: http
-    url:  "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all" 
-    interval: 3600
-    path: ./Proxy/free6.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204  
+      url: http://www.gstatic.com/generate_204    
+  #free1:      
+  #  type: http
+  #  url:  "http://ss.pythonic.life/full/subscribe" 
+  #  interval: 3600
+  #  path: ./Proxy/free1.yaml 
+  #  health-check:
+  #    enable: true
+  #    interval: 600
+  #    url: http://www.gstatic.com/generate_204  
+  #
+  #free2:      
+  #  type: http
+  #  url:  "https://raw.githubusercontent.com/learnhard-cn/free_proxy_ss/main/clash/clash.provider.yaml" 
+  #  interval: 3600
+  #  path: ./Proxy/free2.yaml 
+  #  health-check:
+  #    enable: true
+  #    interval: 600
+  #    url: http://www.gstatic.com/generate_204  
+  #
+  #free3:      
+  #  type: http
+  #  url:  "https://raw.githubusercontent.com/zhlx2835/freefq/main/clash.yaml" 
+  #  interval: 3600
+  #  path: ./Proxy/free3.yaml 
+  #  health-check:
+  #    enable: true
+  #    interval: 600
+  #    url: http://www.gstatic.com/generate_204  
+  #
+  #free4:      
+  #  type: http
+  #  url:  "https://raw.githubusercontent.com/kxswa/k/k/clash" 
+  #  interval: 3600
+  #  path: ./Proxy/free4.yaml 
+  #  health-check:
+  #    enable: true
+  #    interval: 600
+  #    url: http://www.gstatic.com/generate_204  
+#
+  #free5:      
+  #  type: http
+  #  url:  "https://raw.githubusercontent.com/freefq/free/master/v2" 
+  #  interval: 3600
+  #  path: ./Proxy/free5.yaml 
+  #  health-check:
+  #    enable: true
+  #    interval: 600
+  #    url: http://www.gstatic.com/generate_204  
+  #
+  #free6:      
+  #  type: http
+  #  url:  "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all" 
+  #  interval: 3600
+  #  path: ./Proxy/free6.yaml
+  #  health-check:
+  #    enable: true
+  #    interval: 600
+  #    url: http://www.gstatic.com/generate_204  
 
 
   #MIXED US:      
@@ -412,22 +430,18 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
-    filter: '港 | HK '
+    filter: '香港 | HK '
    #lazy: true
    #disable-udp: true
 
   - name: "free(Auto)"
     type: url-test
     use:
-      - free1
-      - free2
-      - free3
-      - free4
-      - free5
-      - free6
+      - bihai
+      - lonxin
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
-    tolerance: 40
+    tolerance: 60
     lazy: true
    #filter: ''
    #disable-udp: true
@@ -446,51 +460,71 @@ proxy-groups:
   - name: "free(Manual)"
     type: select
     use:    
-      - free1
-      - free2
-      - free3
-      - free4
-      - free5
-      - free6
+      - bihai
+      - lonxin
 
-  # 国际流媒体服务
-  - name: "Streaming"
+   # Bilibili国台
+  - name: "Bilibili国台"
     type: select
     proxies:
-      - ✈️PROXY
       - DIRECT
+    use:
+      - SSRCLOUD CNIX
+    filter: "台湾|TW"
 
   # 中国流媒体服务（面向海外版本）
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
-  - name: "StreamingSE"
-    type: select
-    proxies:
-      - DIRECT
-      - ✈️PROXY
-  
-  # tiktok服务
-  - name: "🇹🇼TikTok"
+  #- name: "StreamingSE"
+  #  type: select
+  #  proxies:
+  #    - DIRECT
+  #    - ✈️PROXY
+
+  # tiktok服务/baha
+  - name: "🇹🇼TikTok/baha"
     type: url-test
     use:
      - SSRCLOUD CNIX
     filter: '台湾|TW'
-    url: 'https://t.co/Dau0v71Hh7/'
+    proxies:
+     - ✈️PROXY
+    url: 'https://www.tiktok.com/@minami_aizawa_'
     interval: 900
     tolerance: 50  
 
-  # 巨硬服务
-  - name: "Microsoft"
-    type: select
+  # GITHUB
+  - name: "GITHUB"
+    type: url-test
+    use:
+     - SSRCLOUD CNIX
     proxies:
-     - DIRECT
-     - ✈️PROXY  
+     - ✈️PROXY
+    filter: '日IEPL|日IPLC'
+    url: 'https://github.com'
+    interval: 900
+    tolerance: 50 
+
+  # 巨硬服务
+  #- name: "Microsoft"
+  #  type: select
+  #  proxies:
+  #   - DIRECT
+  #   - ✈️PROXY  
 
   # Steam 服务
-  - name: "Steam"
-    type: select
-    proxies:
-     - DIRECT
-     - ✈️PROXY
+  #- name: "Steam"
+  #  type: select
+  #  proxies:
+  #   - DIRECT
+  #   - ✈️PROXY
+     
+
+  # 个人向gfwlist名单
+  #- name: "myrule"
+  #  type: select
+  #  proxies:
+  #   - ✈️PROXY
+  #   - DIRECT
   
   # 外服游戏
   - name: "🎮online game"
@@ -500,25 +534,32 @@ proxy-groups:
     filter: '游戏'
 
   # Beat Saber/e-hentai
-  - name: "🇺🇸Beat Saber/e-hentai"
+  - name: "B.Saber/e-hentai"
     type:  select
     use:
      - SSRCLOUD CNIX
-    filter: '美国'
+    proxies:
+     - ✈️PROXY
+    #filter: '美国'
+  
 
   # DMM/mgstage
   - name: "🇯🇵DMM/mgstage"
     type: select
     use:
-      - SSRCLOUD CNIX
+     - SSRCLOUD CNIX
     filter: '日本'
+    proxies:
+     - ✈️PROXY
   
   # JAVDB manual
-  - name: "javdb"
-    type: select
-    proxies:
-     - "✈️PROXY"
-     - "Manual"
+  #- name: "javdb"
+  #  type: select
+  #  proxies:
+  #   - "✈️PROXY"
+  #   - "Manual"
+     
+    
 
   # javdb url-test
   #- name: "javauto"
@@ -533,10 +574,8 @@ proxy-groups:
   - name: "DST-PORT"
     type: select
     proxies:
-     - DIRECT
      - ✈️PROXY
-     
-    
+     - DIRECT
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
@@ -589,7 +628,7 @@ rule-providers:
     path: ./RuleSet/Extra/ChinaIP.yaml
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt #https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
-  
+
   #Tiktok
   TikTok:
     type: http
@@ -604,7 +643,16 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Extra/Steam.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Game/Steam.yaml
-    interval: 86400    
+    interval: 86400
+
+  #Steam CN domain
+  SteamCN:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/SteamCN.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+    interval: 86400
+
   
   #myrule
   myrule:
@@ -635,21 +683,63 @@ rule-providers:
     path: ./RuleSet/Extra/Microsoft.yaml
     url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml
     interval: 86400  
-
-  🧱GFW:
-    type: http
-    behavior: domain
-    path: "./rule_provider/gfw.yaml"
-    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
-    interval: 86400
-  🧱Greatfire:
-    type: http
-    behavior: domain
-    path: "./rule_provider/greatfire.yaml"
-    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt
-    interval: 86400
-
   
+  🧱gfw:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  
+  #🧱greatfire:
+  #  type: http
+  #  behavior: domain
+  #  url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+  #  path: ./ruleset/greatfire.yaml
+  #  interval: 86400
+  
+  BILIBILIHMT:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/BILIBILIHMT.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
+    interval: 86400 
+
+  GITHUB:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/GITHUB.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
+    interval: 86400 
+  
+  baha:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/baha.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml"
+    interval: 86400 
+  
+  🍎Apple:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Apple.yaml
+    url: "https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml"
+    interval: 86400
+  
+  bt-trackers:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/anime_trackers.txt"
+    path: ./ruleset/bt-trackers.yaml
+    interval: 86400
+  
+  Telegram:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
 
 # 规则
 rules:
@@ -657,7 +747,7 @@ rules:
   # The rules match in order from top to bottom, rules at the top of the list have higher priority than latter ones.
   # example rules:
   #  - DOMAIN-KEYWORD,google,auto
-  #  - DOMAIN-SUFFIX,beastsaber.com,❎Beat Saber
+  #  - DOMAIN-SUFFIX,beastsaber.com,❎Beat Saber/e-hentai
   #  - DOMAIN,ad.com,REJECT
   #  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
   #  - IP-CIDR,127.0.0.0/8,DIRECT
@@ -667,73 +757,112 @@ rules:
   #  - SRC-PORT,7777,DIRECT
   #  - MATCH,auto
 
-  # ----------------------------------------------------------------------------
-  - DST-PORT,7895,REJECT
-  - DST-PORT,7892,REJECT
+#——————————————————————————————————————————OPENCLASH
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
+  - DOMAIN-SUFFIX,broadcasthe.net,DIRECT
+  - DOMAIN-SUFFIX,chdbits.co,DIRECT
+  - DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+  - DOMAIN-SUFFIX,empornium.me,DIRECT
+  - DOMAIN-SUFFIX,gazellegames.net,DIRECT
+  - DOMAIN-SUFFIX,hdchina.org,DIRECT
+  - DOMAIN-SUFFIX,hdsky.me,DIRECT
+  - DOMAIN-SUFFIX,icetorrent.org,DIRECT
+  - DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+  - DOMAIN-SUFFIX,keepfrds.com,DIRECT
+  - DOMAIN-SUFFIX,madsrevolution.net,DIRECT
+  - DOMAIN-SUFFIX,m-team.cc,DIRECT
+  - DOMAIN-SUFFIX,nanyangpt.com,DIRECT
+  - DOMAIN-SUFFIX,ncore.cc,DIRECT
+  - DOMAIN-SUFFIX,open.cd,DIRECT
+  - DOMAIN-SUFFIX,ourbits.club,DIRECT
+  - DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
+  - DOMAIN-SUFFIX,privatehd.to,DIRECT
+  - DOMAIN-SUFFIX,redacted.ch,DIRECT
+  - DOMAIN-SUFFIX,springsunday.net,DIRECT
+  - DOMAIN-SUFFIX,tjupt.org,DIRECT
+  - DOMAIN-SUFFIX,totheglory.im,DIRECT
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,announce,DIRECT
   - DOMAIN-KEYWORD,torrent,DIRECT
   - DOMAIN-KEYWORD,tracker,DIRECT
-  # ----------------------------------------------------------------------------
+  - RULE-SET,bt-trackers,DIRECT
+#——————————————————————————————————————————神机规则
+
 
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
 
   # Global Area Network
   
-  # ----------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------CUSTOM RULE
   # Microsoft
-  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Microsoft,DIRECT
 
+  # Beat Saber/e-hentai
+  - DOMAIN-SUFFIX,beatsaver.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,bsaber.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,scoresaber.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,skystudioapps.com,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,e-hentai.org,B.Saber/e-hentai
+  - DOMAIN-SUFFIX,hath.network,B.Saber/e-hentai
+  
   # DMM/mgstage
   - DOMAIN-KEYWORD,DMM,🇯🇵DMM/mgstage
   - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
-
-  # Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,beatsaver.com,🇺🇸Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,bsaber.com,🇺🇸Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,scoresaber.com,🇺🇸Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,skystudioapps.com,🇺🇸Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,e-hentai.org,🇺🇸Beat Saber/e-hentai
-  
   
   # javdb
-  - DOMAIN-SUFFIX,javdb.com,javdb
+  - DOMAIN-SUFFIX,javdb.com,✈️PROXY
   
   # myrule
   - RULE-SET,myrule,✈️PROXY
 
   # myrule(but domestic)
   - RULE-SET,domestic,DIRECT
-
+  
   #Tiktok
-  - RULE-SET,TikTok,🇹🇼TikTok
-
+  - RULE-SET,TikTok,🇹🇼TikTok/baha 
 
   # 外服游戏
   - RULE-SET,🎮online game,🎮online game
   
-  #禁止PS4下载更新
+  #禁止PS4/5下载更新
   - DOMAIN-SUFFIX,playstation.com,REJECT
   - DOMAIN-SUFFIX,playstation.net,REJECT
   - DOMAIN-SUFFIX,playstation.org,REJECT
   - DOMAIN,playstation.sony.akadns.net,REJECT
   - DOMAIN,a192.d.akamai.net,REJECT
-  #------------------------------------------------------------------------------------------------------------------
+
+  #Bilibili国台
+  - RULE-SET,BILIBILIHMT,Bilibili国台
+
+  # github
+  - RULE-SET,GITHUB,GITHUB
+
+  # baha
+  - RULE-SET,baha,🇹🇼TikTok/baha
+
+  # Apple
+  - RULE-SET,🍎Apple,DIRECT
+
+  # Steam Service
+  - RULE-SET,SteamCN,DIRECT
+
+  - RULE-SET,Steam,✈️PROXY
+ 
+  # Telegram
+  - RULE-SET,Telegram,✈️PROXY,no-resolve
+  #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
-  - RULE-SET,Streaming,Streaming
+  - RULE-SET,Streaming,✈️PROXY
 
   # (StreamingSE)
-  - RULE-SET,StreamingSE,StreamingSE
+  - RULE-SET,StreamingSE,DIRECT
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,✈️PROXY
-  
-  # Steam Service
-  - RULE-SET,Steam,Steam
-
+ 
   # China Area Network
   - RULE-SET,China,DIRECT
 
@@ -758,16 +887,11 @@ rules:
 
   #- GeoIP China
   - GEOIP,CN,DIRECT
-  
-  # GFW
-  - RULE-SET,🧱GFW,✈️PROXY
-  # GF
-  - RULE-SET,🧱Greatfire,✈️PROXY
-
+#————————————————————————————————————————————————————————————————————loyalsoldier  
+  - RULE-SET,🧱gfw,✈️PROXY
+#————————————————————————————————————————————————————————————————————openclash
   - DST-PORT,80,DST-PORT
   - DST-PORT,443,DST-PORT
   - DST-PORT,22,DST-PORT
-
+#——————————————————————————————————————————————————————————————————————openclash
   - MATCH,DIRECT
-
-
