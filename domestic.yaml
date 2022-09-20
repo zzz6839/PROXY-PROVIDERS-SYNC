@@ -33,4 +33,6 @@ payload:
   - DOMAIN-SUFFIX,mediaclub.tv
 #iplocation
   - DOMAIN-SUFFIX,iplocation.io
+#omofun.tv
+  - DOMAIN-SUFFIX,omofun.tv
 
