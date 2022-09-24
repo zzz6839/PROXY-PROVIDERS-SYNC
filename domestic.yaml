@@ -35,4 +35,6 @@ payload:
   - DOMAIN-SUFFIX,iplocation.io
 #omofun.tv
   - DOMAIN-SUFFIX,omofun.tv
+#iacg
+  - DOMAIN-SUFFIX,iacg.site
 
