@@ -2,6 +2,7 @@ payload:
 #-------------------op.gg----------------------------------
 #  - DOMAIN-SUFFIX,op.gg
 #  - DOMAIN,opgg-static.akamaized.net
+   - DOMAIN-SUFFIX,akamaized.net
 #-------------------videocardz----------------------------------
   - DOMAIN-SUFFIX,videocardz.com
 #-------------------gov----------------------------------  
