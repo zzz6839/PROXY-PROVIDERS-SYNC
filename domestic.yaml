@@ -39,6 +39,6 @@ payload:
   - DOMAIN-SUFFIX,iacg.site
 #imdb
   - DOMAIN-SUFFIX,imdb.com
-  
+  - DOMAIN,dqpnq362acqdi.cloudfront.net
   
 
