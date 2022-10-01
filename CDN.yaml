@@ -1,0 +1,5 @@
+payload:
+#-------------------AMAZON CDN----------------------------------
+  - DOMAIN-SUFFIX,cloudfront.net
+#-------------------AkamaiCloud----------------------------------
+  - DOMAIN-SUFFIX,akamaized.net

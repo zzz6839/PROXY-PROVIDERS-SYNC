@@ -1,7 +1,7 @@
 payload:
 #-------------------op.gg----------------------------------
 #  - DOMAIN-SUFFIX,op.gg
-  - DOMAIN,opgg-static.akamaized.net
+#  - DOMAIN,opgg-static.akamaized.net
 #-------------------videocardz----------------------------------
   - DOMAIN-SUFFIX,videocardz.com
 #-------------------gov----------------------------------  
@@ -39,7 +39,7 @@ payload:
   - DOMAIN-SUFFIX,iacg.site
 #imdb
   #- DOMAIN-SUFFIX,imdb.com
-  - DOMAIN,dqpnq362acqdi.cloudfront.net
-  - DOMAIN,db187550c7dkf.cloudfront.net
+  #- DOMAIN,dqpnq362acqdi.cloudfront.net
+  #- DOMAIN,db187550c7dkf.cloudfront.net
 #docker hub
-  - DOMAIN,d36jcksde1wxzq.cloudfront.net
+  #- DOMAIN,d36jcksde1wxzq.cloudfront.net
