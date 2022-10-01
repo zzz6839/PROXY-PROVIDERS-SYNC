@@ -7,7 +7,7 @@ payload:
 #-------------------gov----------------------------------  
   - DOMAIN-KEYWORD,gov
 #-------------------amazon----------------------------------
-  - DOMAIN-SUFFIX,amazon.com
+#  - DOMAIN-SUFFIX,amazon.com
 #-------------------figma----------------------------------
   - DOMAIN-SUFFIX,figma.cool
 #-------------------rockstar launcher----------------------------------
