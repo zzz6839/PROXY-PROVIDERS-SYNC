@@ -582,7 +582,7 @@ rule-providers:
   #myrule
   myrule:
     type: http
-    behavior: classical
+    behavior: domain
     path: ./RuleSet/Extra/myrule.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Myrule.yaml
     interval: 86400  
@@ -590,7 +590,7 @@ rule-providers:
   #myrule(but domesticly accessable)
   domestic:
     type: http
-    behavior: classical
+    behavior: domain
     path: ./RuleSet/Extra/domestic.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400  
@@ -653,7 +653,7 @@ rule-providers:
   
   bt-trackers:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/anime_trackers.txt"
     path: ./ruleset/bt-trackers.yaml
     interval: 86400
@@ -677,6 +677,13 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Extra/Rockstar.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Rockstar/Rockstar.yaml"
+    interval: 86400
+  
+  CDN:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/CDN.yaml"
+    path: ./ruleset/CDN.yaml
     interval: 86400
 
 # 规则
@@ -833,6 +840,8 @@ rules:
   - GEOIP,CN,DIRECT
 #————————————————————————————————————————————————————————————————————loyalsoldier  
   - RULE-SET,🧱gfw,✈️PROXY
+#————————————————————————————————————————————————————————————————————cdn direct
+  - RULE-SET,CDN,DIRECT
 #————————————————————————————————————————————————————————————————————openclash
   - DST-PORT,80,DST-PORT
   - DST-PORT,443,DST-PORT
