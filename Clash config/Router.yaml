@@ -582,7 +582,7 @@ rule-providers:
   #myrule
   Proxy:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./RuleSet/Extra/Proxy.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
     interval: 86400  
@@ -590,7 +590,7 @@ rule-providers:
   
   domestic:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./RuleSet/Extra/domestic.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400  
@@ -653,7 +653,7 @@ rule-providers:
   
   bt-trackers:
     type: http
-    behavior: classical
+    behavior: domain
     url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/anime_trackers.txt"
     path: ./ruleset/bt-trackers.yaml
     interval: 86400
@@ -681,7 +681,7 @@ rule-providers:
   
   CDN:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/CDN.yaml"
     path: ./ruleset/CDN.yaml
     interval: 86400
