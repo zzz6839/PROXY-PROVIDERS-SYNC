@@ -580,14 +580,14 @@ rule-providers:
 
   
   #myrule
-  myrule:
+  Proxy:
     type: http
     behavior: domain
-    path: ./RuleSet/Extra/myrule.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Myrule.yaml
+    path: ./RuleSet/Extra/Proxy.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
     interval: 86400  
   
-  #myrule(but domesticly accessable)
+  
   domestic:
     type: http
     behavior: domain
@@ -760,9 +760,9 @@ rules:
   - DOMAIN-SUFFIX,javdb.com,✈️PROXY
   
   # myrule
-  - RULE-SET,myrule,✈️PROXY
+  - RULE-SET,Proxy,✈️PROXY
 
-  # myrule(but domestic)
+  # domestic
   - RULE-SET,domestic,DIRECT
   
   #Tiktok
