@@ -704,6 +704,7 @@ rules:
 
 #——————————————————————————————————————————OPENCLASH
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DOMAIN-SUFFIX,qbittorrent.org,✈️PROXY
   - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
   - DOMAIN-SUFFIX,broadcasthe.net,DIRECT
   - DOMAIN-SUFFIX,chdbits.co,DIRECT
