@@ -279,7 +279,7 @@ proxy-providers:
   
   Leon406/SubCrawler:      
     type: http
-    url:  "https://d1.mk/DU2HlE3"   
+    url:  "https://v1.mk/99RFG8B"   
     interval: 3600
     path: ./Proxy/free2.yaml
     health-check:
