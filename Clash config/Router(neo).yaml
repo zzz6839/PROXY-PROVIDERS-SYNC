@@ -463,7 +463,7 @@ proxy-groups:
       - bihai
       - Leon406/SubCrawler
 
-   # Bilibili国台
+  # Bilibili国台
   - name: "Bilibili国台"
     type: select
     proxies:
@@ -486,8 +486,6 @@ proxy-groups:
     use:
      - SSRCLOUD CNIX
     filter: '台湾|TW'
-    proxies:
-     - ✈️PROXY
     url: 'https://www.tiktok.com/@minami_aizawa_'
     interval: 900
     tolerance: 50  
@@ -498,7 +496,7 @@ proxy-groups:
     use:
      - SSRCLOUD CNIX
     proxies:
-     - ✈️PROXY
+     - DIRECT
     filter: '日IEPL|日IPLC'
     url: 'https://github.com'
     interval: 900
@@ -531,6 +529,7 @@ proxy-groups:
     type: select
     use:
       - SSRCLOUD CNIX 
+      - Cordcloud
     filter: '游戏'
 
   # Beat Saber/e-hentai
@@ -538,8 +537,7 @@ proxy-groups:
     type:  select
     use:
      - SSRCLOUD CNIX
-    proxies:
-     - ✈️PROXY
+     - Cordcloud 
     #filter: '美国'
   
 
@@ -547,10 +545,8 @@ proxy-groups:
   - name: "🇯🇵DMM/mgstage"
     type: select
     use:
-     - SSRCLOUD CNIX
+      - SSRCLOUD CNIX
     filter: '日本'
-    proxies:
-     - ✈️PROXY
   
   # JAVDB manual
   #- name: "javdb"
@@ -655,14 +651,14 @@ rule-providers:
 
   
   #myrule
-  myrule:
+  Proxy:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/myrule.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Myrule.yaml
+    path: ./RuleSet/Extra/Proxy.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
     interval: 86400  
   
-  #myrule(but domesticly accessable)
+  
   domestic:
     type: http
     behavior: classical
@@ -739,7 +735,27 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
     path: ./ruleset/Telegram.yaml
     interval: 86400
+  
+  Epicgames:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Epicgames.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
+    interval: 86400
 
+  Rockstar:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Rockstar.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Rockstar/Rockstar.yaml"
+    interval: 86400
+  
+  CDN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/CDN.yaml"
+    path: ./ruleset/CDN.yaml
+    interval: 86400
 
 # 规则
 rules:
@@ -759,6 +775,7 @@ rules:
 
 #——————————————————————————————————————————OPENCLASH
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DOMAIN-SUFFIX,qbittorrent.org,✈️PROXY
   - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
   - DOMAIN-SUFFIX,broadcasthe.net,DIRECT
   - DOMAIN-SUFFIX,chdbits.co,DIRECT
@@ -815,9 +832,9 @@ rules:
   - DOMAIN-SUFFIX,javdb.com,✈️PROXY
   
   # myrule
-  - RULE-SET,myrule,✈️PROXY
+  - RULE-SET,Proxy,✈️PROXY
 
-  # myrule(but domestic)
+  # domestic
   - RULE-SET,domestic,DIRECT
   
   #Tiktok
@@ -852,6 +869,12 @@ rules:
  
   # Telegram
   - RULE-SET,Telegram,✈️PROXY,no-resolve
+
+  #Epicgames
+  - RULE-SET,Epicgames,DIRECT
+
+  #Rockstar games
+  - RULE-SET,Rockstar,DIRECT
   #------------------------------------------------------------------------------------------------------------------神机规则
 
   # (Streaming Media)
@@ -887,6 +910,8 @@ rules:
 
   #- GeoIP China
   - GEOIP,CN,DIRECT
+#————————————————————————————————————————————————————————————————————cdn 
+  - RULE-SET,CDN,🇹🇼TikTok/baha
 #————————————————————————————————————————————————————————————————————loyalsoldier  
   - RULE-SET,🧱gfw,✈️PROXY
 #————————————————————————————————————————————————————————————————————openclash
@@ -895,3 +920,5 @@ rules:
   - DST-PORT,22,DST-PORT
 #——————————————————————————————————————————————————————————————————————openclash
   - MATCH,DIRECT
+  
+
