@@ -279,7 +279,7 @@ proxy-providers:
   
   Leon406/SubCrawler:      
     type: http
-    url:  "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/all"   
+    url:  "https://d1.mk/DU2HlE3"   
     interval: 3600
     path: ./Proxy/free2.yaml
     health-check:
