@@ -277,9 +277,9 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204    
   
-  lonxin:      
+  Leon406/SubCrawler:      
     type: http
-    url:  "https://fq.lonxin.net/clash/proxies?c=HK,TW,KR,JP"   
+    url:  "https://raw.githubusercontent.com/Leon406/SubCrawler/c17909e8a0abd8cb055de4e52a250a25bff9ef65/sub/share/available"   
     interval: 3600
     path: ./Proxy/free2.yaml
     health-check:
@@ -438,7 +438,7 @@ proxy-groups:
     type: url-test
     use:
       - bihai
-      - lonxin
+      - Leon406/SubCrawler
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 60
@@ -461,7 +461,7 @@ proxy-groups:
     type: select
     use:    
       - bihai
-      - lonxin
+      - Leon406/SubCrawler
 
    # Bilibili国台
   - name: "Bilibili国台"
