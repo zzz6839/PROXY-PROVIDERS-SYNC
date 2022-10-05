@@ -354,7 +354,7 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
-    filter: '香港 | HK '
+    filter: '香港|HK|沪港'
    #lazy: true
    #disable-udp: true
 
