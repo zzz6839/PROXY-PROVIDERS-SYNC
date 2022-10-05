@@ -814,7 +814,12 @@ rules:
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,✈️PROXY
- 
+  
+#————————————————————————————————————————————————————————————————————cdn 
+  - RULE-SET,CDN,🇹🇼TikTok/baha
+#————————————————————————————————————————————————————————————————————loyalsoldier  
+  - RULE-SET,🧱gfw,✈️PROXY
+#------------------------------------------------------------------------------------------------------------------神机规则
   # China Area Network
   - RULE-SET,China,DIRECT
 
@@ -839,10 +844,6 @@ rules:
 
   #- GeoIP China
   - GEOIP,CN,DIRECT
-#————————————————————————————————————————————————————————————————————cdn 
-  - RULE-SET,CDN,🇹🇼TikTok/baha
-#————————————————————————————————————————————————————————————————————loyalsoldier  
-  - RULE-SET,🧱gfw,✈️PROXY
 #————————————————————————————————————————————————————————————————————openclash
   - DST-PORT,80,DST-PORT
   - DST-PORT,443,DST-PORT
