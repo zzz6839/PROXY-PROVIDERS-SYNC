@@ -40,7 +40,5 @@ payload:
   - DOMAIN-SUFFIX,iacg.site
 #imdb
   #- DOMAIN-SUFFIX,imdb.com
-  #- DOMAIN,dqpnq362acqdi.cloudfront.net
-  #- DOMAIN,db187550c7dkf.cloudfront.net
-#docker hub
-  #- DOMAIN,d36jcksde1wxzq.cloudfront.net
+#  
+  - DOMAIN-SUFFIX,mediadelivery.net
