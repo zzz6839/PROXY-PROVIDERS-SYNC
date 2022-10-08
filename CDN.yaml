@@ -7,3 +7,5 @@ payload:
   - DOMAIN-SUFFIX,akamaihd.net
 #-------------------navismithapis-cdn----------------------------------
   - DOMAIN,navismithapis-cdn.com
+  
+  - DOMAIN,bunnycdn-video-assets.b-cdn.net
