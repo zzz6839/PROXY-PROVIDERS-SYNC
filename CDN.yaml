@@ -9,3 +9,4 @@ payload:
   - DOMAIN,navismithapis-cdn.com
   
   - DOMAIN-SUFFIX,b-cdn.net
+  - DOMAIN-SUFFIX,bunnycdn.com
