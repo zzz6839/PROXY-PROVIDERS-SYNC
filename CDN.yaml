@@ -8,5 +8,3 @@ payload:
 #-------------------navismithapis-cdn----------------------------------
   - DOMAIN,navismithapis-cdn.com
   
-  - DOMAIN-SUFFIX,b-cdn.net
-  - DOMAIN-SUFFIX,bunnycdn.com
