@@ -40,4 +40,11 @@ payload:
   - DOMAIN-SUFFIX,iacg.site
 #imdb
   #- DOMAIN-SUFFIX,imdb.com
+  #-------------------AMAZON CDN----------------------------------
+  - DOMAIN-SUFFIX,cloudfront.net
+#-------------------AkamaiCloud----------------------------------
+  - DOMAIN-SUFFIX,akamaized.net
+  - DOMAIN-SUFFIX,akamai.net
+  - DOMAIN-SUFFIX,akamaihd.net
+
 
