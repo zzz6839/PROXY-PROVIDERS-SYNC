@@ -648,7 +648,8 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/Apple.yaml
-    url: "https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    #url: "https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml"
     interval: 86400
   
   bt-trackers:
@@ -679,12 +680,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Rockstar/Rockstar.yaml"
     interval: 86400
   
-  CDN:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/CDN.yaml"
-    path: ./ruleset/CDN.yaml
-    interval: 86400
+  #CDN:
+  #  type: http
+  #  behavior: classical
+  #  url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/CDN.yaml"
+  #  path: ./ruleset/CDN.yaml
+  #  interval: 86400
 
 # 规则
 rules:
@@ -812,7 +813,7 @@ rules:
   - RULE-SET,Global,✈️PROXY
   
 #————————————————————————————————————————————————————————————————————cdn 
-  - RULE-SET,CDN,🇹🇼TikTok/baha
+  #- RULE-SET,CDN,🇹🇼TikTok/baha
 #————————————————————————————————————————————————————————————————————loyalsoldier  
   - RULE-SET,🧱gfw,✈️PROXY
 #------------------------------------------------------------------------------------------------------------------神机规则
