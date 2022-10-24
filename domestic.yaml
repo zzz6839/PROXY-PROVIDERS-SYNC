@@ -46,5 +46,7 @@ payload:
   - DOMAIN-SUFFIX,akamaized.net
   - DOMAIN-SUFFIX,akamai.net
   - DOMAIN-SUFFIX,akamaihd.net
+#steam discount
+  - DOMAIN-SUFFIX,greenmangaming.com
 
 
