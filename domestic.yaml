@@ -49,4 +49,4 @@ payload:
 #steam discount
   - DOMAIN-SUFFIX,greenmangaming.com
   - DOMAIN,static-eu.payments-amazon.com
-
+  - DOMAIN,checkoutshopper-live.adyen.com
