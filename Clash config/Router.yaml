@@ -415,7 +415,7 @@ proxy-groups:
     use:
      - SSRCLOUD CNIX
     filter: '台湾|TW'
-    url: 'https://www.tiktok.com/@minami_aizawa_'
+    url: 'http://www.tiktok.com/@minami_aizawa_'
     interval: 900
     tolerance: 50  
 
@@ -424,10 +424,8 @@ proxy-groups:
     type: url-test
     use:
      - SSRCLOUD CNIX
-    proxies:
-     - DIRECT
-    filter: '日IEPL|日IPLC'
-    url: 'https://github.com'
+    filter: 'IEPL|IPLC'
+    url: 'http://github-debug.com/generate_204'
     interval: 900
     tolerance: 50 
 

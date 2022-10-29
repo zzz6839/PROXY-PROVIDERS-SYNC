@@ -439,7 +439,7 @@ proxy-groups:
     use:
       #- bihai
       - Leon406/SubCrawler
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'http://www.youtube.com/generate_204'
     interval: 300
     tolerance: 60
     lazy: true
