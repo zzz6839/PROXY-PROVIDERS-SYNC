@@ -51,4 +51,4 @@ payload:
   - DOMAIN,static-eu.payments-amazon.com
   - DOMAIN,checkoutshopper-live.adyen.com
   #gearbox
-  -DOMAIN-KEYWORD,gearboxsoftware
+  - DOMAIN-KEYWORD,gearboxsoftware
