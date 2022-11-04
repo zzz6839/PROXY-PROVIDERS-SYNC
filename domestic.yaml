@@ -52,5 +52,8 @@ payload:
   - DOMAIN,checkoutshopper-live.adyen.com
   #gearbox
   - DOMAIN-KEYWORD,gearboxsoftware
-  #dns.google
+  #dns
   - DOMAIN,dns.google
+  - DOMAIN,dns.cloudflare.com
+  - DOMAIN,i.passcloud.xyz
+  - DOMAIN,doh.opendns.com
