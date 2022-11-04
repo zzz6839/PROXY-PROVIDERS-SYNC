@@ -538,19 +538,19 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
     interval: 86400
 
-  China:
-    type: http
-    behavior: classical
-    path: ./RuleSet/China.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
-    interval: 86400
-
-  ChinaIP:
-    type: http
-    behavior: ipcidr
-    path: ./RuleSet/Extra/ChinaIP.yaml
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt #https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
-    interval: 86400
+  #China:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/China.yaml
+  #  url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+  #  interval: 86400
+#
+  #ChinaIP:
+  #  type: http
+  #  behavior: ipcidr
+  #  path: ./RuleSet/Extra/ChinaIP.yaml
+  #  url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt #https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+  #  interval: 86400
 
   #Tiktok
   TikTok:
@@ -703,34 +703,12 @@ rules:
 
 #——————————————————————————————————————————OPENCLASH
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-  - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
-  - DOMAIN-SUFFIX,broadcasthe.net,DIRECT
-  - DOMAIN-SUFFIX,chdbits.co,DIRECT
-  - DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
-  - DOMAIN-SUFFIX,empornium.me,DIRECT
-  - DOMAIN-SUFFIX,gazellegames.net,DIRECT
-  - DOMAIN-SUFFIX,hdchina.org,DIRECT
-  - DOMAIN-SUFFIX,hdsky.me,DIRECT
-  - DOMAIN-SUFFIX,icetorrent.org,DIRECT
-  - DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
-  - DOMAIN-SUFFIX,keepfrds.com,DIRECT
-  - DOMAIN-SUFFIX,madsrevolution.net,DIRECT
-  - DOMAIN-SUFFIX,m-team.cc,DIRECT
-  - DOMAIN-SUFFIX,nanyangpt.com,DIRECT
-  - DOMAIN-SUFFIX,ncore.cc,DIRECT
-  - DOMAIN-SUFFIX,open.cd,DIRECT
-  - DOMAIN-SUFFIX,ourbits.club,DIRECT
-  - DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
-  - DOMAIN-SUFFIX,privatehd.to,DIRECT
-  - DOMAIN-SUFFIX,redacted.ch,DIRECT
-  - DOMAIN-SUFFIX,springsunday.net,DIRECT
-  - DOMAIN-SUFFIX,tjupt.org,DIRECT
-  - DOMAIN-SUFFIX,totheglory.im,DIRECT
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,announce,DIRECT
   - DOMAIN-KEYWORD,torrent,DIRECT
-  - DOMAIN-KEYWORD,tracker,DIRECT
   - RULE-SET,bt-trackers,DIRECT
+  - DOMAIN-KEYWORD,tracker,DIRECT
+  
 #——————————————————————————————————————————神机规则
 
 
@@ -792,7 +770,7 @@ rules:
   - RULE-SET,Steam,✈️PROXY
  
   # Telegram
-  - RULE-SET,Telegram,✈️PROXY
+  - RULE-SET,Telegram,✈️PROXY,no-resolve
 
   #Epicgames
   - RULE-SET,Epicgames,DIRECT
@@ -816,7 +794,9 @@ rules:
   - RULE-SET,🧱gfw,✈️PROXY
 #------------------------------------------------------------------------------------------------------------------神机规则
   # China Area Network
-  - RULE-SET,China,DIRECT
+  #- RULE-SET,China,DIRECT
+
+  - GeoSite,CN,DIRECT
 
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
@@ -828,7 +808,7 @@ rules:
   - IP-CIDR,fe80::/10,DIRECT
 
   # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
-  - RULE-SET,ChinaIP,DIRECT
+  #- RULE-SET,ChinaIP,DIRECT
 
   # Tencent
   - IP-CIDR,119.28.28.28/32,DIRECT
