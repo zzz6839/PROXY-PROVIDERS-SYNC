@@ -57,3 +57,4 @@ payload:
   - DOMAIN,dns.cloudflare.com
   - DOMAIN,i.passcloud.xyz
   - DOMAIN,doh.opendns.com
+  - DOMAIN,i.iqiqcloud.com
