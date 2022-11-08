@@ -814,8 +814,6 @@ rules:
   - DOMAIN-SUFFIX,e-hentai.org,B.Saber/e-hentai
   - DOMAIN-SUFFIX,hath.network,B.Saber/e-hentai
   
-  
-
   # gfw
   - GeoSite,gfw,✈️PROXY
 
@@ -825,6 +823,10 @@ rules:
   # ----------------------------------------------------------------------------DIRECT DOMAIN (CDN PROXY)
   # domestic
   - RULE-SET,domestic,DIRECT
+
+  
+  # China Area Network
+  - GeoSite,CN,DIRECT
 
   # Unbreak
   #- RULE-SET,Unbreak,DIRECT
@@ -843,21 +845,17 @@ rules:
   - GeoSite,category-games@cn,DIRECT
 
   # Steam Service
-  - GeoSite,Steam@CN,DIRECT
   - GeoSite,Steam,✈️PROXY
 
   # Apple
-  - GeoSite,icloud@cn,DIRECT
-  - GeoSite,apple@cn,DIRECT
-  - GeoSite,apple-cn,DIRECT
-  - GeoSite,Apple,✈️PROXY
+  #- GeoSite,icloud@cn,DIRECT
+  #- GeoSite,apple@cn,DIRECT
+  #- GeoSite,apple-cn,DIRECT
+  - GeoSite,Apple,DIRECT
   
   #microsoft
-  - GeoSite,Microsoft@cn,DIRECT
-  - GeoSite,Microsoft,✈️PROXY
-
-  # China Area Network
-  - GeoSite,CN,DIRECT
+  #- GeoSite,Microsoft@cn,DIRECT
+  - GeoSite,Microsoft,DIRECT
   #------------------------------------------------------------------------------------------------------------------PROXY IP
 
   #telegram ip
