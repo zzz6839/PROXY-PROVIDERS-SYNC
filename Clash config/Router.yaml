@@ -756,7 +756,7 @@ rules:
   - RULE-SET,Steam,✈️PROXY
  
   # Telegram
-  - RULE-SET,telegram,✈️PROXY,no-resolve
+  - RULE-SET,Telegram,✈️PROXY,no-resolve
 
   #Epicgames
   - RULE-SET,Epicgames,DIRECT
