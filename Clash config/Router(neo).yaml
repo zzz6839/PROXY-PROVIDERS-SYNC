@@ -786,11 +786,6 @@ rules:
   # ----------------------------------------------------------------------------Proxy Domain(Banned,selective)
   # myrule
   - RULE-SET,Proxy,✈️PROXY
-  # gfw
-  - GeoSite,gfw,✈️PROXY
-
-  # Steam Service
-  - GeoSite,Steam,✈️PROXY
  
   # Telegram
   - GeoSite,Telegram,✈️PROXY
@@ -809,7 +804,7 @@ rules:
   #- RULE-SET,TikTok,🇹🇼TikTok/baha 
 
   # (Streaming Media)(tiktok/DMM/pornhub/youtube/baha/twitch included)
-  - RULE-SET,Streaming,✈️PROXY
+  #- RULE-SET,Streaming,✈️PROXY
   
   # Beat Saber/e-hentai
   - DOMAIN-SUFFIX,beatsaver.com,B.Saber/e-hentai
@@ -819,21 +814,17 @@ rules:
   - DOMAIN-SUFFIX,e-hentai.org,B.Saber/e-hentai
   - DOMAIN-SUFFIX,hath.network,B.Saber/e-hentai
   
-  # apple
-  - GeoSite,Apple,✈️PROXY
   
-  #microsoft
-  - GeoSite,Microsoft,✈️PROXY
+
+  # gfw
+  - GeoSite,gfw,✈️PROXY
 
   #Bilibili国台(selective,CN/TW)
   - RULE-SET,BILIBILIHMT,TW/CN
 
-  # ----------------------------------------------------------------------------DIRECT DOMAIN
+  # ----------------------------------------------------------------------------DIRECT DOMAIN (CDN PROXY)
   # domestic
   - RULE-SET,domestic,DIRECT
-
-  # China Area Network
-  - GeoSite,CN,DIRECT
 
   # Unbreak
   #- RULE-SET,Unbreak,DIRECT
@@ -851,20 +842,22 @@ rules:
   # game direct
   - GeoSite,category-games@cn,DIRECT
 
-  # Microsoft
-  #- RULE-SET,Microsoft,DIRECT
-
+  # Steam Service
+  - GeoSite,Steam@CN,DIRECT
+  - GeoSite,Steam,✈️PROXY
 
   # Apple
   - GeoSite,icloud@cn,DIRECT
   - GeoSite,apple@cn,DIRECT
   - GeoSite,apple-cn,DIRECT
+  - GeoSite,Apple,✈️PROXY
   
   #microsoft
   - GeoSite,Microsoft@cn,DIRECT
+  - GeoSite,Microsoft,✈️PROXY
 
-
-
+  # China Area Network
+  - GeoSite,CN,DIRECT
   #------------------------------------------------------------------------------------------------------------------PROXY IP
 
   #telegram ip
