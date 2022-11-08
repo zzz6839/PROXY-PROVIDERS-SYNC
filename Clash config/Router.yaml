@@ -657,13 +657,6 @@ rule-providers:
     path: ./ruleset/bt-trackers.yaml
     interval: 86400
   
-  Telegram:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
-    path: ./ruleset/Telegram.yaml
-    interval: 86400
-  
   Epicgames:
     type: http
     behavior: classical
@@ -767,7 +760,7 @@ rules:
   - RULE-SET,Steam,✈️PROXY
  
   # Telegram
-  - GeoSite,Telegram,✈️PROXY
+  - GeoSite,telegram,✈️PROXY
 
   #Epicgames
   - RULE-SET,Epicgames,DIRECT
@@ -782,6 +775,9 @@ rules:
   # (StreamingSE)
   - RULE-SET,StreamingSE,DIRECT
 
+  #telegram ip
+  - GEOIP,telegram,✈️PROXY,no-resolve
+
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,✈️PROXY
   
@@ -795,8 +791,6 @@ rules:
   #- RULE-SET,China,DIRECT
   - GeoSite,CN,DIRECT
 
-  #telegram ip
-  - GEOIP,telegram,✈️PROXY,no-resolve
 
   # Local Area Network
   - GEOIP,private,DIRECT,no-resolve
