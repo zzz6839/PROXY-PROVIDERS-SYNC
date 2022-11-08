@@ -41,11 +41,11 @@ payload:
 #imdb
   #- DOMAIN-SUFFIX,imdb.com
   #-------------------AMAZON CDN----------------------------------
-  - DOMAIN-SUFFIX,cloudfront.net
+  # - DOMAIN-SUFFIX,cloudfront.net
 #-------------------AkamaiCloud----------------------------------
-  - DOMAIN-SUFFIX,akamaized.net
-  - DOMAIN-SUFFIX,akamai.net
-  - DOMAIN-SUFFIX,akamaihd.net
+  #- DOMAIN-SUFFIX,akamaized.net
+  #- DOMAIN-SUFFIX,akamai.net
+  #- DOMAIN-SUFFIX,akamaihd.net
 #steam discount
   - DOMAIN-SUFFIX,greenmangaming.com
   - DOMAIN,static-eu.payments-amazon.com
