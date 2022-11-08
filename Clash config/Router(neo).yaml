@@ -862,7 +862,7 @@ rules:
   
   #microsoft
   - GeoSite,Microsoft@cn,DIRECT
-  - GeoSite,Microsoft-cn,DIRECT
+
 
 
   #------------------------------------------------------------------------------------------------------------------PROXY IP
