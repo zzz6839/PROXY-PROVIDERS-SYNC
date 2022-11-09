@@ -424,7 +424,7 @@ proxy-groups:
     type: url-test
     use:
      - SSRCLOUD CNIX
-    filter: '新加坡'
+    filter: '日IEPL|日IPLC'
     url: 'http://github-debug.com/generate_204'
     interval: 900
     tolerance: 50 
