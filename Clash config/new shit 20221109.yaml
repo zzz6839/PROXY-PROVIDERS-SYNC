@@ -661,7 +661,9 @@ rule-providers:
 # 规则
 rules:
    
-    
+    # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
+
+    #AD block 
     - GeoSite,category-ads-all,REJECT
     
     - DOMAIN-SUFFIX,playstation.com,REJECT
@@ -669,7 +671,7 @@ rules:
     - DOMAIN-SUFFIX,playstation.org,REJECT
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
-
+    
     - RULE-SET,DMM,🇯🇵DMM/mgstage
     
     - RULE-SET,GITHUB,GITHUB
@@ -681,16 +683,16 @@ rules:
 
     - RULE-SET,SteamCN,DIRECT
     - RULE-SET,Steam,✈️PROXY
-
-    - RULE-SET,🎮online game,🎮online game
+    # IP PROXY
+    - RULE-SET,🎮online game,🎮online game,no-resolve
     
     - RULE-SET,Telegram,✈️PROXY,no-resolve
-     
+    # final proxy  
     - RULE-SET,🧱gfw,✈️PROXY
     
     - RULE-SET,Proxy,✈️PROXY
     
-
+    # DOMAIN DIRECT
     - RULE-SET,bt-trackers,DIRECT
    
     - RULE-SET,Microsoft,DIRECT
@@ -709,7 +711,7 @@ rules:
     - RULE-SET,domestic,DIRECT
 
     - GeoSite,CN,DIRECT
-  
+    # IP DIRECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
     
     - GEOIP,private,DIRECT,no-resolve
@@ -722,11 +724,11 @@ rules:
     - IP-CIDR,fe80::/10,DIRECT
     
     - GEOIP,CN,DIRECT
-  
+    # !CN WEBSITE GO PROXY/ BLACKLIST MDOE? 
     - DST-PORT,80,DST-PORT
     - DST-PORT,443,DST-PORT
     - DST-PORT,22,DST-PORT
-  
+    # FINAL
     - MATCH,DIRECT
   
 
