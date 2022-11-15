@@ -823,13 +823,13 @@ rules:
     - GEOIP,google,✈️PROXY
 
     - GEOIP,twitter,✈️PROXY
+
+    - GEOIP,cloudflare,✈️PROXY  #I/O timeout 
     # IP DIRECT
     - GEOIP,private,DIRECT,no-resolve
 
     - GEOIP,CN,DIRECT
-
-    - GEOIP,cloudflare,DIRECT
-
+    
     - GEOIP,cloudfront,DIRECT
 
     - GEOIP,fastly,DIRECT
