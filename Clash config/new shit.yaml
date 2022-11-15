@@ -672,19 +672,17 @@ rules:
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
     
-    - RULE-SET,DMM,🇯🇵DMM/mgstage  #DOMAIN&IP
-    
     - RULE-SET,GITHUB,GITHUB  #domain-set
 
     - RULE-SET,baha,🇹🇼TikTok/baha #DOMAIN-SET
     - RULE-SET,TikTok,🇹🇼TikTok/baha #DOMAIN+PROCESS NAME
     
+    - RULE-SET,DMM,🇯🇵DMM/mgstage  #DOMAIN&IP
+
     - RULE-SET,E-Hentai,e-hentai # DOMAIN+IP
 
     - RULE-SET,SteamCN,DIRECT #DOMAIN+DIRECT
     - RULE-SET,Steam,✈️PROXY  #DOMAIN
-    # IP PROXY
-    - RULE-SET,🎮online game,🎮online game,no-resolve
     
     - RULE-SET,Telegram,✈️PROXY,no-resolve
     # final proxy  
@@ -693,7 +691,7 @@ rules:
     - RULE-SET,Cloudflare,✈️PROXY #direct>proxy due to i/o timeout
     
     - RULE-SET,Proxy,✈️PROXY
-    
+
     # DOMAIN DIRECT
     - RULE-SET,bt-trackers,DIRECT
     - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
@@ -713,9 +711,14 @@ rules:
     - RULE-SET,domestic,DIRECT
 
     - GeoSite,CN,DIRECT
-    # IP DIRECT
+
+    # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-    
+
+    # IP PROXY
+    - RULE-SET,🎮online game,🎮online game,no-resolve
+
+    # IP DIRECT
     - GEOIP,private,DIRECT,no-resolve
     - IP-CIDR,192.168.0.0/16,DIRECT
     - IP-CIDR,10.0.0.0/8,DIRECT
