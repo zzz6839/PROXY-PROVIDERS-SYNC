@@ -779,7 +779,7 @@ rules:
     - GeoSite,bahamut,TW
     - GeoSite,TikTok,TW
     
-    - Geosite,ehentai.e-hentai
+    - Geosite,ehentai,e-hentai
 
     - GeoSite,steam@CN,DIRECT  # if domain matching, mismatch results dismissing
     #- GeoSite,steam,✈️PROXY
