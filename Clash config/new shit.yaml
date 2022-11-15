@@ -664,7 +664,7 @@ rules:
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
     #AD block 
-    - GeoSite,category-ads-all,REJECT
+    #- GeoSite,category-ads-all,REJECT
     
     - DOMAIN-SUFFIX,playstation.com,REJECT
     - DOMAIN-SUFFIX,playstation.net,REJECT

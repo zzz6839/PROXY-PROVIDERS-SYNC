@@ -705,7 +705,7 @@ rules:
 #——————————————————————————————————————————OPENCLASH
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   # 去广告https://github.com/Loyalsoldier/v2ray-rules-dat
-  - GeoSite,category-ads-all,REJECT
+  #- GeoSite,category-ads-all,REJECT
   - RULE-SET,bt-trackers,DIRECT
   
 #——————————————————————————————————————————神机规则
