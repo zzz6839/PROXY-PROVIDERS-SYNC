@@ -532,7 +532,7 @@ proxy-groups:
     filter: '游戏'
 
   # Beat Saber/e-hentai
-  - name: "B.Saber/e-hentai"
+  - name: "e-hentai"
     type:  select
     use:
      - SSRCLOUD CNIX
@@ -590,12 +590,12 @@ rule-providers:
   #  url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
   #  interval: 86400
 
-  Streaming:
-    type: http
-    behavior: classical
-    path: ./RuleSet/StreamingMedia/Streaming.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
-    interval: 86400
+  #Streaming:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/StreamingMedia/Streaming.yaml
+  #  url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+  #  interval: 86400
 
   #StreamingSE:
   #  type: http
@@ -694,12 +694,12 @@ rule-providers:
   #  path: ./ruleset/greatfire.yaml
   #  interval: 86400
   
-  BILIBILIHMT:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/BILIBILIHMT.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
-    interval: 86400 
+  #BILIBILIHMT:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/BILIBILIHMT.yaml
+  #  url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
+  #  interval: 86400 
 
   #GITHUB:
   #  type: http
@@ -760,150 +760,83 @@ rule-providers:
 
 # 规则
 rules:
-  # Rules have Priority
-  # The rules match in order from top to bottom, rules at the top of the list have higher priority than latter ones.
-  # example rules:
-  #  - DOMAIN-KEYWORD,google,auto
-  #  - DOMAIN-SUFFIX,beastsaber.com,❎Beat Saber/e-hentai
-  #  - DOMAIN,ad.com,REJECT
-  #  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
-  #  - IP-CIDR,127.0.0.0/8,DIRECT
-  #  - IP-CIDR6,2620:0:2d0:200::7/32,auto
-  #  - GEOIP,CN,DIRECT
-  #  - DST-PORT,80,DIRECT
-  #  - SRC-PORT,7777,DIRECT
-  #  - MATCH,auto
+   
+    # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
-  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+    #AD block & REJECT
+
+    
+    - GeoSite,category-ads-all,REJECT
+    
+    - Geosite,playstation,REJECT
+    - DOMAIN,a192.d.akamai.net,REJECT
+    
+    #DOMAIN & PROXY
+    - Geosite,dmm,JP
+
+    - Geosite,github,GITHUB
+
+    - GeoSite,bahamut,TW
+    - GeoSite,TikTok,TW
+    
+    - Geosite,ehentai.e-hentai
+
+    - GeoSite,steam@CN,DIRECT  # if domain matching, mismatch results dismissing
+    #- GeoSite,steam,✈️PROXY
+    
+    #- Geosite,Telegram,✈️PROXY
+    
+    # some sites are unblocked, manual correct gfw list
+    - RULE-SET,domestic,DIRECT
+
+    - Geosite,gfw,✈️PROXY
+    
+    - RULE-SET,Proxy,✈️PROXY
+    
+    # DOMAIN DIRECT
+    - Geosite,bilibili,TW/CN
+
+    - GeoSite,CN,DIRECT
+
+    - RULE-SET,bt-trackers,DIRECT
+    - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
+   
+    - Geosite,microsoft,DIRECT
   
-  #- DOMAIN-KEYWORD,announce,DIRECT
-  #- DOMAIN-KEYWORD,torrent,DIRECT
-  #- DOMAIN-KEYWORD,tracker,DIRECT
-
-  # 去广告https://github.com/Loyalsoldier/v2ray-rules-dat
-  - GeoSite,category-ads-all,REJECT
-
-  # ----------------------------------------------------------------------------Proxy Domain(Banned,selective)
-  # myrule
-  - RULE-SET,Proxy,✈️PROXY
- 
-  # Telegram
-  - GeoSite,Telegram,✈️PROXY
-
-  # DMM/mgstage proxible domain (japan)
-  - GeoSite,dmm,JP
-  #- DOMAIN-KEYWORD,DMM,JP
-  #- DOMAIN-SUFFIX,mgstage.com,JP
-
-  # baha proxible domain (taiwan)
-  - GeoSite,bahamut,TW
-  #- RULE-SET,baha,🇹🇼TikTok/baha
-
-  #Tiktok proxible domain (taiwan)
-  - GeoSite,tiktok,TW
-  #- RULE-SET,TikTok,🇹🇼TikTok/baha 
-
-  # (Streaming Media)(tiktok/DMM/pornhub/youtube/baha/twitch included)
-  #- RULE-SET,Streaming,✈️PROXY
+    - Geosite,apple,DIRECT
+   
+    - Geosite,epicgames,DIRECT
+   
+    - Geosite,rockstar,DIRECT
   
-  # Beat Saber/e-hentai
-  - DOMAIN-SUFFIX,beatsaver.com,B.Saber/e-hentai
-  - DOMAIN-SUFFIX,bsaber.com,B.Saber/e-hentai
-  - DOMAIN-SUFFIX,scoresaber.com,B.Saber/e-hentai
-  - DOMAIN-SUFFIX,skystudioapps.com,B.Saber/e-hentai
-  - DOMAIN-SUFFIX,e-hentai.org,B.Saber/e-hentai
-  - DOMAIN-SUFFIX,hath.network,B.Saber/e-hentai
-  
-  # gfw
-  - GeoSite,gfw,✈️PROXY
+    - Geosite,Cloudflare,DIRECT
+    
+    # IP Reject
+    - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+    # IP PROXY
+    - GEOIP,telegram,✈️PROXY,no-resolve
 
-  #Bilibili国台(selective,CN/TW)
-  - RULE-SET,BILIBILIHMT,TW/CN
+    - RULE-SET,🎮online game,🎮online game,no-resolve
 
-  # ----------------------------------------------------------------------------DIRECT DOMAIN (CDN PROXY)
-  # domestic
-  - RULE-SET,domestic,DIRECT
+    - GEOIP,netflix,✈️PROXY
+    
+    - GEOIP,google,✈️PROXY
 
-  
-  # China Area Network
-  - GeoSite,CN,DIRECT
+    - GEOIP,twitter,✈️PROXY
+    # IP DIRECT
+    - GEOIP,private,DIRECT,no-resolve
 
-  # Unbreak
-  #- RULE-SET,Unbreak,DIRECT
+    - GEOIP,CN,DIRECT
 
-  # bt-trackers
-  - RULE-SET,bt-trackers,DIRECT
-  - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
+    - GEOIP,cloudflare,DIRECT
 
+    - GEOIP,cloudfront,DIRECT
 
-  #禁止PS4/5下载更新
-  - DOMAIN-SUFFIX,playstation.com,REJECT
-  - DOMAIN-SUFFIX,playstation.net,REJECT
-  - DOMAIN-SUFFIX,playstation.org,REJECT
-  - DOMAIN,playstation.sony.akadns.net,REJECT
-  - DOMAIN,a192.d.akamai.net,REJECT
-
-  # game direct
-  - GeoSite,category-games@cn,DIRECT
-
-  # Steam Service
-  - GeoSite,Steam,✈️PROXY
-
-  # Apple
-  #- GeoSite,icloud@cn,DIRECT
-  #- GeoSite,apple@cn,DIRECT
-  #- GeoSite,apple-cn,DIRECT
-  - GeoSite,Apple,DIRECT
-  
-  #microsoft
-  #- GeoSite,Microsoft@cn,DIRECT
-  - GeoSite,Microsoft,DIRECT
-  #------------------------------------------------------------------------------------------------------------------PROXY IP
-
-  #telegram ip
-  - GEOIP,telegram,✈️PROXY,no-resolve
-
-  
-  # 外服游戏ipcidr
-  - RULE-SET,🎮online game,🎮online game
-
-
-  # (StreamingSE)
-  #- RULE-SET,StreamingSE,DIRECT
-
-  # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
-  #- RULE-SET,Global,✈️PROXY
-  
-
-#------------------------------------------------------------------------------------------------------------------DIRECT IP
-
-  # Local Area Network
-  - GEOIP,private,DIRECT,no-resolve
-  # Local Area Network
-  #- IP-CIDR,192.168.0.0/16,DIRECT
-  #- IP-CIDR,10.0.0.0/8,DIRECT
-  #- IP-CIDR,172.16.0.0/12,DIRECT
-  #- IP-CIDR,127.0.0.0/8,DIRECT
-  #- IP-CIDR,100.64.0.0/10,DIRECT
-  #- IP-CIDR,224.0.0.0/4,DIRECT
-  #- IP-CIDR,fe80::/10,DIRECT
-
-
-
-  # Tencent
-  #- IP-CIDR,119.28.28.28/32,DIRECT
-  #- IP-CIDR,182.254.116.0/24,DIRECT
-  #- IP-CIDR,203.205.236.0/24,DIRECT
-  #- IP-CIDR,121.51.40.0/24,DIRECT
-  #- IP-CIDR,101.91.92.0/24,DIRECT
-  
-  #- GeoIP China
-  - GEOIP,CN,DIRECT
-#————————————————————————————————————————————————————————————————————openclash
-  - DST-PORT,80,DST-PORT
-  - DST-PORT,443,DST-PORT
-  - DST-PORT,22,DST-PORT
-#——————————————————————————————————————————————————————————————————————openclash
-  - MATCH,DIRECT
-  
-
+    - GEOIP,fastly,DIRECT
+    
+    # !CN WEBSITE GO PROXY/ BLACKLIST MDOE? 
+    - DST-PORT,80,DST-PORT
+    - DST-PORT,443,DST-PORT
+    - DST-PORT,22,DST-PORT
+    # FINAL
+    - MATCH,DIRECT
