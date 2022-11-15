@@ -54,6 +54,8 @@ payload:
   - DOMAIN-KEYWORD,gearboxsoftware
   #dns
   - DOMAIN,dns.google
+  - DOMAIN,1.1.1.1
+  - DOMAIN,8.8.8.8
   - DOMAIN,dns.cloudflare.com
   #- DOMAIN,i.passcloud.xyz
   - DOMAIN,doh.opendns.com
