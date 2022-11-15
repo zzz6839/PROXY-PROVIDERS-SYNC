@@ -672,23 +672,25 @@ rules:
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
     
-    - RULE-SET,DMM,🇯🇵DMM/mgstage
+    - RULE-SET,DMM,🇯🇵DMM/mgstage  #DOMAIN&IP
     
-    - RULE-SET,GITHUB,GITHUB
+    - RULE-SET,GITHUB,GITHUB  #domain-set
 
-    - RULE-SET,baha,🇹🇼TikTok/baha
-    - RULE-SET,TikTok,🇹🇼TikTok/baha 
+    - RULE-SET,baha,🇹🇼TikTok/baha #DOMAIN-SET
+    - RULE-SET,TikTok,🇹🇼TikTok/baha #DOMAIN+PROCESS NAME
     
-    - RULE-SET,E-Hentai,e-hentai
+    - RULE-SET,E-Hentai,e-hentai # DOMAIN+IP
 
-    - RULE-SET,SteamCN,DIRECT
-    - RULE-SET,Steam,✈️PROXY
+    - RULE-SET,SteamCN,DIRECT #DOMAIN+DIRECT
+    - RULE-SET,Steam,✈️PROXY  #DOMAIN
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve
     
     - RULE-SET,Telegram,✈️PROXY,no-resolve
     # final proxy  
     - RULE-SET,🧱gfw,✈️PROXY
+    
+    - RULE-SET,Cloudflare,✈️PROXY #direct>proxy due to i/o timeout
     
     - RULE-SET,Proxy,✈️PROXY
     
@@ -705,8 +707,7 @@ rules:
     - RULE-SET,Epicgames,DIRECT
    
     - RULE-SET,Rockstar,DIRECT
-  
-    - RULE-SET,Cloudflare,DIRECT
+
     - RULE-SET,CloudGlobal,DIRECT
     
     - RULE-SET,domestic,DIRECT
