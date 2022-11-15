@@ -781,7 +781,7 @@ rules:
   #- DOMAIN-KEYWORD,tracker,DIRECT
 
   # 去广告https://github.com/Loyalsoldier/v2ray-rules-dat
-  #- GeoSite,category-ads-all,REJECT
+  - GeoSite,category-ads-all,REJECT
 
   # ----------------------------------------------------------------------------Proxy Domain(Banned,selective)
   # myrule
