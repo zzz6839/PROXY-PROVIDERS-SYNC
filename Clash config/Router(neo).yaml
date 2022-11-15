@@ -490,7 +490,7 @@ proxy-groups:
     interval: 900
     tolerance: 50  
 
-   GITHUB
+   #GITHUB
   - name: "GITHUB"
     type: url-test
     use:
