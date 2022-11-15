@@ -490,17 +490,17 @@ proxy-groups:
     interval: 900
     tolerance: 50  
 
-  # GITHUB
-  #- name: "GITHUB"
-  #  type: url-test
-  #  use:
-  #   - SSRCLOUD CNIX
-  #  proxies:
-  #   - DIRECT
-  #  filter: '日IEPL|日IPLC'
-  #  url: 'https://github.com'
-  #  interval: 900
-  #  tolerance: 50 
+   GITHUB
+  - name: "GITHUB"
+    type: url-test
+    use:
+     - SSRCLOUD CNIX
+    proxies:
+     - DIRECT
+    filter: '日IEPL|日IPLC'
+    url: 'https://github.com'
+    interval: 900
+    tolerance: 50 
 
   # 巨硬服务
   #- name: "Microsoft"
@@ -786,7 +786,7 @@ rules:
     
     #- Geosite,Telegram,✈️PROXY
     
-    # some sites are unblocked, manual correct gfw list
+    # some sites are unblocked, manual correct gfw lists
     - RULE-SET,domestic,DIRECT
 
     - Geosite,gfw,✈️PROXY
