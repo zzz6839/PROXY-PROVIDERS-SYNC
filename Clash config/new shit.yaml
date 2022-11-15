@@ -694,6 +694,7 @@ rules:
     
     # DOMAIN DIRECT
     - RULE-SET,bt-trackers,DIRECT
+    - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
    
     - RULE-SET,Microsoft,DIRECT
   

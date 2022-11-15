@@ -833,6 +833,8 @@ rules:
 
   # bt-trackers
   - RULE-SET,bt-trackers,DIRECT
+  - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
+
 
   #禁止PS4/5下载更新
   - DOMAIN-SUFFIX,playstation.com,REJECT

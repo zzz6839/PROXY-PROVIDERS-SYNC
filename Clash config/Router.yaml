@@ -707,7 +707,8 @@ rules:
   # 去广告https://github.com/Loyalsoldier/v2ray-rules-dat
   - GeoSite,category-ads-all,REJECT
   - RULE-SET,bt-trackers,DIRECT
-  
+  - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
+
 #——————————————————————————————————————————神机规则
 
   # Unbreak
