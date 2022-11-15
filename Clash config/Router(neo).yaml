@@ -782,9 +782,9 @@ rules:
     - Geosite,ehentai,e-hentai
 
     - GeoSite,steam@CN,DIRECT  # if domain matching, mismatch results dismissing
-    #- GeoSite,steam,✈️PROXY
+    - GeoSite,steam,✈️PROXY
     
-    #- Geosite,Telegram,✈️PROXY
+    - Geosite,Telegram,✈️PROXY
     
     # some sites are unblocked, manual correct gfw lists
     - RULE-SET,domestic,DIRECT
