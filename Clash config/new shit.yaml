@@ -743,7 +743,7 @@ rules:
 
     - RULE-SET,DMM_ip,🇯🇵DMM/mgstage 
 
-    - RULE-SET,E-hentai_ip,e-hentai
+    - RULE-SET,E-Hentai_ip,e-hentai
  
 
     # IP DIRECT
