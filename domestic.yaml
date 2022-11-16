@@ -3,7 +3,7 @@ payload:
 #  - DOMAIN-SUFFIX,op.gg
 #  - DOMAIN,opgg-static.akamaized.net
 #-------------------videocardz----------------------------------
-  - DOMAIN-SUFFIX,videocardz.com
+#  - DOMAIN-SUFFIX,videocardz.com
 #-------------------gov----------------------------------  
   - DOMAIN-KEYWORD,gov
 #-------------------amazon----------------------------------
@@ -51,7 +51,7 @@ payload:
   - DOMAIN,static-eu.payments-amazon.com
   - DOMAIN,checkoutshopper-live.adyen.com
   #gearbox
-  - DOMAIN-KEYWORD,gearboxsoftware
+  #- DOMAIN-KEYWORD,gearboxsoftware
   #dns
   - DOMAIN-SUFFIX,dns.google
   - DOMAIN-SUFFIX,1.1.1.1
