@@ -708,7 +708,6 @@ rules:
    
     - RULE-SET,Rockstar,DIRECT
 
-    
     - RULE-SET,domestic,DIRECT
 
     - GeoSite,CN,DIRECT
