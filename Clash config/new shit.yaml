@@ -701,7 +701,7 @@ rules:
     
     - RULE-SET,DMM_domain,🇯🇵DMM/mgstage 
 
-    - RULE-SET,Ehentai_domain,e-hentai 
+    - RULE-SET,E-Hentai_domain,e-hentai 
 
     - RULE-SET,SteamCN,DIRECT #DOMAIN+DIRECT
     - RULE-SET,Steam,✈️PROXY  #DOMAIN
