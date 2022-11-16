@@ -511,25 +511,39 @@ rule-providers:
 #   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
 
 
-  🍎Apple:
+  🍎Apple_domain:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/Apple.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    path: ./RuleSet/Extra/Apple_domain.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_domain.yaml"
+    interval: 86400
+
+  🍎Apple_ip:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/Apple_ip.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
     interval: 86400
 
   baha:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/baha.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml"
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Bahamut_domain.yaml"
     interval: 86400 
   
-  BILIBILIHMT:
+  BILIBILIHMT_domain:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/BILIBILIHMT.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
+    path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
+    interval: 86400 
+  
+  BILIBILIHMT_ip:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/BILIBILIHMT_ip.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_ip.yaml"
     interval: 86400 
 
   bt-trackers:
@@ -539,11 +553,18 @@ rule-providers:
     path: ./ruleset/bt-trackers.txt
     interval: 86400
 
-  DMM:
+  DMM_domain:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/DMM.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DMM/DMM.yaml
+    path: ./RuleSet/Extra/DMM_domain.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_domain.yaml
+    interval: 86400 
+
+  DMM_ip:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/DMM_ip.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
     interval: 86400 
 
   domestic:
@@ -553,34 +574,46 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400 
   
-  E-Hentai:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Ehentai.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EHGallery/EHGallery.yaml"
-    interval: 86400
-
   Epicgames:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/Epicgames.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/EPIC_domain.yaml"
     interval: 86400
 
-  #Tiktok
-  TikTok:
+  E-Hentai_domain:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/TikTok.yaml
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/TikTok.list #https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml 
+    path: ./RuleSet/Extra/Ehentai_domain.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_domain.yaml"
+    interval: 86400
+
+  E-Hentai_ip:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/Ehentai_ip.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_ip.yaml"
+    interval: 86400
+
+  GITHUB:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/GITHUB.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Github_domain.yaml"
     interval: 86400 
 
-  #Steam
-  Steam:
+  Microsoft:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/Steam.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Game/Steam.yaml
+    path: ./RuleSet/Extra/Microsoft.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
+    interval: 86400  
+
+  Rockstar:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Rockstar.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Rockstar_domain.yaml
     interval: 86400
 
   #Steam CN domain
@@ -588,8 +621,38 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/SteamCN.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/SteamCN_domain.yaml
     interval: 86400
+
+  #Steam
+  Steam:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Steam.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Steam_domain.yaml
+    interval: 86400
+
+  Telegram_domain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_domain.yaml
+    path: ./ruleset/Telegram_domain.yaml
+    interval: 86400
+
+  Telegram_ip:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_ip.yaml
+    path: ./ruleset/Telegram_ip.yaml
+    interval: 86400
+
+  #Tiktok
+  TikTok:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/TikTok.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Tiktok_domain.yaml 
+    interval: 86400 
 
   #myrule
   Proxy:
@@ -606,13 +669,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/onlinegame.yaml
     interval: 86400  
 
-  Microsoft:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Microsoft.yaml
-    url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml
-    interval: 86400  
-  
   🧱gfw:
     type: http
     behavior: domain
@@ -620,26 +676,6 @@ rule-providers:
     path: ./ruleset/gfw.txt
     interval: 86400
   
-  Telegram:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
-    path: ./ruleset/Telegram.yaml
-    interval: 86400
-
-  GITHUB:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/GITHUB.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
-    interval: 86400 
-  
-  Rockstar:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Rockstar.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Rockstar/Rockstar.yaml"
-    interval: 86400
 
   
   
@@ -658,33 +694,34 @@ rules:
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
     
-    - RULE-SET,GITHUB,GITHUB  #domain-set
+    - RULE-SET,GITHUB,GITHUB  
 
-    - RULE-SET,baha,🇹🇼TikTok/baha #DOMAIN-SET
-    - RULE-SET,TikTok,🇹🇼TikTok/baha #DOMAIN+PROCESS NAME
+    - RULE-SET,baha,🇹🇼TikTok/baha 
+    - RULE-SET,TikTok,🇹🇼TikTok/baha 
     
-    - RULE-SET,DMM,🇯🇵DMM/mgstage  #DOMAIN&IP
+    - RULE-SET,DMM_domain,🇯🇵DMM/mgstage 
 
-    - RULE-SET,E-Hentai,e-hentai # DOMAIN+IP
+    - RULE-SET,Ehentai_domain,e-hentai 
 
     - RULE-SET,SteamCN,DIRECT #DOMAIN+DIRECT
     - RULE-SET,Steam,✈️PROXY  #DOMAIN
     
-    - RULE-SET,Telegram,✈️PROXY,no-resolve
+    - RULE-SET,Telegram_domain,✈️PROXY
     # final proxy  
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
 
     # DOMAIN DIRECT
+    
+    - RULE-SET,BILIBILIHMT_domain,Bilibili国台
+
     - RULE-SET,bt-trackers,DIRECT
     - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
    
     - RULE-SET,Microsoft,DIRECT
   
-    - RULE-SET,BILIBILIHMT,Bilibili国台
-  
-    - RULE-SET,🍎Apple,DIRECT
+    - RULE-SET,🍎Apple_domain,DIRECT
    
     - RULE-SET,Epicgames,DIRECT
    
@@ -700,6 +737,15 @@ rules:
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve
 
+    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
+
+    - RULE-SET,BILIBILIHMT_ip,Bilibili国台,no-resolve
+
+    - RULE-SET,DMM_ip,🇯🇵DMM/mgstage 
+
+    - RULE-SET,Ehentai_ip,e-hentai
+ 
+
     # IP DIRECT
     - GEOIP,private,DIRECT,no-resolve
     - IP-CIDR,192.168.0.0/16,DIRECT
@@ -710,6 +756,8 @@ rules:
     - IP-CIDR,224.0.0.0/4,DIRECT
     - IP-CIDR,fe80::/10,DIRECT
     
+    - RULE-SET,🍎Apple_ip,DIRECT
+
     - GEOIP,CN,DIRECT
     # !CN WEBSITE GO PROXY/ BLACKLIST MDOE? 
     - DST-PORT,80,DST-PORT
