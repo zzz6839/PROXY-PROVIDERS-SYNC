@@ -690,6 +690,8 @@ rules:
     
     - RULE-SET,Cloudflare,✈️PROXY #direct>proxy due to i/o timeout
     
+    - RULE-SET,CloudGlobal,✈️PROXY #direct>proxy due to i/o timeout
+
     - RULE-SET,Proxy,✈️PROXY
 
     # DOMAIN DIRECT
@@ -706,7 +708,6 @@ rules:
    
     - RULE-SET,Rockstar,DIRECT
 
-    - RULE-SET,CloudGlobal,DIRECT
     
     - RULE-SET,domestic,DIRECT
 
