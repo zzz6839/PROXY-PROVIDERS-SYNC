@@ -520,7 +520,7 @@ rule-providers:
 
   🍎Apple_ip:
     type: http
-    behavior: ipcidr
+    behavior: classical
     path: ./RuleSet/Extra/Apple_ip.yaml
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
     interval: 86400
@@ -541,7 +541,7 @@ rule-providers:
   
   BILIBILIHMT_ip:
     type: http
-    behavior: ipcidr
+    behavior: classical
     path: ./RuleSet/Extra/BILIBILIHMT_ip.yaml
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_ip.yaml"
     interval: 86400 
@@ -562,7 +562,7 @@ rule-providers:
 
   DMM_ip:
     type: http
-    behavior: ipcidr
+    behavior: classical
     path: ./RuleSet/Extra/DMM_ip.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
     interval: 86400 
@@ -590,7 +590,7 @@ rule-providers:
 
   E-Hentai_ip:
     type: http
-    behavior: ipcidr
+    behavior: classical
     path: ./RuleSet/Extra/Ehentai_ip.yaml
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_ip.yaml"
     interval: 86400
@@ -641,7 +641,7 @@ rule-providers:
 
   Telegram_ip:
     type: http
-    behavior: ipcidr
+    behavior: classical
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_ip.yaml
     path: ./ruleset/Telegram_ip.yaml
     interval: 86400
