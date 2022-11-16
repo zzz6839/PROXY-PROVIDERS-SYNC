@@ -536,22 +536,8 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/anime_trackers.txt"
-    path: ./ruleset/bt-trackers.yaml
+    path: ./ruleset/bt-trackers.txt
     interval: 86400
-  
-  #Cloudflare:
-  #  type: http
-  #  behavior: classical
-  #  path: ./RuleSet/Extra/Cloudflare.yaml
-  #  url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.yaml"
-  #  interval: 86400
-  
-   #CloudGlobal:
-   # type: http
-   # behavior: classical
-   # path: ./RuleSet/Extra/CloudGlobal_Classical.yaml
-   # url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloud/CloudGlobal/CloudGlobal_Classical.yaml"
-   # interval: 86400
 
   DMM:
     type: http
@@ -586,7 +572,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/TikTok.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/TikTok.list #https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml 
     interval: 86400 
 
   #Steam
@@ -631,7 +617,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
-    path: ./ruleset/gfw.yaml
+    path: ./ruleset/gfw.txt
     interval: 86400
   
   Telegram:
@@ -687,10 +673,6 @@ rules:
     - RULE-SET,Telegram,✈️PROXY,no-resolve
     # final proxy  
     - RULE-SET,🧱gfw,✈️PROXY
-    
-    #- RULE-SET,Cloudflare,✈️PROXY #direct>proxy due to i/o timeout
-    
-    #- RULE-SET,CloudGlobal,✈️PROXY #direct>proxy due to i/o timeout
 
     - RULE-SET,Proxy,✈️PROXY
 
