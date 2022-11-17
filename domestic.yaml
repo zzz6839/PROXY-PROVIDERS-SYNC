@@ -62,3 +62,5 @@ payload:
   #- DOMAIN,i.iqiqcloud.com
   #unblockneteasemusic
   #- DOMAIN,music.163-my-beloved.com
+ #dns test
+  - DOMAIN-SUFFIX,dnsleaktest.com
