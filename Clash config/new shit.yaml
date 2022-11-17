@@ -729,7 +729,7 @@ rules:
     - RULE-SET,Steam,✈️PROXY  
     
     - RULE-SET,Telegram_domain,✈️PROXY
-    
+    - DOMAIN,dns.google,DIRECT
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
