@@ -705,9 +705,8 @@ rule-providers:
 rules:
     # less rules the better, more reasonable sequence the better.
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
+
     
-    # lan domain
-    - RULE-SET,private,DIRECT
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
 
@@ -735,8 +734,9 @@ rules:
 
     - RULE-SET,Proxy,✈️PROXY
 
+    # lan domain
+    - RULE-SET,private,DIRECT
     # DOMAIN DIRECT
-    
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
 
     - RULE-SET,bt-trackers,DIRECT
