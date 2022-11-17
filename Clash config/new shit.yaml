@@ -752,7 +752,7 @@ rules:
 
     - RULE-SET,domestic,DIRECT
 
-    - RULE-SET,China_domain,DIRECT #4000+ rules
+    - RULE-SET,China_domain,DIRECT #70000+ rules
     
     # lan ip
     - GEOIP,private,DIRECT,no-resolve
