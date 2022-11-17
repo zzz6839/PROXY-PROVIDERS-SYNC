@@ -555,9 +555,9 @@ rule-providers:
 
   China_domain:
     type: http
-    behavior: classical
-    path: ./RuleSet/Extra/China_domain.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.yaml"
+    behavior: domain
+    path: ./RuleSet/Extra/China_domain.txt
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Domain.txt"
     interval: 86400 
 
   DMM_domain:
