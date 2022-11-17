@@ -729,7 +729,7 @@ rules:
     - RULE-SET,Steam,✈️PROXY  
     
     - RULE-SET,Telegram_domain,✈️PROXY
-    - DOMAIN,dns.google,DIRECT
+    
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
@@ -740,7 +740,7 @@ rules:
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
 
     - RULE-SET,bt-trackers,DIRECT
-    - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
+   
    
     - RULE-SET,Microsoft,DIRECT
   
