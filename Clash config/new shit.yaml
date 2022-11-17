@@ -706,6 +706,8 @@ rules:
     # less rules the better, more reasonable sequence the better.
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
     
+    # lan domain
+    - RULE-SET,private,DIRECT
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
 
@@ -736,8 +738,6 @@ rules:
     # DOMAIN DIRECT
     
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
-    
-    - RULE-SET,private,DIRECT
 
     - RULE-SET,bt-trackers,DIRECT
     - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
@@ -753,11 +753,12 @@ rules:
     - RULE-SET,domestic,DIRECT
 
     - RULE-SET,China_domain,DIRECT #4000+ rules
-
-    # IP REJECT
-    - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+    
     # lan ip
     - GEOIP,private,DIRECT,no-resolve
+    # IP REJECT
+    - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
 
