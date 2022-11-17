@@ -667,6 +667,13 @@ rule-providers:
     path: ./RuleSet/Extra/TikTok.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Tiktok_domain.yaml 
     interval: 86400 
+  
+  private:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
 
   #myrule
   Proxy:
@@ -698,7 +705,7 @@ rule-providers:
 rules:
     # less rules the better, more reasonable sequence the better.
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
-
+    
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
 
@@ -729,6 +736,8 @@ rules:
     # DOMAIN DIRECT
     
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
+    
+    - RULE-SET,private,DIRECT
 
     - RULE-SET,bt-trackers,DIRECT
     - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
@@ -759,7 +768,6 @@ rules:
 
     - RULE-SET,E-Hentai_ip,e-hentai #proxy group
  
-
     # IP DIRECT
     - IP-CIDR,1.0.0.1/15,DIRECT
     - IP-CIDR,8.8.8.8/32,DIRECT
