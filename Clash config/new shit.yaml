@@ -553,6 +553,13 @@ rule-providers:
     path: ./ruleset/bt-trackers.txt
     interval: 86400
 
+  China_domain:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/China_domain.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.yaml"
+    interval: 86400 
+
   DMM_domain:
     type: http
     behavior: classical
@@ -608,7 +615,14 @@ rule-providers:
     path: ./RuleSet/Extra/Microsoft.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
     interval: 86400  
-
+  
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  
   Rockstar:
     type: http
     behavior: classical
@@ -682,39 +696,39 @@ rule-providers:
 
 # 规则
 rules:
-   
+    # less rules the better, more reasonable sequence the better.
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
     #AD block 
-    - GeoSite,category-ads-all,REJECT
-    
+    - RULE-SET,reject,REJECT #59447 rules >
+
     - DOMAIN-SUFFIX,playstation.com,REJECT
     - DOMAIN-SUFFIX,playstation.net,REJECT
     - DOMAIN-SUFFIX,playstation.org,REJECT
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
+    # proxy domain
+    - RULE-SET,GITHUB,GITHUB  #proxy-group
+
+    - RULE-SET,baha,🇹🇼TikTok/baha #proxy group
+    - RULE-SET,TikTok,🇹🇼TikTok/baha #proxy group
     
-    - RULE-SET,GITHUB,GITHUB  
+    - RULE-SET,DMM_domain,🇯🇵DMM/mgstage #proxy group
 
-    - RULE-SET,baha,🇹🇼TikTok/baha 
-    - RULE-SET,TikTok,🇹🇼TikTok/baha 
-    
-    - RULE-SET,DMM_domain,🇯🇵DMM/mgstage 
+    - RULE-SET,E-Hentai_domain,e-hentai #proxy group
 
-    - RULE-SET,E-Hentai_domain,e-hentai 
-
-    - RULE-SET,SteamCN,DIRECT #DOMAIN+DIRECT
-    - RULE-SET,Steam,✈️PROXY  #DOMAIN
+    - RULE-SET,SteamCN,DIRECT 
+    - RULE-SET,Steam,✈️PROXY  
     
     - RULE-SET,Telegram_domain,✈️PROXY
-    # final proxy  
+    
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
 
     # DOMAIN DIRECT
     
-    - RULE-SET,BILIBILIHMT_domain,Bilibili国台
+    - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
 
     - RULE-SET,bt-trackers,DIRECT
     - DOMAIN-SUFFIX,qbittorrent.org,DIRECT
@@ -729,21 +743,21 @@ rules:
 
     - RULE-SET,domestic,DIRECT
 
-    - GeoSite,CN,DIRECT
+    - RULE-SET,China_domain,DIRECT #4000+ rules
 
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 
     # IP PROXY
-    - RULE-SET,🎮online game,🎮online game,no-resolve
+    - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
 
-    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
+    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
 
-    - RULE-SET,BILIBILIHMT_ip,Bilibili国台,no-resolve
+    - RULE-SET,BILIBILIHMT_ip,Bilibili国台,no-resolve #proxy group
 
-    - RULE-SET,DMM_ip,🇯🇵DMM/mgstage 
+    - RULE-SET,DMM_ip,🇯🇵DMM/mgstage #proxy group
 
-    - RULE-SET,E-Hentai_ip,e-hentai
+    - RULE-SET,E-Hentai_ip,e-hentai #proxy group
  
 
     # IP DIRECT
