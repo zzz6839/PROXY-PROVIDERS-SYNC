@@ -609,6 +609,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Github_domain.yaml"
     interval: 86400 
 
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
   Microsoft:
     type: http
     behavior: classical
@@ -741,7 +748,6 @@ rules:
 
     - RULE-SET,bt-trackers,DIRECT
    
-   
     - RULE-SET,Microsoft,DIRECT
   
     - RULE-SET,🍎Apple_domain,DIRECT
@@ -757,7 +763,7 @@ rules:
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
     # lan ip
-    - RULE-SET,private,DIRECT,no-resolve
+    - RULE-SET,lancidr,DIRECT,no-resolve
 
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
@@ -774,14 +780,6 @@ rules:
     - IP-CIDR,1.0.0.1/15,DIRECT
     - IP-CIDR,8.8.8.8/32,DIRECT
 
-    - IP-CIDR,192.168.0.0/16,DIRECT
-    - IP-CIDR,10.0.0.0/8,DIRECT
-    - IP-CIDR,172.16.0.0/12,DIRECT
-    - IP-CIDR,127.0.0.0/8,DIRECT
-    - IP-CIDR,100.64.0.0/10,DIRECT
-    - IP-CIDR,224.0.0.0/4,DIRECT
-    - IP-CIDR,fe80::/10,DIRECT
-    
     - RULE-SET,🍎Apple_ip,DIRECT
 
     - GEOIP,CN,DIRECT
