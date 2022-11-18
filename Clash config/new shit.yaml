@@ -754,10 +754,10 @@ rules:
 
     - RULE-SET,China_domain,DIRECT #70000+ rules
     
-    # lan ip
-    - GEOIP,private,DIRECT,no-resolve
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+    # lan ip
+    - RULE-SET,private,DIRECT,no-resolve
 
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
