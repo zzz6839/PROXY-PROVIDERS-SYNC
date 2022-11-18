@@ -62,3 +62,4 @@ payload:
  #dns test
   - DOMAIN-SUFFIX,dnsleaktest.com
   - DOMAIN-SUFFIX,dnsperf.com
+  - DOMAIN-SUFFIX,perfops.net
