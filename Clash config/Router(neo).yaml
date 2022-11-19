@@ -492,14 +492,6 @@ proxy-groups:
       - SSRCLOUD CNIX
     filter: "台湾|TW"
 
-  # 中国流媒体服务（面向海外版本）
-  # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
-  #- name: "StreamingSE"
-  #  type: select
-  #  proxies:
-  #    - DIRECT
-  #    - ✈️PROXY
-
   # tiktok服务/baha
   - name: "TW"
     type: url-test
@@ -521,28 +513,6 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
-  # 巨硬服务
-  #- name: "Microsoft"
-  #  type: select
-  #  proxies:
-  #   - DIRECT
-  #   - ✈️PROXY  
-
-  # Steam 服务
-  #- name: "Steam"
-  #  type: select
-  #  proxies:
-  #   - DIRECT
-  #   - ✈️PROXY
-     
-
-  # 个人向gfwlist名单
-  #- name: "myrule"
-  #  type: select
-  #  proxies:
-  #   - ✈️PROXY
-  #   - DIRECT
-  
   # 外服游戏
   - name: "🎮online game"
     type: select
@@ -551,39 +521,39 @@ proxy-groups:
     filter: '游戏'
 
   # Beat Saber/e-hentai
+  #- name: "e-hentai"
+  #  type:  select
+  #  use:
+  #   - SSRCLOUD CNIX
+  #  Proxies:
+  #   - Manual
+  #  #filter: '美国'
   - name: "e-hentai"
-    type:  select
+    type: load-balance
+    strategy: round-robin
     use:
      - SSRCLOUD CNIX
-    Proxies:
-     - Manual
-    #filter: '美国'
+    #filter: '日IEPL|日IPLC'
+    url: 'http://e-hentai.org'
+    interval: 900
+    tolerance: 50 
   
 
   # DMM/mgstage
-  - name: "JP"
-    type: select
-    use:
-      - SSRCLOUD CNIX
-    filter: '日本'
-  
-  # JAVDB manual
-  #- name: "javdb"
+  #- name: "JP"
   #  type: select
-  #  proxies:
-  #   - "✈️PROXY"
-  #   - "Manual"
-     
-    
-
-  # javdb url-test
-  #- name: "javauto"
-  #  type: url-test
   #  use:
   #    - SSRCLOUD CNIX
-  #  url: 'https://javdb.com/v/0ez7k'
-  #  interval: 900
-  #  tolerance: 0 #not sure if it will work, auto switch should apply, if not, set to 1.
+  #  filter: '日本'
+  - name: "JP"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - SSRCLOUD CNIX
+    filter: '日IEPL|日IPLC'
+    url: 'http://dmm.co.jp'
+    interval: 900
+    tolerance: 50 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
