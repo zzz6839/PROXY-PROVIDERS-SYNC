@@ -63,3 +63,4 @@ payload:
   - DOMAIN-SUFFIX,dnsleaktest.com
   - DOMAIN-SUFFIX,dnsperf.com
   - DOMAIN-SUFFIX,perfops.net
+  - DOMAIN-SUFFIX,ipleak.net
