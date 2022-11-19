@@ -374,6 +374,26 @@ proxy-groups:
     proxies:
       - main (Manual)
       - backup (Manual)
+      - main(load-balance)
+      - backup(load-balance)
+
+  - name: "main(load-balance)"
+    type: load-balance
+    strategy: consistent-hashing
+    use:    
+      - SSRCLOUD CNIX
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    lazy: true
+
+  - name: "backup(load-balance)"
+    type: load-balance
+    strategy: round-robin
+    use:    
+      - Cordcloud 
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    lazy: true
 
   - name: "main (Manual)"
     type: select
@@ -384,13 +404,8 @@ proxy-groups:
     type: select
     use:    
      - Cordcloud 
-
-  # 国际流媒体服务
-  #- name: "Streaming"
-  #  type: select
-  #  proxies:
-  #    - ✈️PROXY
-  #    - DIRECT
+  #########################################################Safe protection
+  
   
   # Bilibili国台
   - name: "Bilibili国台"
@@ -419,9 +434,10 @@ proxy-groups:
     interval: 900
     tolerance: 50  
 
-  # GITHUB
+   #GITHUB
   - name: "GITHUB"
-    type: url-test
+    type: load-balance
+    strategy: consistent-hashing
     use:
      - SSRCLOUD CNIX
     filter: '日IEPL|日IPLC'
@@ -429,27 +445,6 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
-  # 巨硬服务
-  #- name: "Microsoft"
-  #  type: select
-  #  proxies:
-  #   - DIRECT
-  #   - ✈️PROXY  
-
-  # Steam 服务
-  #- name: "Steam"
-  #  type: select
-  #  proxies:
-  #   - DIRECT
-  #   - ✈️PROXY
-     
-
-  # 个人向gfwlist名单
-  #- name: "myrule"
-  #  type: select
-  #  proxies:
-  #   - ✈️PROXY
-  #   - DIRECT
   
   # 外服游戏
   - name: "🎮online game"
@@ -460,38 +455,37 @@ proxy-groups:
     filter: '游戏'
 
   # Beat Saber/e-hentai
+  #- name: "e-hentai"
+  #  type:  select
+  #  use:
+  #   - SSRCLOUD CNIX
+  #   - Cordcloud 
+  #  #filter: '美国'
   - name: "e-hentai"
-    type:  select
+    type: load-balance
+    strategy: round-robin
     use:
      - SSRCLOUD CNIX
-     - Cordcloud 
-    #filter: '美国'
-  
+    #filter: '日IEPL|日IPLC'
+    url: 'http://e-hentai.org'
+    interval: 900
+    tolerance: 50 
 
   # DMM/mgstage
-  - name: "🇯🇵DMM/mgstage"
-    type: select
-    use:
-      - SSRCLOUD CNIX
-    filter: '日本'
-  
-  # JAVDB manual
-  #- name: "javdb"
+  #- name: "🇯🇵DMM/mgstage"
   #  type: select
-  #  proxies:
-  #   - "✈️PROXY"
-  #   - "Manual"
-     
-    
-
-  # javdb url-test
-  #- name: "javauto"
-  #  type: url-test
   #  use:
   #    - SSRCLOUD CNIX
-  #  url: 'https://javdb.com/v/0ez7k'
-  #  interval: 900
-  #  tolerance: 0 #not sure if it will work, auto switch should apply, if not, set to 1.
+  #  filter: '日本'
+  - name: "🇯🇵DMM/mgstage"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - SSRCLOUD CNIX
+    filter: '日IEPL|日IPLC'
+    url: 'http://dmm.co.jp'
+    interval: 900
+    tolerance: 50 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
