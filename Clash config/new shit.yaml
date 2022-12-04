@@ -461,6 +461,13 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
+  # Epicgame
+  - name: "EpicGames"
+    type: select
+    proxies:
+      - ✈️PROXY
+      - DIRECT
+
   # Bilibili国台
   - name: "Bilibili国台"
     type: select
@@ -726,6 +733,8 @@ rules:
 
     - RULE-SET,Proxy,✈️PROXY
 
+    - RULE-SET,Epicgames,EpicGames
+
     # lan domain
     - RULE-SET,private,DIRECT
     # DOMAIN DIRECT
@@ -736,8 +745,6 @@ rules:
     - RULE-SET,Microsoft,DIRECT
   
     - RULE-SET,🍎Apple_domain,DIRECT
-   
-    - RULE-SET,Epicgames,DIRECT
    
     - RULE-SET,Rockstar,DIRECT
 
