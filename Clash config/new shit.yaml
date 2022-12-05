@@ -428,14 +428,18 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
-  # Beat Saber/e-hentai
-  #- name: "e-hentai"
-  #  type:  select
-  #  use:
-  #   - SSRCLOUD CNIX
-  #   - Cordcloud 
-  #  #filter: '美国'
+   #Beat Saber/e-hentai
   - name: "e-hentai"
+    type:  select
+    proxies:
+     - e-hentai auto
+     - DIRECT
+    use:
+     - SSRCLOUD CNIX
+     - Cordcloud 
+    #filter: '美国'
+
+  - name: "e-hentai auto"
     type: load-balance
     strategy: round-robin
     use:
