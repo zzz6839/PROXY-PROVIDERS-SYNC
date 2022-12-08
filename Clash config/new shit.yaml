@@ -449,12 +449,16 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
-  # DMM/mgstage
-  #- name: "🇯🇵DMM/mgstage"
-  #  type: select
-  #  use:
-  #    - SSRCLOUD CNIX
-  #  filter: '日本'
+  - name: "javdb"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - SSRCLOUD CNIX
+    #filter: '日IEPL|日IPLC'
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 900
+    tolerance: 50 
+
   - name: "🇯🇵DMM/mgstage"
     type: load-balance
     strategy: round-robin
@@ -734,6 +738,8 @@ rules:
     - RULE-SET,Telegram_domain,✈️PROXY
     
     - RULE-SET,🧱gfw,✈️PROXY
+    
+    - DOMAIN-SUFFIX,javdb.com,javdb
 
     - RULE-SET,Proxy,✈️PROXY
 
