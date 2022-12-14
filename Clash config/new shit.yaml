@@ -261,7 +261,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   
 
-  Cordcloud:      
+  WestData:      
     type: http
     url:  "" 
     interval: 3600
@@ -361,7 +361,7 @@ proxy-groups:
   - name: "backup(Auto)"
     type: url-test
     use:
-      - Cordcloud
+      - WestData
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
@@ -390,7 +390,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:    
-      - Cordcloud 
+      - WestData 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     lazy: true
@@ -403,7 +403,7 @@ proxy-groups:
   - name: "backup (Manual)"
     type: select
     use:    
-     - Cordcloud 
+     - WestData 
   #########################################################Safe protection
   
 
@@ -436,7 +436,7 @@ proxy-groups:
      - DIRECT
     use:
      - SSRCLOUD CNIX
-     - Cordcloud 
+     - WestData 
     #filter: '美国'
 
   - name: "e-hentai auto"
@@ -490,7 +490,7 @@ proxy-groups:
     type: select
     use:
       - SSRCLOUD CNIX 
-      - Cordcloud
+      - WestData
     filter: '游戏'
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
