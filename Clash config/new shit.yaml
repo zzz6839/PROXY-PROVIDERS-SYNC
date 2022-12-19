@@ -728,6 +728,7 @@ rules:
     - RULE-SET,baha,🇹🇼TikTok/baha #proxy group
     - RULE-SET,TikTok,🇹🇼TikTok/baha #proxy group
     
+    - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
     - RULE-SET,DMM_domain,🇯🇵DMM/mgstage #proxy group
 
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
