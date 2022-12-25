@@ -250,7 +250,7 @@ proxy-providers:
   #     url: http://www.gstatic.com/generate_204
   # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删除
 
-  SSRCLOUD CNIX: 
+  Airport A: 
     type: http
     url:  ""
     interval: 3600
@@ -261,7 +261,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   
 
-  WestData:      
+  Airport B:      
     type: http
     url:  "" 
     interval: 3600
@@ -350,7 +350,7 @@ proxy-groups:
   - name: "main(Auto)"
     type: url-test
     use:
-      - SSRCLOUD CNIX
+      - Airport A
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
@@ -361,7 +361,7 @@ proxy-groups:
   - name: "backup(Auto)"
     type: url-test
     use:
-      - WestData
+      - Airport B
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
@@ -381,7 +381,7 @@ proxy-groups:
     type: load-balance
     strategy: consistent-hashing
     use:    
-      - SSRCLOUD CNIX
+      - Airport A
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     lazy: true
@@ -390,7 +390,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:    
-      - WestData 
+      - Airport B 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     lazy: true
@@ -398,12 +398,12 @@ proxy-groups:
   - name: "main (Manual)"
     type: select
     use:    
-     - SSRCLOUD CNIX
+     - Airport A
 
   - name: "backup (Manual)"
     type: select
     use:    
-     - WestData 
+     - Airport B 
   #########################################################Safe protection
   
 
@@ -411,7 +411,7 @@ proxy-groups:
   - name: "🇹🇼TikTok/baha"
     type: url-test
     use:
-     - SSRCLOUD CNIX
+     - Airport A
     filter: '台湾|TW|taiwan'
     url: 'http://www.tiktok.com/@minami_aizawa_'
     interval: 900
@@ -422,7 +422,7 @@ proxy-groups:
     type: load-balance
     strategy: consistent-hashing
     use:
-     - SSRCLOUD CNIX
+     - Airport A
     filter: '日IEPL|日IPLC'
     url: 'http://github-debug.com/generate_204'
     interval: 900
@@ -435,15 +435,15 @@ proxy-groups:
      - e-hentai auto
      - DIRECT
     use:
-     - SSRCLOUD CNIX
-     - WestData 
+     - Airport A
+     - Airport B 
     #filter: '美国'
 
   - name: "e-hentai auto"
     type: load-balance
     strategy: round-robin
     use:
-     - SSRCLOUD CNIX
+     - Airport A
     #filter: '日IEPL|日IPLC'
     url: 'http://e-hentai.org'
     interval: 900
@@ -453,7 +453,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:
-     - SSRCLOUD CNIX
+     - Airport A
     filter: '^(?!.*(日|Japan|jp))'
     url: 'http://www.gstatic.com/generate_204'
     interval: 900
@@ -463,7 +463,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:
-     - SSRCLOUD CNIX
+     - Airport A
     filter: '日|Japan|jp'
     url: 'http://dmm.co.jp'
     interval: 900
@@ -482,15 +482,15 @@ proxy-groups:
     proxies:
       - DIRECT
     use:
-      - SSRCLOUD CNIX
+      - Airport A
     filter: "台湾|TW|taiwan"
   
   # 外服游戏
   - name: "🎮online game"
     type: select
     use:
-      - SSRCLOUD CNIX 
-      - WestData
+      - Airport A 
+      - Airport B
     filter: '游戏|game'
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
