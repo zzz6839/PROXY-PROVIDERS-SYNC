@@ -777,7 +777,7 @@ rules:
 
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
 
-    - RULE-SET,BILIBILIHMT_ip,Bilibili国台,no-resolve #proxy group
+    - RULE-SET,BILIBILIHMT_ip,Bilibili国台 #proxy group
 
     - RULE-SET,DMM_ip,🇯🇵DMM/mgstage #proxy group
 
