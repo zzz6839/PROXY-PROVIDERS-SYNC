@@ -374,8 +374,6 @@ proxy-groups:
     proxies:
       - main (Manual)
       - backup (Manual)
-      - main(load-balance)
-      - backup(load-balance)
 
   - name: "main (Manual)"
     type: select
