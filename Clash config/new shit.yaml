@@ -397,17 +397,6 @@ proxy-groups:
     interval: 900
     tolerance: 50  
 
-   #GITHUB
-  - name: "GITHUB"
-    type: load-balance
-    strategy: consistent-hashing
-    use:
-     - Airport A
-    filter: '日IEPL|日IPLC'
-    url: 'http://github-debug.com/generate_204'
-    interval: 900
-    tolerance: 50 
-
    #Beat Saber/e-hentai
   - name: "e-hentai"
     type:  select
@@ -445,6 +434,16 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
+   #GITHUB
+  - name: "GITHUB"
+    type: load-balance
+    strategy: consistent-hashing
+    use:
+     - Airport A
+    filter: '日IEPL|日IPLC'
+    url: 'http://github-debug.com/generate_204'
+    interval: 900
+    tolerance: 50 
 
   # Bilibili国台
   - name: "Bilibili国台"
