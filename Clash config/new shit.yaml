@@ -67,6 +67,10 @@ hosts:
   # '*.clash.dev': 127.0.0.1
   # '.dev': 127.0.0.1
   # 'alpha.clash.dev': '::1'
+  
+  #dns
+  'music.163-my-beloved.com': 76.76.21.21
+  'dns.google': 8.8.4.4
 
   # Firebase Cloud Messaging
   'mtalk.google.com': 108.177.125.188
@@ -691,6 +695,10 @@ rules:
     - DOMAIN-SUFFIX,playstation.org,REJECT
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
+    # dns rule
+    - DOMAIN-SUFFIX,nextdns.io,DIRECT
+    - DOMAIN-SUFFIX,dns.google,DIRECT
+
     # proxy domain
     - RULE-SET,GITHUB,GITHUB  #proxy-group
 
