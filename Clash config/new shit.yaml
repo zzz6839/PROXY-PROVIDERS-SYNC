@@ -71,6 +71,7 @@ hosts:
   #dns
   'music.163-my-beloved.com': 76.76.21.21
   'dns.google': 8.8.4.4
+  'dns.nextdns.io': 45.11.104.186
 
   # Firebase Cloud Messaging
   'mtalk.google.com': 108.177.125.188
@@ -762,7 +763,7 @@ rules:
  
     # IP DIRECT
     - IP-CIDR,1.0.0.1/15,DIRECT
-    - IP-CIDR,8.8.8.8/32,DIRECT
+    - IP-CIDR,8.8.4.4/32,DIRECT
 
     - RULE-SET,🍎Apple_ip,DIRECT
 
