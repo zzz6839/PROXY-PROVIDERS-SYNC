@@ -397,8 +397,8 @@ proxy-groups:
     type: url-test
     use:
      - Airport A
-    filter: '台湾|TW|taiwan'
-    url: 'http://www.tiktok.com/@minami_aizawa_'
+    filter: '台湾|TW|taiwan|动画疯'
+    url: 'http://www.gstatic.com/generate_204'
     interval: 900
     tolerance: 50  
 
@@ -716,7 +716,7 @@ rules:
     - RULE-SET,Steam,✈️PROXY  
     
     - RULE-SET,GITHUB,✈️PROXY  
-    
+
     - RULE-SET,Telegram_domain,✈️PROXY
     
     - RULE-SET,🧱gfw,✈️PROXY
