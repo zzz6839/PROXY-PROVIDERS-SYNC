@@ -440,15 +440,15 @@ proxy-groups:
     tolerance: 50 
 
    #GITHUB
-  - name: "GITHUB"
-    type: load-balance
-    strategy: consistent-hashing
-    use:
-     - Airport A
-    filter: '日IEPL|日IPLC'
-    url: 'http://github-debug.com/generate_204'
-    interval: 900
-    tolerance: 50 
+  #- name: "GITHUB"
+  #  type: load-balance
+  #  strategy: consistent-hashing
+  #  use:
+  #   - Airport A
+  #  filter: '日IEPL|日IPLC'
+  #  url: 'http://github-debug.com/generate_204'
+  #  interval: 900
+  #  tolerance: 50 
 
   # Bilibili国台
   - name: "Bilibili国台"
@@ -702,24 +702,24 @@ rules:
     - DOMAIN-SUFFIX,dns.google,DIRECT
 
     # proxy domain
-    - RULE-SET,GITHUB,GITHUB  #proxy-group
-
     - RULE-SET,baha,🇹🇼TikTok/baha #proxy group
     - RULE-SET,TikTok,🇹🇼TikTok/baha #proxy group
     
-    - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage
+    - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage #proxy group
     - RULE-SET,DMM_domain,🇯🇵DMM/mgstage #proxy group
 
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
 
+    - DOMAIN-SUFFIX,javdb.com,javdb #proxy group
+
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
+    
+    - RULE-SET,GITHUB,✈️PROXY  
     
     - RULE-SET,Telegram_domain,✈️PROXY
     
     - RULE-SET,🧱gfw,✈️PROXY
-    
-    - DOMAIN-SUFFIX,javdb.com,javdb #proxy group
 
     - RULE-SET,Proxy,✈️PROXY
 
