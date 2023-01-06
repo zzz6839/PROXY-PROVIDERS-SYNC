@@ -696,6 +696,7 @@ rules:
     - DOMAIN-SUFFIX,playstation.org,REJECT
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
+
     # dns rule
     - DOMAIN-SUFFIX,nextdns.io,DIRECT
     - DOMAIN-SUFFIX,dns.google,DIRECT
@@ -718,19 +719,18 @@ rules:
     
     - RULE-SET,🧱gfw,✈️PROXY
     
-    - DOMAIN-SUFFIX,javdb.com,javdb
+    - DOMAIN-SUFFIX,javdb.com,javdb #proxy group
 
     - RULE-SET,Proxy,✈️PROXY
 
-    - RULE-SET,Epicgames,DIRECT
+    
 
     # lan domain
     - RULE-SET,private,DIRECT
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
     
-    # localtunnel 
-    - DOMAIN-SUFFIX,loca.lt,DIRECT
+    - RULE-SET,Epicgames,DIRECT
     
     - RULE-SET,bt-trackers,DIRECT
    
@@ -739,7 +739,7 @@ rules:
     - RULE-SET,🍎Apple_domain,DIRECT
    
     - RULE-SET,Rockstar,DIRECT
-
+    # custom domestic rules
     - RULE-SET,domestic,DIRECT
 
     - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
@@ -754,21 +754,19 @@ rules:
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
 
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
-
+    
+    # pending for correction
     - RULE-SET,BILIBILIHMT_ip,Bilibili国台 #proxy group
 
     - RULE-SET,DMM_ip,🇯🇵DMM/mgstage #proxy group
 
     - RULE-SET,E-Hentai_ip,e-hentai #proxy group
- 
-    # IP DIRECT
-    - IP-CIDR,1.0.0.1/15,DIRECT
-    - IP-CIDR,8.8.4.4/32,DIRECT
 
     - RULE-SET,🍎Apple_ip,DIRECT
-
+   
+    # rest mainland ip resolved
     - GEOIP,CN,DIRECT
-    # !CN WEBSITE GO PROXY/ BLACKLIST MDOE? 
+    # BLACKLIST MDOE
     - DST-PORT,80,DST-PORT
     - DST-PORT,443,DST-PORT
     - DST-PORT,22,DST-PORT
