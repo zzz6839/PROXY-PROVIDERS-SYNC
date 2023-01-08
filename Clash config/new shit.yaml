@@ -697,8 +697,9 @@ rules:
     - DOMAIN,a192.d.akamai.net,REJECT
 
     # dns rule
-    - DOMAIN-SUFFIX,nextdns.io,DIRECT
-    - DOMAIN-SUFFIX,dns.google,DIRECT
+    - DOMAIN,nextdns.io,✈️PROXY 
+    - DOMAIN,dns.google,✈️PROXY 
+    - DOMAIN,1dot1dot1dot1.cloudflare-dns.com,✈️PROXY 
 
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
