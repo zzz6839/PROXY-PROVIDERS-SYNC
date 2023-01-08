@@ -50,12 +50,12 @@ payload:
   #gearbox
   #- DOMAIN-KEYWORD,gearboxsoftware
   #dns
-  - DOMAIN-SUFFIX,dns.google
+  #- DOMAIN-SUFFIX,dns.google
   #- DOMAIN-SUFFIX,1.1.1.1
   #- DOMAIN-SUFFIX,8.8.8.8
-  - DOMAIN-SUFFIX,dns.cloudflare.com
+  #- DOMAIN-SUFFIX,dns.cloudflare.com
   #- DOMAIN,i.passcloud.xyz
-  - DOMAIN-SUFFIX,doh.opendns.com
+  #- DOMAIN-SUFFIX,doh.opendns.com
   #- DOMAIN,i.iqiqcloud.com
   #unblockneteasemusic
   #- DOMAIN,music.163-my-beloved.com
