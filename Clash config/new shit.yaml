@@ -739,12 +739,12 @@ rules:
     - RULE-SET,🍎Apple_domain,DIRECT
    
     - RULE-SET,Rockstar,DIRECT
+    
+    - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
+                                   #仅GEOIP CN 可以完全做到判断大陆网站。
     # custom domestic rules
     - RULE-SET,domestic,DIRECT
 
-    - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
-                                   #仅GEOIP CN 可以完全做到判断大陆网站。
-    
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
     # lan ip
