@@ -349,14 +349,14 @@ proxy-groups:
     proxies:
       - main(Auto)
       - backup(Auto)
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300 
 
   - name: "main(Auto)"
     type: url-test
     use:
       - Airport A
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
     filter: '香港|hk|hong'
@@ -367,7 +367,7 @@ proxy-groups:
     type: url-test
     use:
       - Airport B
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
     lazy: true
@@ -392,13 +392,13 @@ proxy-groups:
   #########################################################Safe protection
   
 
-  # tiktok服务/baha
-  - name: "🇹🇼TikTok/baha"
+  # baha
+  - name: "🇹🇼Baha"
     type: url-test
     use:
      - Airport A
-    filter: '台湾|TW|taiwan|动画疯'
-    url: 'http://www.gstatic.com/generate_204'
+    filter: '台湾|TW|taiwan'
+    url: 'https://ani.gamer.com.tw/'
     interval: 900
     tolerance: 50  
 
@@ -414,8 +414,7 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
-    #filter: '日IEPL|日IPLC'
-    url: 'http://e-hentai.org'
+    url: 'https://e-hentai.org'
     interval: 900
     tolerance: 50 
 
@@ -425,17 +424,17 @@ proxy-groups:
     use:
      - Airport A
     filter: '^(?!.*(日|Japan|jp))'
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://javdb.com'
     interval: 900
     tolerance: 50 
 
-  - name: "🇯🇵DMM/mgstage"
+  - name: "🇯🇵DMM/Mgstage/Tiktok"
     type: load-balance
     strategy: round-robin
     use:
      - Airport A
     filter: '日|Japan|jp'
-    url: 'http://dmm.co.jp'
+    url: 'https://dmm.co.jp'
     interval: 900
     tolerance: 50 
 
@@ -596,7 +595,7 @@ rule-providers:
     path: ./RuleSet/Extra/Microsoft.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
     interval: 86400  
-  
+    
   reject:
     type: http
     behavior: domain
@@ -702,11 +701,11 @@ rules:
     - DOMAIN-SUFFIX,dns.google,DIRECT
 
     # proxy domain
-    - RULE-SET,baha,🇹🇼TikTok/baha #proxy group
-    - RULE-SET,TikTok,🇹🇼TikTok/baha #proxy group
-    
-    - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/mgstage #proxy group
-    - RULE-SET,DMM_domain,🇯🇵DMM/mgstage #proxy group
+    - RULE-SET,baha,🇹🇼Baha #proxy group
+
+    - RULE-SET,TikTok,🇯🇵DMM/Mgstage/Tiktok #proxy group
+    - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
+    - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
 
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
 
@@ -758,7 +757,7 @@ rules:
     # pending for correction
     - RULE-SET,BILIBILIHMT_ip,Bilibili国台 #proxy group
 
-    - RULE-SET,DMM_ip,🇯🇵DMM/mgstage #proxy group
+    - RULE-SET,DMM_ip,🇯🇵DMM/Mgstage/Tiktok #proxy group
 
     - RULE-SET,E-Hentai_ip,e-hentai #proxy group
 
