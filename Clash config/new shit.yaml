@@ -397,7 +397,7 @@ proxy-groups:
     type: url-test
     use:
      - Airport A
-    filter: '台湾|TW|taiwan'
+    filter: '(?!.*(游戏)).*(台湾|taiwan|TW)'
     url: 'https://ani.gamer.com.tw/'
     interval: 900
     tolerance: 50  
