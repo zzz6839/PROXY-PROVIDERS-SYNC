@@ -1,0 +1,493 @@
+
+port: 7890                 
+socks-port: 7891           
+mixed-port: 7893             
+redir-port: 7892           
+tproxy-port: 7895          
+
+authentication:            
+ - "Clash:GfWeEbwi"
+
+
+
+geodata-loader: memconservative
+
+tcp-concurrent: true         
+                             
+
+allow-lan: true                  
+bind-address:                     
+  '*'                             
+  
+  
+  
+mode: rule                 
+
+log-level: silent            
+
+ipv6: true                
+
+external-controller: 0.0.0.0:9090   
+external-ui: /usr/share/openclash/ui  
+                                      
+secret: "123456"                          
+
+
+
+
+
+profile:                   
+  store-selected: true    
+  store-fake-ip: true      
+
+
+sniffer:                         
+  enable: true                   
+  sniffing:                      
+    - tls
+    - http
+  skip-domain:                   
+                                 
+    - 'Mijia Cloud'              
+    - 'dlg.io.mi.com'
+    - '+.apple.com'              
+  
+    
+  force-domain:                  
+  
+    - 'google.com'
+    - "+.netflix.com"
+    - "+.nflxvideo.net"
+    - "+.amazonaws.com"
+    - "+.media.dssott.com"
+    
+  port-whitelist:               
+   - 80
+   - 443
+  
+  ForceDnsMapping: false
+  ParsePureIp: true
+
+hosts:                           
+  
+  
+  
+
+  music.163-my-beloved.com: 76.76.21.21
+  
+  
+  
+  
+  
+
+dns:
+  enable: true                 
+  listen: 0.0.0.0:7874           
+  ipv6: true               
+  
+  default-nameserver:          
+    - 119.29.29.29
+    - 223.6.6.6
+    
+  
+  
+  
+  
+  enhanced-mode: fake-ip          
+                                     
+  fake-ip-range: 198.18.0.1/16       
+  use-hosts: true                  
+  
+  fake-ip-filter:                  
+  - "*.lan"
+  - localhost.ptlogin2.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - "+.xboxlive.com"
+  - msftconnecttest.com
+  - xbox.*.microsoft.com
+  - "*.battlenet.com.cn"
+  - "*.battlenet.com"
+  - "*.blzstatic.cn"
+  - "*.battle.net"
+  - "*.wegame.com.cn"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - msftncsi.com
+  - localhost.sec.qq.com
+  - "*.n.n.srv.nintendo.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - Mijia Cloud
+  - "+.dns.google"
+  - p-bstarstatic.akamaized.net
+  - p.bstarstatic.com
+  - upos-bstar-mirrorakam.akamaized.net
+  - upos-bstar1-mirrorakam.akamaized.net
+  - upos-hz-mirrorakam.akamaized.net
+  - acgvideo.com
+  - bilibili.com
+  - bilibili.tv
+  
+  proxy-server-nameserver:          
+    - tls://dns.google
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+
+  nameserver:                        
+    - 223.6.6.6
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+
+  fallback:                          
+    - tls://dns.google
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+    
+    
+    
+    
+                                     
+                                     
+  fallback-filter:                   
+    geoip: true                      
+    geoip-code: CN                   
+    geosite:                         
+      - gfw
+    ipcidr:                          
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+    domain:                          
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - "+.githubusercontent.com"
+      - "+.googlevideo.com"
+      - "+.msftconnecttest.com"
+      - "+.msftncsi.com"
+      - msftconnecttest.com
+      - msftncsi.com
+
+proxies:
+    
+
+proxy-groups:
+  
+
+  - name: "✈️PROXY"
+    type: select
+    proxies: 
+      - Auto
+      - Manual
+
+  
+  - name: "Auto"
+    type: fallback
+    proxies:
+      - main(Auto)
+      - backup(Auto)
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300 
+
+  - name: "main(Auto)"
+    type: url-test
+    use:
+      - Airport A
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 40
+    filter: '香港|hk|hong'
+   
+   
+
+  - name: "backup(Auto)"
+    type: url-test
+    use:
+      - Airport B
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 40
+    lazy: true
+    filter: '港|hk|hong'
+   
+
+  - name: "Manual"
+    type: select
+    proxies:
+      - main (Manual)
+      - backup (Manual)
+
+  - name: "main (Manual)"
+    type: select
+    use:    
+     - Airport A
+
+  - name: "backup (Manual)"
+    type: select
+    use:    
+     - Airport B 
+  
+  - name: "🇹🇼Baha"
+    type: url-test
+    use:
+     - Airport A
+    filter: '(?!.*(游戏)).*(台湾|taiwan|TW)'
+    url: 'https://ani.gamer.com.tw/'
+    interval: 900
+    tolerance: 50  
+
+   
+  - name: "e-hentai"
+    type:  select
+    proxies:
+     - e-hentai auto
+     - Manual
+
+  - name: "e-hentai auto"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    url: 'https://e-hentai.org'
+    interval: 900
+    tolerance: 50 
+
+  - name: "javdb"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    filter: '^(?!.*(日|Japan|jp))'
+    url: 'https://javdb.com'
+    interval: 900
+    tolerance: 50 
+
+  - name: "🇯🇵DMM/Mgstage/Tiktok"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    filter: '日|Japan|jp'
+    url: 'https://dmm.co.jp'
+    interval: 900
+    tolerance: 50 
+
+  - name: "Bilibili国台"
+    type: select
+    proxies:
+      - DIRECT
+    use:
+      - Airport A
+    filter: "台湾|TW|taiwan"
+  
+  
+  - name: "🎮online game"
+    type: select
+    use:
+      - Airport A 
+      - Airport B
+    filter: '游戏|game'
+
+  
+  - name: "DST-PORT"
+    type: select
+    proxies:
+     - ✈️PROXY
+     - DIRECT
+
+proxy-providers:
+  
+  
+  Airport A:
+    type: http
+    url: 
+    interval: 3600
+    path: "./proxy_provider/main.yaml"
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.gstatic.com/generate_204
+
+  Airport B:
+    type: http
+    url: 
+    interval: 3600
+    path: "./proxy_provider/backup.yaml"
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.gstatic.com/generate_204
+
+rule-providers:
+
+  bt-trackers:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Pioooooo/clash-rules-bt/main/anime_trackers.txt"
+    path: ./ruleset/bt-trackers.txt
+    interval: 86400
+  
+  domestic:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/domestic.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
+    interval: 86400 
+
+  #myrule
+  Proxy:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Proxy.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
+    interval: 86400 
+
+rules:
+  
+  - GEOSITE,private,DIRECT
+
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,playstation,REJECT
+
+  - GEOSITE,bahamut,🇹🇼Baha
+  - GEOSITE,tiktok,🇯🇵DMM/Mgstage/Tiktok
+  - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok
+  - GEOSITE,dmm,🇯🇵DMM/Mgstage/Tiktok
+  - GEOSITE,ehentai,e-hentai
+  - GEOSITE,javdb,javdb
+  - GEOSITE,bilibili,Bilibili国台
+
+  - GEOSITE,Steam@cn,DIRECT
+  - GEOSITE,Steam,✈️PROXY 
+  
+  - RULE-SET,bt-trackers,DIRECT
+  - GEOSITE,github,✈️PROXY
+  - GEOSITE,gfw,✈️PROXY
+  - GEOSITE,geolocation-!cn,✈️PROXY
+  - RULE-SET,Proxy,✈️PROXY
+
+  - GEOSITE,icloud@cn,DIRECT
+  - GEOSITE,apple@cn,DIRECT
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,geolocation-cn,DIRECT
+  - RULE-SET,domestic,DIRECT
+  
+  - RULE-SET,🎮online game,🎮online game,no-resolve 
+  - GEOIP,telegram,✈️PROXY,no-resolve
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOIP,cn,DIRECT
+  
+  - DST-PORT,80,DST-PORT
+  - DST-PORT,443,DST-PORT
+  - DST-PORT,22,DST-PORT
+
+  - MATCH,DIRECT     
