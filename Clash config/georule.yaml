@@ -456,7 +456,7 @@ rule-providers:
     path: ./RuleSet/Extra/onlinegame.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/onlinegame.yaml
     interval: 86400  
-    
+
 rules:
   
   - GEOSITE,private,DIRECT
