@@ -69,15 +69,15 @@ hosts:
   # 'alpha.clash.dev': '::1'
   
   #dns
-  'music.163-my-beloved.com': 76.76.21.21
-  'dns.google': 8.8.4.4
-  'dns.nextdns.io': 45.11.104.186
-
-  # Firebase Cloud Messaging
-  'mtalk.google.com': 108.177.125.188
-  # Google Dl
-  'dl.google.com': 180.163.151.161
-  'dl.l.google.com': 180.163.151.161
+  #'music.163-my-beloved.com': 76.76.21.21
+  #'dns.google': 8.8.4.4
+  #'dns.nextdns.io': 45.11.104.186
+#
+  ## Firebase Cloud Messaging
+  #'mtalk.google.com': 108.177.125.188
+  ## Google Dl
+  #'dl.google.com': 180.163.151.161
+  #'dl.l.google.com': 180.163.151.161
 
 profile:
   # Store the `select` results in $HOME/.config/clash/.cache
@@ -690,16 +690,15 @@ rules:
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
 
+    - DOMAIN,ws.infinitynewtab.com,REJECT
+    - DOMAIN,www.msftconnecttest.com,REJECT
+
     - DOMAIN-SUFFIX,playstation.com,REJECT
     - DOMAIN-SUFFIX,playstation.net,REJECT
     - DOMAIN-SUFFIX,playstation.org,REJECT
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
 
-    # dns rule
-    - DOMAIN,nextdns.io,✈️PROXY 
-    - DOMAIN,dns.google,✈️PROXY 
-    - DOMAIN,1dot1dot1dot1.cloudflare-dns.com,✈️PROXY 
 
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
