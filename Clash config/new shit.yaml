@@ -684,10 +684,8 @@ rule-providers:
     path: ./ruleset/gfw.txt
     interval: 86400
   
-
+https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/new shit.yaml
   
-  
-
 # 规则
 rules:
     # less rules the better, more reasonable sequence the better.
@@ -696,7 +694,7 @@ rules:
     
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
-    - RULE-SET,refuse,REJECT
+    - RULE-SET,Refuse,REJECT
 
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
