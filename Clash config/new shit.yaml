@@ -684,7 +684,6 @@ rule-providers:
     path: ./ruleset/gfw.txt
     interval: 86400
   
-https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/new shit.yaml
   
 # 规则
 rules:
