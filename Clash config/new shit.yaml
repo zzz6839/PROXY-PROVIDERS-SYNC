@@ -603,6 +603,13 @@ rule-providers:
     path: ./ruleset/reject.yaml
     interval: 86400
   
+  Refuse:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Refuse.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/refuse.yaml
+    interval: 86400
+  
   Rockstar:
     type: http
     behavior: classical
@@ -689,16 +696,7 @@ rules:
     
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
-
-    - DOMAIN,ws.infinitynewtab.com,REJECT
-    - DOMAIN,www.msftconnecttest.com,REJECT
-
-    - DOMAIN-SUFFIX,playstation.com,REJECT
-    - DOMAIN-SUFFIX,playstation.net,REJECT
-    - DOMAIN-SUFFIX,playstation.org,REJECT
-    - DOMAIN,playstation.sony.akadns.net,REJECT
-    - DOMAIN,a192.d.akamai.net,REJECT
-
+    - RULE-SET,refuse,REJECT
 
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
