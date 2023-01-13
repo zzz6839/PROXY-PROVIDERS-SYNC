@@ -484,19 +484,19 @@ rule-providers:
 #   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
 
 
-  🍎Apple_domain:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Apple_domain.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_domain.yaml"
-    interval: 86400
+  #🍎Apple_domain:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/Apple_domain.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_domain.yaml"
+  #  interval: 86400
 
-  🍎Apple_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Apple_ip.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
-    interval: 86400
+  #🍎Apple_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/Apple_ip.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
+  #  interval: 86400
 
   baha:
     type: http
@@ -589,12 +589,12 @@ rule-providers:
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
-  Microsoft:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Microsoft.yaml
-    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
-    interval: 86400  
+  #Microsoft:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/Microsoft.yaml
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
+  #  interval: 86400  
     
   reject:
     type: http
@@ -760,7 +760,7 @@ rules:
 
     - RULE-SET,E-Hentai_ip,e-hentai #proxy group
 
-    - RULE-SET,🍎Apple_ip,DIRECT
+    #- RULE-SET,🍎Apple_ip,DIRECT
    
     # rest mainland ip resolved
     - GEOIP,CN,DIRECT
