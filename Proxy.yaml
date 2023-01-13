@@ -50,5 +50,5 @@
   - DOMAIN-SUFFIX,hxcy.moe
   - DOMAIN,1dot1dot1dot1.cloudflare-dns.com
 
-  - DOMAIN,ws.infinitynewtab.com
+  #- DOMAIN,ws.infinitynewtab.com
   - DOMAIN,www.msftconnecttest.com
