@@ -1,6 +1,6 @@
   payload:
   
-    #- DOMAIN,ws.infinitynewtab.com,REJECT
+    - DOMAIN,ws.infinitynewtab.com,REJECT
     #- DOMAIN,www.msftconnecttest.com,REJECT
     - DOMAIN-SUFFIX,playstation.com,REJECT
     - DOMAIN-SUFFIX,playstation.net,REJECT
