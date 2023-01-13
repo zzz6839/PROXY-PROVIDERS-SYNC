@@ -728,9 +728,13 @@ rules:
     
     - RULE-SET,bt-trackers,DIRECT
    
-    - RULE-SET,Microsoft,DIRECT
-  
-    - RULE-SET,🍎Apple_domain,DIRECT
+    #- RULE-SET,Microsoft,DIRECT
+    - GEOSITE,microsoft@cn,DIRECT
+
+
+    #- RULE-SET,🍎Apple_domain,DIRECT
+    - GEOSITE,apple@cn,DIRECT
+    - GEOSITE,apple-cn,DIRECT
    
     - RULE-SET,Rockstar,DIRECT
     
