@@ -28,7 +28,7 @@ log-level: silent
 ipv6: true                
 
 external-controller: 0.0.0.0:9090   
-external-ui: /usr/share/openclash/ui  
+#external-ui: /usr/share/openclash/ui  
                                       
 secret: "123456"                          
 
@@ -73,7 +73,7 @@ hosts:
   
   
 
-  music.163-my-beloved.com: 76.76.21.21
+ # music.163-my-beloved.com: 76.76.21.21
   
   
   
