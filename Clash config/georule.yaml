@@ -443,20 +443,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400 
 
-  Refuse:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Refuse.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/refuse.yaml
-    interval: 86400
-
-  #myrule
-  Proxy:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Proxy.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
-    interval: 86400 
 
   🎮online game:
     type: http
@@ -465,8 +451,41 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/onlinegame.yaml
     interval: 86400  
 
-rules:
+  #myrule
+  Proxy:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Proxy.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
+    interval: 86400 
   
+  Refuse:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Refuse.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/refuse.yaml
+    interval: 86400
+
+   #Steam CN domain
+  SteamCN:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/SteamCN.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/SteamCN_domain.yaml
+    interval: 86400
+
+  #Steam
+  Steam:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Steam.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Steam_domain.yaml
+    interval: 86400
+    
+  
+rules:
+
+  - DOMAIN,msftconnecttest.com,✈️PROXY 
   - GEOSITE,private,DIRECT
 
   - GEOSITE,category-ads-all,REJECT
@@ -484,8 +503,8 @@ rules:
 
   - GEOSITE,bilibili,Bilibili国台
 
-  - GEOSITE,Steam@cn,DIRECT
-  - GEOSITE,Steam,✈️PROXY 
+  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,Steam,✈️PROXY 
   
   - RULE-SET,bt-trackers,DIRECT
 
