@@ -485,7 +485,6 @@ rule-providers:
   
 rules:
 
-  - DOMAIN,msftconnecttest.com,✈️PROXY 
   - GEOSITE,private,DIRECT
 
   - GEOSITE,category-ads-all,REJECT
