@@ -443,6 +443,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400 
 
+  Refuse:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Refuse.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/refuse.yaml
+    interval: 86400
+
   #myrule
   Proxy:
     type: http
@@ -463,25 +470,31 @@ rules:
   - GEOSITE,private,DIRECT
 
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,playstation,REJECT
+  - RULE-SET,Refuse,REJECT
 
   - GEOSITE,bahamut,🇹🇼Baha
+  
   - GEOSITE,tiktok,🇯🇵DMM/Mgstage/Tiktok
   - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok
   - GEOSITE,dmm,🇯🇵DMM/Mgstage/Tiktok
+
   - GEOSITE,ehentai,e-hentai
+
   - GEOSITE,javdb,javdb
+
   - GEOSITE,bilibili,Bilibili国台
 
   - GEOSITE,Steam@cn,DIRECT
   - GEOSITE,Steam,✈️PROXY 
   
   - RULE-SET,bt-trackers,DIRECT
+
   - GEOSITE,github,✈️PROXY
   - GEOSITE,gfw,✈️PROXY
-  - GEOSITE,geolocation-!cn,✈️PROXY
   - RULE-SET,Proxy,✈️PROXY
 
+  - GEOSITE,epicgames,DIRECT
+  - GEOSITE,rockstar,DIRECT
   - GEOSITE,icloud@cn,DIRECT
   - GEOSITE,apple@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
@@ -489,9 +502,11 @@ rules:
   - GEOSITE,geolocation-cn,DIRECT
   - RULE-SET,domestic,DIRECT
   
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - GEOIP,private,DIRECT,no-resolve
   - RULE-SET,🎮online game,🎮online game,no-resolve 
   - GEOIP,telegram,✈️PROXY,no-resolve
-  - GEOIP,private,DIRECT,no-resolve
+  
   - GEOIP,cn,DIRECT
   
   - DST-PORT,80,DST-PORT
