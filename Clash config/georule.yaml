@@ -467,7 +467,7 @@ rules:
   - GEOSITE,apple@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,cn,DIRECT
   - RULE-SET,domestic,DIRECT
   
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
