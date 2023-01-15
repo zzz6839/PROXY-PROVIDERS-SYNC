@@ -526,12 +526,12 @@ rule-providers:
     path: ./ruleset/bt-trackers.txt
     interval: 86400
 
-  China_domain:
-    type: http
-    behavior: domain
-    path: ./RuleSet/Extra/China_domain.txt
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
-    interval: 86400 
+  #China_domain:
+  #  type: http
+  #  behavior: domain
+  #  path: ./RuleSet/Extra/China_domain.txt
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
+  #  interval: 86400 
 
   DMM_domain:
     type: http
@@ -690,11 +690,14 @@ rules:
     # less rules the better, more reasonable sequence the better.
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
-    
-    #AD block 
-    - RULE-SET,reject,REJECT #59447 rules >
     - RULE-SET,Refuse,REJECT
 
+    # lan domain
+    - RULE-SET,private,DIRECT
+
+    #AD block 
+    - RULE-SET,reject,REJECT #59447 rules >
+  
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
 
@@ -704,7 +707,7 @@ rules:
 
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
 
-    - DOMAIN-SUFFIX,javdb.com,javdb #proxy group
+    - GEOSITE,javdb,javdb #proxy group
 
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
@@ -717,10 +720,6 @@ rules:
 
     - RULE-SET,Proxy,✈️PROXY
 
-    
-
-    # lan domain
-    - RULE-SET,private,DIRECT
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
     
@@ -731,14 +730,13 @@ rules:
     #- RULE-SET,Microsoft,DIRECT
     - GEOSITE,microsoft@cn,DIRECT
 
-
     #- RULE-SET,🍎Apple_domain,DIRECT
     - GEOSITE,apple@cn,DIRECT
     - GEOSITE,apple-cn,DIRECT
    
     - RULE-SET,Rockstar,DIRECT
     
-    - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
+    - GEOSITE,cn,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
                                    #仅GEOIP CN 可以完全做到判断大陆网站。
     # custom domestic rules
     - RULE-SET,domestic,DIRECT
