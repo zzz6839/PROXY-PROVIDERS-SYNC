@@ -394,6 +394,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400 
 
+  🧱gfw:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    path: ./ruleset/gfw.txt
+    interval: 86400
 
   🎮online game:
     type: http
@@ -439,7 +445,6 @@ rules:
   - GEOSITE,private,DIRECT
   - GEOSITE,category-ads-all,REJECT
   
-
   - GEOSITE,bahamut,🇹🇼Baha
   
   - GEOSITE,tiktok,🇯🇵DMM/Mgstage/Tiktok
@@ -458,7 +463,7 @@ rules:
   - RULE-SET,bt-trackers,DIRECT
 
   - GEOSITE,github,✈️PROXY
-  - GEOSITE,gfw,✈️PROXY
+  - RULE-SET,🧱gfw,✈️PROXY
   - RULE-SET,Proxy,✈️PROXY
 
   - GEOSITE,epicgames,DIRECT
