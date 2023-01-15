@@ -435,10 +435,10 @@ rule-providers:
     
 rules:
 
-  - GEOSITE,private,DIRECT
-
-  - GEOSITE,category-ads-all,REJECT
   - RULE-SET,Refuse,REJECT
+  - GEOSITE,private,DIRECT
+  - GEOSITE,category-ads-all,REJECT
+  
 
   - GEOSITE,bahamut,🇹🇼Baha
   
