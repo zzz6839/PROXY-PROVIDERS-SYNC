@@ -209,6 +209,7 @@ dns:
     geoip-code: CN                   
     geosite:                         
       - gfw
+      - "!cn"
     ipcidr:                          
       - 0.0.0.0/8
       - 10.0.0.0/8
