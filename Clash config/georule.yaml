@@ -59,7 +59,7 @@ sniffer:
 
 hosts:                           
 
- # music.163-my-beloved.com: 76.76.21.21
+  music.163-my-beloved.com: 76.76.21.21
   
 dns:
   enable: true                 
