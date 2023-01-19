@@ -253,14 +253,14 @@ proxy-groups:
     proxies:
       - main(Auto)
       - backup(Auto)
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300 
 
   - name: "main(Auto)"
     type: url-test
     use:
       - Airport A
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
     filter: '香港|hk|hong'
@@ -269,7 +269,7 @@ proxy-groups:
     type: url-test
     use:
       - Airport B
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
     lazy: true
@@ -367,7 +367,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204
+      url: https://www.gstatic.com/generate_204
 
   Airport B:
     type: http
@@ -377,7 +377,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204
+      url: https://www.gstatic.com/generate_204
 
 rule-providers:
 
@@ -466,13 +466,20 @@ rules:
   - GEOSITE,github,✈️PROXY
   - RULE-SET,🧱gfw,✈️PROXY
   - RULE-SET,Proxy,✈️PROXY
+  
 
-  - GEOSITE,epicgames,DIRECT
+  - GEOSITE,epicgames@cn,DIRECT
+  - GEOSITE,epicgames,✈️PROXY
+
   - GEOSITE,rockstar,DIRECT
   - GEOSITE,icloud@cn,DIRECT
   - GEOSITE,apple@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,✈️PROXY
+
   - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,microsoft,✈️PROXY
+
   - GEOSITE,cn,DIRECT
   - RULE-SET,domestic,DIRECT
   
