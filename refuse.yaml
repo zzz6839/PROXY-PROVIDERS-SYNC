@@ -1,9 +1,11 @@
   payload:
   
     - DOMAIN,ws.infinitynewtab.com,REJECT
+    - DOMAIN-SUFFIX,inftab.com,REJECT
     - DOMAIN,www.msftconnecttest.com,REJECT
     - DOMAIN-SUFFIX,playstation.com,REJECT
     - DOMAIN-SUFFIX,playstation.net,REJECT
     - DOMAIN-SUFFIX,playstation.org,REJECT
     - DOMAIN,playstation.sony.akadns.net,REJECT
     - DOMAIN,a192.d.akamai.net,REJECT
+    
