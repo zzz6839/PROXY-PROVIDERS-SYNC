@@ -263,7 +263,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204
+      url: http://www.gstatic.com/generate_204
   
 
   Airport B:      
@@ -274,7 +274,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204    
+      url: http://www.gstatic.com/generate_204    
  
   #MIXED US:      
   #  type: http
@@ -349,14 +349,14 @@ proxy-groups:
     proxies:
       - main(Auto)
       - backup(Auto)
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'http://www.gstatic.com/generate_204'
     interval: 300 
 
   - name: "main(Auto)"
     type: url-test
     use:
       - Airport A
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
     filter: '香港|hk|hong'
@@ -367,7 +367,7 @@ proxy-groups:
     type: url-test
     use:
       - Airport B
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'http://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
     lazy: true
@@ -512,12 +512,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
     interval: 86400 
   
-  BILIBILIHMT_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/BILIBILIHMT_ip.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_ip.yaml"
-    interval: 86400 
+  #BILIBILIHMT_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/BILIBILIHMT_ip.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_ip.yaml"
+  #  interval: 86400 
 
   bt-trackers:
     type: http
@@ -540,12 +540,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_domain.yaml
     interval: 86400 
 
-  DMM_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/DMM_ip.yaml
-    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
-    interval: 86400 
+  #DMM_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/DMM_ip.yaml
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
+  #  interval: 86400 
 
   domestic:
     type: http
@@ -568,12 +568,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_domain.yaml"
     interval: 86400
 
-  E-Hentai_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Ehentai_ip.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_ip.yaml"
-    interval: 86400
+  #E-Hentai_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/Ehentai_ip.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_ip.yaml"
+  #  interval: 86400
 
   GITHUB:
     type: http
@@ -589,12 +589,12 @@ rule-providers:
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
-  #Microsoft:
-  #  type: http
-  #  behavior: classical
-  #  path: ./RuleSet/Extra/Microsoft.yaml
-  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
-  #  interval: 86400  
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Microsoft.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
+    interval: 86400  
     
   reject:
     type: http
@@ -633,12 +633,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Steam_domain.yaml
     interval: 86400
 
-  Telegram_domain:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_domain.yaml
-    path: ./ruleset/Telegram_domain.yaml
-    interval: 86400
+  #Telegram_domain:
+  #  type: http
+  #  behavior: classical
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_domain.yaml
+  #  path: ./ruleset/Telegram_domain.yaml
+  #  interval: 86400
 
   Telegram_ip:
     type: http
@@ -691,10 +691,8 @@ rules:
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
     - RULE-SET,Refuse,REJECT
-
     # lan domain
     - RULE-SET,private,DIRECT
-
     #AD block 
     - RULE-SET,reject,REJECT #59447 rules >
   
@@ -712,10 +710,6 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - RULE-SET,GITHUB,✈️PROXY  
-
-    - RULE-SET,Telegram_domain,✈️PROXY
-    
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
@@ -727,13 +721,13 @@ rules:
     
     - RULE-SET,bt-trackers,DIRECT
    
-    #- RULE-SET,Microsoft,DIRECT
     - GEOSITE,microsoft@cn,DIRECT
-
-    #- RULE-SET,🍎Apple_domain,DIRECT
+    - RULE-SET,Microsoft,✈️PROXY
+    
     - GEOSITE,apple@cn,DIRECT
     - GEOSITE,apple-cn,DIRECT
-   
+    - RULE-SET,🍎Apple_domain,✈️PROXY
+
     - RULE-SET,Rockstar,DIRECT
     
     - GEOSITE,cn,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
@@ -750,15 +744,6 @@ rules:
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
 
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
-    
-    # pending for correction
-    - RULE-SET,BILIBILIHMT_ip,Bilibili国台 #proxy group
-
-    - RULE-SET,DMM_ip,🇯🇵DMM/Mgstage/Tiktok #proxy group
-
-    - RULE-SET,E-Hentai_ip,e-hentai #proxy group
-
-    #- RULE-SET,🍎Apple_ip,DIRECT
    
     # rest mainland ip resolved
     - GEOIP,CN,DIRECT
