@@ -259,6 +259,7 @@ proxy-providers:
     type: http
     url:  ""
     interval: 3600
+    filter: "^((?!(官网|漏洞|倒卖)).)*$"
     path: ./Proxy/main.yaml
     health-check:
       enable: true
