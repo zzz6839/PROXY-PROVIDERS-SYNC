@@ -67,7 +67,7 @@ hosts:
   # '*.clash.dev': 127.0.0.1
   # '.dev': 127.0.0.1
   # 'alpha.clash.dev': '::1'
-  music.desperadoj.com = 101.132.192.212
+  'music.desperadoj.com': 101.132.192.212
 
   #dns
   #'music.163-my-beloved.com': 76.76.21.21
@@ -482,9 +482,9 @@ rule-providers:
 
   🍎Apple_domain:
     type: http
-    behavior: domain-text
-    path: ./RuleSet/Extra/AppleCN.txt
-    url: "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt"
+    behavior: domain
+    path: ./RuleSet/Extra/AppleCN.yaml
+    url: "https://rules.kr328.app/apple@cn.yaml"
     interval: 86400
 
   #🍎Apple_ip:
@@ -510,9 +510,9 @@ rule-providers:
 
   China_domain:
     type: http
-    behavior: domain-text
-    path: ./RuleSet/Extra/China_domain.txt
-    url: "https://raw.githubusercontent.com/Larvan2/Clash_Rulesets/release/direct.txt"
+    behavior: domain
+    path: ./RuleSet/Extra/China_domain.yaml
+    url: "https://rules.kr328.app/cn.yaml"
     interval: 86400 
 
   DMM_domain:
@@ -573,9 +573,9 @@ rule-providers:
 
   Netease:
     type: http
-    behavior: domain-text
+    behavior: classical
     path: ./RuleSet/Extra/Netease.yaml
-    url: https://raw.githubusercontent.com/DesperadoJ/Rules-for-UnblockNeteaseMusic/master/Surge/RuleSet/NeteaseMusic.list
+    url: https://raw.githubusercontent.com/DesperadoJ/Rules-for-UnblockNeteaseMusic/master/Clash/RuleSet/NeteaseMusic.yaml
     interval: 86400  
 
   Microsoft:
@@ -587,8 +587,8 @@ rule-providers:
     
   reject:
     type: http
-    behavior: domain-text
-    url: "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt"
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
   
@@ -653,8 +653,8 @@ rule-providers:
 
   🧱gfw:
     type: http
-    behavior: domain-text
-    url: "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt"
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt"
     path: ./ruleset/gfw.txt
     interval: 86400
   
@@ -686,12 +686,12 @@ rules:
 
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
-    - RULE-SET,Netease,网抑云🎵
     - RULE-SET,Epicgames,DIRECT
    
     - RULE-SET,Microsoft,DIRECT
     
     - RULE-SET,🍎Apple_domain,DIRECT
+    - RULE-SET,Netease,网抑云🎵
 
     - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
                                    #仅GEOIP CN 可以完全做到判断大陆网站。
