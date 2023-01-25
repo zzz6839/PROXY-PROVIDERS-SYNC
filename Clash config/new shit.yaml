@@ -734,8 +734,7 @@ rules:
     
     - RULE-SET,bt-trackers,DIRECT
    
-    - GEOSITE,microsoft@cn,DIRECT
-    - RULE-SET,Microsoft,✈️PROXY
+    - RULE-SET,Microsoft,DIRECT
     
     - GEOSITE,apple@cn,DIRECT
     - GEOSITE,apple-cn,DIRECT
