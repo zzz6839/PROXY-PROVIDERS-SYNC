@@ -532,12 +532,12 @@ rule-providers:
     path: ./ruleset/bt-trackers.txt
     interval: 86400
 
-  #China_domain:
-  #  type: http
-  #  behavior: domain
-  #  path: ./RuleSet/Extra/China_domain.txt
-  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
-  #  interval: 86400 
+  China_domain:
+    type: http
+    behavior: domain
+    path: ./RuleSet/Extra/China_domain.txt
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
+    interval: 86400 
 
   DMM_domain:
     type: http
@@ -742,7 +742,7 @@ rules:
 
     - RULE-SET,Rockstar,DIRECT
     
-    - GEOSITE,cn,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
+    - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
                                    #仅GEOIP CN 可以完全做到判断大陆网站。
     # custom domestic rules
     - RULE-SET,domestic,DIRECT
