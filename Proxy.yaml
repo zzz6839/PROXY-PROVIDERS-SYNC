@@ -49,6 +49,7 @@
   - DOMAIN-SUFFIX,chkaja.com
   - DOMAIN-SUFFIX,hxcy.moe
   - DOMAIN,1dot1dot1dot1.cloudflare-dns.com
+  - DOMAIN,gstatic.com
 
   #- DOMAIN,ws.infinitynewtab.com
   #- DOMAIN,www.msftconnecttest.com
