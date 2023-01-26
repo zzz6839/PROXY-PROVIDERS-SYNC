@@ -606,7 +606,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Reject_domain.txt"
-    path: ./ruleset/reject.yaml
+    path: ./ruleset/reject.txt
     interval: 86400
   
   reject_ip:
