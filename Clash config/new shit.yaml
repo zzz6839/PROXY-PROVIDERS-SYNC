@@ -70,8 +70,9 @@ hosts:
   
   #dns
   #'music.163-my-beloved.com': 76.76.21.21
-  #'dns.google': 8.8.4.4
-  #'dns.nextdns.io': 45.11.104.186
+  'dns.google': 8.8.4.4
+  'dns.nextdns.io': 45.11.104.186
+  '1dot1dot1dot1.cloudflare-dns.com': 1.0.0.1
 #
   ## Firebase Cloud Messaging
   #'mtalk.google.com': 108.177.125.188
@@ -735,7 +736,6 @@ rules:
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
     
     - RULE-SET,Vercel,Vercel #proxy group
-    - DOMAIN,music.163-my-beloved.com,Vercel #proxy group
     
     - GEOSITE,javdb,javdb #proxy group
 
@@ -774,6 +774,8 @@ rules:
 
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
+    
+    - IP-CIDR,76.76.21.21/32,Vercel,no-resolve #proxy group
 
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
    
