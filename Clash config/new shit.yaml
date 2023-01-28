@@ -444,16 +444,16 @@ proxy-groups:
     interval: 900
     tolerance: 50 
 
-   #GITHUB
-  #- name: "GITHUB"
-  #  type: load-balance
-  #  strategy: consistent-hashing
-  #  use:
-  #   - Airport A
-  #  filter: '日IEPL|日IPLC'
-  #  url: 'http://github-debug.com/generate_204'
-  #  interval: 900
-  #  tolerance: 50 
+   #Vercel
+  - name: "Vercel"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    #filter: '日IEPL|日IPLC'
+    url: 'https://vercel.app'
+    interval: 900
+    tolerance: 50 
 
   # Bilibili国台
   - name: "Bilibili国台"
@@ -629,6 +629,13 @@ rule-providers:
     path: ./RuleSet/Extra/Rockstar.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Rockstar_domain.yaml
     interval: 86400
+  
+  Vercel:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Vercel.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Vercel/Vercel.yaml
+    interval: 86400
 
   #Steam CN domain
   SteamCN:
@@ -723,6 +730,7 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
+    - RULE-SET,Vercel,✈️PROXY
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
