@@ -65,5 +65,7 @@ payload:
   - DOMAIN-SUFFIX,dnsperf.com
   - DOMAIN-SUFFIX,perfops.net
   - DOMAIN-SUFFIX,ipleak.net
+  #vercel pollution
+  - DOMAIN,music.163-my-beloved.com
   - DOMAIN,YUC.WIKI
 
