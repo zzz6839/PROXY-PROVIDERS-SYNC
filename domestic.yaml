@@ -66,6 +66,6 @@ payload:
   - DOMAIN-SUFFIX,perfops.net
   - DOMAIN-SUFFIX,ipleak.net
   #vercel pollution
-  - DOMAIN,music.163-my-beloved.com
+  #- DOMAIN,music.163-my-beloved.com #no https
   - DOMAIN,YUC.WIKI
 
