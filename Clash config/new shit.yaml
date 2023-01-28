@@ -733,13 +733,14 @@ rules:
     - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
 
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
+    
+    - RULE-SET,Vercel,Vercel #proxy group
 
     - GEOSITE,javdb,javdb #proxy group
 
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - RULE-SET,Vercel,✈️PROXY
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
