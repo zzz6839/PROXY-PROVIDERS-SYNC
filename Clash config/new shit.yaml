@@ -735,7 +735,8 @@ rules:
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
     
     - RULE-SET,Vercel,Vercel #proxy group
-
+    - DOMAIN,music.163-my-beloved.com,Vercel #proxy group
+    
     - GEOSITE,javdb,javdb #proxy group
 
     - RULE-SET,SteamCN,DIRECT 
