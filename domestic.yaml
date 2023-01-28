@@ -24,7 +24,8 @@ payload:
 #  - DOMAIN-SUFFIX,store.leagueoflegends.com
 #  - DOMAIN,am-a.akamaihd.net
 #-------------------qbittorrent----------------------------------
-  - DOMAIN-SUFFIX,qbittorrent.org
+  - DOMAIN-KEYWORD,bittorrent
+  - DOMAIN-KEYWORD,torrent
 #-------------------pyncmd---------------------------------- 
 #  - DOMAIN,pyncmd.vercel.app
 #-------------------不规则tracker---------------------------------- 
