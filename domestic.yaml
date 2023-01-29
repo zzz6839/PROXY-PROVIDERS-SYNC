@@ -67,5 +67,7 @@ payload:
   - DOMAIN-SUFFIX,ipleak.net
   #vercel pollution
   #- DOMAIN,music.163-my-beloved.com #no https
-  - DOMAIN,YUC.WIKI
+  - DOMAIN-SUFFIX,YUC.WIKI
+
+  - DOMAIN-SUFFIX,greasyfork.org
 
