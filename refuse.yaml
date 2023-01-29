@@ -1,5 +1,5 @@
   payload:
-    - DOMAIN,ws.infinitynewtab.com
+    #- DOMAIN,ws.infinitynewtab.com
     - DOMAIN,basic-static-server.inftab.com
     - DOMAIN,www.msftconnecttest.com
     - DOMAIN-SUFFIX,playstation.com
