@@ -126,12 +126,12 @@ dns:
   # involved. Clash answers the DNS question with the first result gathered.
   default-nameserver: #parse DOH/DOT/DOQ dns
       - 223.6.6.6
-      - 129.29.29.29
+      - 119.29.29.29
   nameserver:
       - tls://dns.google
       - tls://1dot1dot1dot1.cloudflare-dns.com
   proxy-server-nameserver:
-      - 129.29.29.29
+      - 119.29.29.29
       - 223.6.6.6
   nameserver-policy:
       "geosite:cn": 223.6.6.6
