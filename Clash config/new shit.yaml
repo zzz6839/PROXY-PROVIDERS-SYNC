@@ -419,7 +419,7 @@ proxy-groups:
     interval: 900
     lazy: true
     tolerance: 50  
-
+  
    #Beat Saber/e-hentai
   - name: "e-hentai"
     type:  select
@@ -671,6 +671,13 @@ rule-providers:
   #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_domain.yaml
   #  path: ./ruleset/Telegram_domain.yaml
   #  interval: 86400
+  
+  Twitch:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Twitch.yaml
+    path: ./ruleset/Twitch.yaml
+    interval: 86400
 
   Telegram_ip:
     type: http
@@ -734,7 +741,8 @@ rules:
     - RULE-SET,TikTok,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
-
+    - RULE-SET,Twitch,🇯🇵DMM/Mgstage/Tiktok
+    
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
     
     - RULE-SET,Vercel,Vercel #proxy group
