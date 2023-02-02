@@ -387,7 +387,7 @@ proxy-groups:
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 40
-    lazy: true
+    #lazy: true
     filter: '港|hk|hong'
    #disable-udp: true
 
@@ -417,6 +417,7 @@ proxy-groups:
     filter: '(?!.*(游戏)).*(台湾|taiwan|TW)'
     url: 'https://ani.gamer.com.tw/'
     interval: 900
+    lazy: true
     tolerance: 50  
 
    #Beat Saber/e-hentai
