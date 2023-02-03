@@ -125,17 +125,18 @@ dns:
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   default-nameserver: #parse DOH/DOT/DOQ dns
-      - 223.6.6.6
+      - 223.6.6.6       
       - 119.29.29.29
   nameserver:
       - tls://dns.google
-      - tls://1dot1dot1dot1.cloudflare-dns.com
+      #- tls://1dot1dot1dot1.cloudflare-dns.com
+      - quic://dns.nextdns.io
   proxy-server-nameserver:
-      - 119.29.29.29
-      - 223.6.6.6
+      - 119.29.29.29      # use DOH if redir-host mode to counter hijack
+      - 223.6.6.6         #
   nameserver-policy:
       "geosite:gfw": tls://dns.google
-      "geosite:cn": 223.6.6.6
+      "geosite:cn": 223.6.6.6           # use DOH if redir-host mode to counter hijack
     # - 114.114.114.114 # default value
     # - 8.8.8.8 # default value
     # - tls://dns.rubyfish.cn:853 # DNS over TLS
