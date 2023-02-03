@@ -133,7 +133,7 @@ dns:
       - quic://dns.nextdns.io
   proxy-server-nameserver:
       - 119.29.29.29      # use DOH if redir-host mode to counter hijack
-      - 223.6.6.6         #
+      - 223.6.6.6         # https://dns.alidns.com https://doh.pub/dns-query
   nameserver-policy:
       "geosite:gfw": tls://dns.google
       "geosite:cn": 223.6.6.6           # use DOH if redir-host mode to counter hijack
