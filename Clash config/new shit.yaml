@@ -494,7 +494,7 @@ proxy-groups:
     filter: "港"
     url: "https://dns.nextdns.io"
     interval: 900
-    tolerance: 40 
+    tolerance: 20 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
@@ -693,7 +693,7 @@ rule-providers:
 
   Telegram_ip:
     type: http
-    behavior: classical
+    behavior: ipcidr
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_ip.yaml
     path: ./ruleset/Telegram_ip.yaml
     interval: 86400
