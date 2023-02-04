@@ -128,9 +128,9 @@ dns:
       - 223.6.6.6       
       - 119.29.29.29
   nameserver:
-      - tls://dns.google
+      - tls://dns.google#DNS
       #- tls://1dot1dot1dot1.cloudflare-dns.com
-      - quic://dns.nextdns.io
+      - quic://dns.nextdns.io#DNS
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
@@ -484,6 +484,17 @@ proxy-groups:
       - Airport A 
       - Airport B
     filter: '游戏|game'
+  
+  # DNS
+  - name: "DNS"
+    type: url-test
+    use:
+      - Airport A 
+      - Airport B
+    filter: "港"
+    url: "https://dns.nextdns.io"
+    interval: 900
+    tolerance: 40 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
