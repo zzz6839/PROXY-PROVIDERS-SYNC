@@ -132,11 +132,11 @@ dns:
       #- tls://1dot1dot1dot1.cloudflare-dns.com
       - quic://dns.nextdns.io
   proxy-server-nameserver:
-      - 119.29.29.29      # use DOH if redir-host mode to counter hijack, 
-      - 223.6.6.6         # https://doh.pub/dns-query https://dns.alidns.com/dns-query
+      - 119.29.29.29      
+      - 223.6.6.6         
   nameserver-policy:
-      "geosite:gfw": tls://dns.google
-      "geosite:cn": 223.6.6.6           # use DOH if redir-host mode to counter hijack
+      "geosite:gfw": [tls://dns.google,quic://818f63.dns.nextdns.io]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
+      "geosite:cn": [223.6.6.6,119.29.29.29]           
     # - 114.114.114.114 # default value
     # - 8.8.8.8 # default value
     # - tls://dns.rubyfish.cn:853 # DNS over TLS
