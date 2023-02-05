@@ -537,6 +537,15 @@ proxy-groups:
       - Airport B
     filter: '游戏|game'
   
+  #RiotGames
+  - name: "RiotGames"
+    type: select
+    proxies:
+      - ✈️PROXY
+      - DIRECT
+      - 🎮online game
+    filter: ((游戏).(台湾))|((台湾).(游戏))
+
   # DNS
   - name: "DNS"
     type: url-test
@@ -699,6 +708,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/refuse.yaml
     interval: 86400
   
+  RiotGames:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/RiotGames.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/RiotGames.yaml
+    interval: 86400
+
   Rockstar:
     type: http
     behavior: classical
@@ -819,6 +835,8 @@ rules:
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
+
+    - RULE-SET,RiotGames,RiotGames
 
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
