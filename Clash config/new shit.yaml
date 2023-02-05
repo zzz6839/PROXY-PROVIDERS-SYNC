@@ -711,7 +711,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/RiotGames.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/RiotGames.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/RiotGames.yaml
     interval: 86400
 
   Rockstar:
