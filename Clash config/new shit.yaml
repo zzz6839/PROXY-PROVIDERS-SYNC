@@ -232,7 +232,9 @@ dns:
  
 #
 # https://github.com/Dreamacro/clash/wiki/premium-core-features
-#
+# 
+#interface-name: en0
+
 # tun:
 #   enable: true
 #   stack: system # or gvisor
