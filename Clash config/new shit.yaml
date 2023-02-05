@@ -543,7 +543,8 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-      - 🎮online game
+    use:
+      - Airport A
     filter: ((游戏).(台湾))|((台湾).(游戏))
 
   # DNS
