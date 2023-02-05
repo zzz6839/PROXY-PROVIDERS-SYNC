@@ -538,7 +538,7 @@ proxy-groups:
     filter: '游戏|game'
   
   #RiotGames
-  - name: "RiotGames"
+  - name: "👊RiotGames"
     type: select
     proxies:
       - ✈️PROXY
@@ -835,7 +835,7 @@ rules:
 
     - RULE-SET,Proxy,✈️PROXY
 
-    - RULE-SET,RiotGames,RiotGames
+    - RULE-SET,RiotGames,👊RiotGames #proxy group
 
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
