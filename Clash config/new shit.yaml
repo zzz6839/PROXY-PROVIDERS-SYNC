@@ -544,6 +544,7 @@ proxy-groups:
       - ✈️PROXY
       - DIRECT
       - 🎮online game
+      - 🇹🇼Baha
 
   # DNS
   - name: "DNS"
