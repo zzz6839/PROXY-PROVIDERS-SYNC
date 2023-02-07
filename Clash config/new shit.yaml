@@ -535,6 +535,9 @@ proxy-groups:
     use:
       - Airport A 
       - Airport B
+    proxies:
+      - ✈️PROXY
+      - DIRECT
     filter: '游戏|game'
   
   #RiotGames
@@ -544,7 +547,6 @@ proxy-groups:
       - ✈️PROXY
       - DIRECT
       - 🎮online game
-      - 🇹🇼Baha
 
   # DNS
   - name: "DNS"
