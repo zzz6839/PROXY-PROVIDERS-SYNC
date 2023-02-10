@@ -538,7 +538,7 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-    filter: '游戏|game'
+    filter: '游戏|game|深港专线转香港BGP[M][倍率:2.5]|深港专线8[倍率:2.5]'
   
   #RiotGames
   - name: "👊RiotGames"
@@ -547,6 +547,7 @@ proxy-groups:
       - ✈️PROXY
       - DIRECT
       - 🎮online game
+      - 🇹🇼Baha
 
   # DNS
   - name: "DNS"
