@@ -549,6 +549,12 @@ proxy-groups:
       - 🎮online game
       - 🇹🇼Baha
 
+  - name: "openai"
+    type: select
+    proxies:
+      - ✈️PROXY
+      - DIRECT
+      - Manual
   # DNS
   - name: "DNS"
     type: url-test
@@ -835,7 +841,7 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - DOMAIN-KEYWORD,openai,✈️PROXY
+    - DOMAIN-KEYWORD,openai,openai
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
