@@ -835,6 +835,7 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
+    - DOMAIN-KEYWORD,openai,✈️PROXY
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
