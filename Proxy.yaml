@@ -53,3 +53,6 @@
   
   # Amazon cloudfront service
   - DOMAIN-SUFFIX,cloudfront.net
+
+  #new bing
+  - DOMAIN-SUFFIX,bing.com
