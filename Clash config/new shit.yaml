@@ -855,7 +855,6 @@ rules:
     
     - RULE-SET,bt-trackers,DIRECT
    
-    - DOMAIN-SUFFIX,bing.com,✈️PROXY
     - RULE-SET,Microsoft,DIRECT
     
     - GEOSITE,apple@cn,DIRECT
