@@ -180,12 +180,12 @@ dns:
   nameserver:
       - tls://dns.google#DNS
       #- tls://1dot1dot1dot1.cloudflare-dns.com
-      - quic://dns.nextdns.io#DNS
+      - quic://dns.nextdns.io
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
   nameserver-policy:
-      "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io#DNS]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
+      "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
       "geosite:cn": [223.6.6.6,119.29.29.29]           
     # - 114.114.114.114 # default value
     # - 8.8.8.8 # default value
@@ -562,7 +562,7 @@ proxy-groups:
       - Airport A 
       - Airport B
     filter: "港"
-    url: "https://dns.nextdns.io"
+    url: "https://dns.google"
     interval: 900
     tolerance: 20 
 
