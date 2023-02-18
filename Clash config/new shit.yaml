@@ -340,6 +340,7 @@ proxy-providers:
     type: http
     url:  "" 
     interval: 3600
+    filter: "^((?!(联通|移动)).)*$"
     path: ./Proxy/backup.yaml
     health-check:
       enable: true
@@ -561,7 +562,7 @@ proxy-groups:
     use:
       - Airport A 
       - Airport B
-    filter: "港"
+    filter: "(?!.*(Tro)).*(港)"
     url: "https://dns.google"
     interval: 900
     tolerance: 20 
