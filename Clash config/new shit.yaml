@@ -535,11 +535,11 @@ proxy-groups:
     type: select
     use:
       - Airport A 
-      - Airport B
+    #  - Airport B
     proxies:
-      - ✈️PROXY
+      - DNS
       - DIRECT
-    filter: '游戏|game|深港专线8[倍率:2.5]'
+    filter: '游戏|game'
   
   #RiotGames
   - name: "👊RiotGames"
@@ -560,7 +560,7 @@ proxy-groups:
   - name: "DNS"
     type: url-test
     use:
-      - Airport A 
+    #  - Airport A 
       - Airport B
     filter: "(?!.*(Tro)).*(港)"
     url: "https://dns.google"
