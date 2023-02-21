@@ -526,9 +526,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-    use:
-      - Airport A
-    filter: "台湾|TW|taiwan"
+      - 🇹🇼Baha
   
   # 外服游戏
   - name: "🎮online game"
