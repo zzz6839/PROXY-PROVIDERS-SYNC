@@ -548,12 +548,15 @@ proxy-groups:
       - 🎮online game
       - 🇹🇼Baha
 
-  - name: "openai"
+  - name: "🇺🇸openai"
     type: select
     proxies:
-      - ✈️PROXY
       - DIRECT
       - Manual
+    use:
+      - Airport A
+    filter: "美国|us"
+    
   # DNS
   - name: "DNS"
     type: url-test
