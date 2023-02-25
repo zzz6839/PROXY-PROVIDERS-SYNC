@@ -321,7 +321,7 @@ proxy-providers:
   #   health-check:
   #     enable: true
   #     interval: 600
-  #     url: https://www.gstatic.com/generate_204
+  #     url: https://cp.cloudflare.com/generate_204
   # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删除
 
   Airport A: 
@@ -333,7 +333,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204
+      url: https://cp.cloudflare.com/generate_204
   
 
   Airport B:      
@@ -345,7 +345,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204    
+      url: https://cp.cloudflare.com/generate_204    
  
   #MIXED US:      
   #  type: http
@@ -356,7 +356,7 @@ proxy-providers:
   #  health-check:
   #    enable: true
   #    interval: 600
-  #    url: https://www.gstatic.com/generate_204    
+  #    url: https://cp.cloudflare.com/generate_204    
   
 
 proxy-groups:
@@ -420,14 +420,14 @@ proxy-groups:
     proxies:
       - main(Auto)
       - backup(Auto)
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300 
 
   - name: "main(Auto)"
     type: url-test
     use:
       - Airport A
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 40
     filter: '香港|hk|hong'
@@ -438,7 +438,7 @@ proxy-groups:
     type: url-test
     use:
       - Airport B
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 40
     #lazy: true
