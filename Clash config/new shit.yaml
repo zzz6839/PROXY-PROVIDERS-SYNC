@@ -556,7 +556,7 @@ proxy-groups:
     use:
       - Airport A
     filter: "美国|us"
-    
+
   # DNS
   - name: "DNS"
     type: url-test
@@ -843,7 +843,7 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - DOMAIN-KEYWORD,openai,openai
+    - DOMAIN-KEYWORD,openai,🇺🇸openai
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
