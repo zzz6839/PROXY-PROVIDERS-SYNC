@@ -70,9 +70,9 @@ hosts:
   
   #dns
   'music.163-my-beloved.com': 76.76.21.21
-  'dns.google': 8.8.4.4
-  'dns.nextdns.io': 45.11.104.186
-  '1dot1dot1dot1.cloudflare-dns.com': 1.0.0.1
+  #'dns.google': 8.8.4.4
+  #'dns.nextdns.io': 45.11.104.186
+  #'1dot1dot1dot1.cloudflare-dns.com': 1.0.0.1
 #
   ## Firebase Cloud Messaging
   #'mtalk.google.com': 108.177.125.188
@@ -180,12 +180,12 @@ dns:
   nameserver:
       - tls://dns.google#DNS
       #- tls://1dot1dot1dot1.cloudflare-dns.com
-      - quic://dns.nextdns.io
+      - quic://dns.nextdns.io#DIRECT
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
   nameserver-policy:
-      "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
+      "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
       "geosite:cn": [223.6.6.6,119.29.29.29]           
     # - 114.114.114.114 # default value
     # - 8.8.8.8 # default value
