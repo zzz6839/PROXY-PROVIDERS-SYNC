@@ -48,7 +48,7 @@
   - DOMAIN-SUFFIX,chkaja.com
   - DOMAIN-SUFFIX,hxcy.moe
   - DOMAIN,1dot1dot1dot1.cloudflare-dns.com
-  - DOMAIN,gstatic.com
+  
   - DOMAIN-SUFFIX,vercel.com
   
   # Amazon cloudfront service
@@ -56,3 +56,9 @@
 
   #new bing
   - DOMAIN-SUFFIX,bing.com
+
+  #connectivity test
+  - DOMAIN,captive.apple.com
+  - DOMAIN,cp.cloudflare.com
+  - DOMAIN,gstatic.com
+  
