@@ -8,7 +8,7 @@
     - DOMAIN,playstation.sony.akadns.net
     - DOMAIN,a192.d.akamai.net
     # 薅叔叔羊毛
-    - DOMAIN-SUFFIX,mcdn.bilivideo.cn
+    #- DOMAIN-SUFFIX,mcdn.bilivideo.cn
     - DOMAIN,stun-5.chat.bilibili.com
     - DOMAIN,stun-3.chat.bilibili.com
     - DOMAIN,stun-4.chat.bilibili.com
