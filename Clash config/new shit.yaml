@@ -161,8 +161,9 @@ dns:
     #bark 
     - "+.api.day.app"
     #放行tracker和torrent
-    - "tracker.+"
-    - "trackers.+"
+    - "tracker.*.*"
+    - "*.tracker.*"
+    - "*.tracker.*.*"
     #Qbittorrent推送
     - "+.alpinelinux.org"
 
