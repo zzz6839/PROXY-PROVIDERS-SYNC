@@ -124,8 +124,7 @@ dns:
   
   
   nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
+    - 192.168.1.1:5553
     
     
     
@@ -136,8 +135,7 @@ dns:
   
   
   fallback:
-     - quic://cn-east.ovo.glass:853
-     - quic://dns.nextdns.io:853
+    - 192.168.1.1:5553
   
   
   
