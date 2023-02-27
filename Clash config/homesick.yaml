@@ -135,10 +135,9 @@ dns:
   
   
   
-  
   fallback:
-     - tls://1dot1dot1dot1.cloudflare-dns.com
-     - tls://dns.google
+     - quic://cn-east.ovo.glass:853
+     - quic://dns.nextdns.io
   
   
   
