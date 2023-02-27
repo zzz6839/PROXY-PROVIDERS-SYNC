@@ -137,7 +137,7 @@ dns:
   
   fallback:
      - quic://cn-east.ovo.glass:853
-     - quic://dns.nextdns.io
+     - quic://dns.nextdns.io:853
   
   
   
