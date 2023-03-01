@@ -552,6 +552,13 @@ proxy-groups:
     use:
       - Airport A
     filter: "美国|us"
+  
+  
+  - name: "♿speedtest"
+    type: select
+    proxies:
+      - DIRECT
+      - ✈️PROXY
 
   # DNS
   - name: "DNS"
@@ -751,6 +758,14 @@ rule-providers:
     path: ./RuleSet/Extra/Steam.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Steam_domain.yaml
     interval: 86400
+  
+  #Steam
+  Speedtest:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Speedtest.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Speedtest.yaml
+    interval: 86400
 
   #Telegram_domain:
   #  type: http
@@ -845,7 +860,8 @@ rules:
     - RULE-SET,Proxy,✈️PROXY
 
     - RULE-SET,RiotGames,👊RiotGames #proxy group
-
+    
+    - RULE-SET,Speedtest,♿speedtest
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
     
