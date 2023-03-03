@@ -32,7 +32,7 @@ bind-address: '*'
 
 
 
-mode: rule
+mode: direct
 
 
 
