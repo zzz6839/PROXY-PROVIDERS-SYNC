@@ -124,7 +124,8 @@ dns:
   
   
   nameserver:
-    - UDP://192.168.1.1:53
+    - 119.29.29.29
+    - 223.5.5.5
     
     
     
@@ -135,7 +136,8 @@ dns:
   
   
   fallback:
-    - UDP://192.168.1.1:53
+   - quic://cn-east.ovo.glass:853
+   - quic://dns.nextdns.io:853
   
   
   
