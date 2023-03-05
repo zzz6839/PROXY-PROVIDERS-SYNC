@@ -469,13 +469,6 @@ proxy-groups:
     interval: 900
     lazy: true
     tolerance: 50  
-  
-   #Beat Saber/e-hentai
-  - name: "e-hentai"
-    type:  select
-    proxies:
-     - e-hentai auto
-     - Manual
 
   - name: "e-hentai auto"
     type: load-balance
