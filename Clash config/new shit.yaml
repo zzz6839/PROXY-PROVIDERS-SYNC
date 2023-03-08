@@ -427,8 +427,8 @@ proxy-groups:
     interval: 300
     tolerance: 40
     filter: '香港|hk|hong'
-   #lazy: true
-   #disable-udp: true
+    lazy: false
+    #disable-udp: true
 
   - name: "backup(Auto)"
     type: url-test
