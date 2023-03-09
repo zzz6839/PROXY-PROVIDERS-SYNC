@@ -166,6 +166,8 @@ dns:
     - "*.tracker.*.*"
     #Qbittorrent推送
     - "+.alpinelinux.org"
+    #二维码问题
+    - "+.tencent.com"
 
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
