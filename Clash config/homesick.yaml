@@ -1,56 +1,21 @@
-port: 7890
-
-socks-port: 7891
-
-redir-port: 7892
-
-tproxy-port: 7893
-
-mixed-port: 7890
-
 allow-lan: false
-
 bind-address: '*'
-
 mode: direct
-
 log-level: info
-
 ipv6: true
-
 external-controller: 127.0.0.1:9090
-
 hosts:
-
 profile:
 
   store-selected: true
-
 dns:
   enable: true
   listen: 0.0.0.0:7874
   
   default-nameserver:
     - UDP://192.168.1.1:53
-  enhanced-mode: fake-ip 
-  fake-ip-range: 198.18.0.1/16 
-  
-  
-  fake-ip-filter:
-    - '*.lan'
-    - localhost.ptlogin2.qq.com
-    - '+.srv.nintendo.net'
-    - '+.stun.playstation.net'
-    - '+.msftconnecttest.com'
-    - '+.msftncsi.com'
-    - '+.xboxlive.com'
-    - 'msftconnecttest.com'
-    - 'xbox.*.microsoft.com'
-    - '*.battlenet.com.cn'
-    - '*.battlenet.com'
-    - '*.blzstatic.cn'
-    - '*.battle.net'
-    - '*.wegame.com.cn'
+    
+  enhanced-mode: redir-host
   
   nameserver:
     - UDP://192.168.1.1:53
@@ -60,9 +25,6 @@ dns:
   
   fallback-filter:
      geoip: true
-     geosite:
-       - "!cn"
-       - gfw
      geoip-code: CN
      ipcidr:
        - 240.0.0.0/4
@@ -70,26 +32,14 @@ dns:
        - '+.google.com'
        - '+.facebook.com'
        - '+.youtube.com'
-
 proxies:
 
 proxy-providers:
   
-  Netease:
-    type: http
-    url:  "https://raw.githubusercontent.com/DesperadoJ/Rules-for-UnblockNeteaseMusic/master/Clash/Proxy/NeteaseMusic.yaml" 
-    interval: 3600
-    path: ./Proxy/netease.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: https://www.gstatic.com/generate_204    
-  
 proxy-groups:
 
 rules:
-    
-    - MATCH,DIRECT
+  - MATCH,DIRECT
   
 
 
