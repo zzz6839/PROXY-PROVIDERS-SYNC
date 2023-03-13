@@ -559,7 +559,7 @@ proxy-groups:
   - name: "DNS"
     type: url-test
     use:
-    #  - Airport A 
+      - Airport A 
       - Airport B
     filter: "(?!.*(Tro)).*(港)"
     url: "https://dns.google"
