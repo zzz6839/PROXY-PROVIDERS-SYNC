@@ -15,5 +15,6 @@
     - DOMAIN,stun-2.chat.bilibili.com
     - DOMAIN,stun-1.chat.bilibili.com
     - DOMAIN,stun.chat.bilibili.com
+    - DOMAIN-KEYWORD,pcdn
 
     
