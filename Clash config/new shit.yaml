@@ -159,15 +159,15 @@ dns:
     - "+.stun.*.*.*.*.*"
     - "+.dns.google"
     #bark 
-    - "+.api.day.app"
-    #放行tracker和torrent
-    - "tracker.*.*"
-    - "*.tracker.*"
-    - "*.tracker.*.*"
-    #Qbittorrent推送
-    - "+.alpinelinux.org"
-    - "download.db-ip.com"
-    - "cf.trackerslist.com"
+    #- "+.api.day.app"
+    ##放行tracker和torrent
+    #- "tracker.*.*"
+    #- "*.tracker.*"
+    #- "*.tracker.*.*"
+    ##Qbittorrent推送
+    #- "+.alpinelinux.org"
+    #- "download.db-ip.com"
+    #- "cf.trackerslist.com"
     #二维码问题
     #- "+.tencent.com"
     #- "+.qq.com"
