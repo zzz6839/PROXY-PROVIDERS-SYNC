@@ -542,7 +542,7 @@ proxy-groups:
       - 🎮online game
       - 🇹🇼Baha
 
-  - name: "🇺🇸openai"
+  - name: "🇺🇸AI"
     type: select
     proxies:
       - DIRECT
@@ -852,7 +852,8 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - DOMAIN-KEYWORD,openai,🇺🇸openai
+    - DOMAIN-KEYWORD,openai,🇺🇸AI
+    - DOMAIN,bard.google.com,🇺🇸AI
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
