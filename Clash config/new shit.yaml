@@ -560,7 +560,8 @@ proxy-groups:
 
   # DNS
   - name: "DNS"
-    type: url-test
+    type: load-balance
+    strategy: round-robin
     use:
       - Airport A 
       - Airport B
