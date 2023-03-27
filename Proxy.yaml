@@ -61,4 +61,7 @@
   - DOMAIN,captive.apple.com
   - DOMAIN,cp.cloudflare.com
   - DOMAIN,gstatic.com
-  
+
+  # lol esports
+  - DOMAIN-SUFFIX,lolesports.com
+  - DOMAIN,cdn.rgpub.io
