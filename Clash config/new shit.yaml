@@ -630,12 +630,12 @@ rule-providers:
     path: ./ruleset/bt-trackers.txt
     interval: 86400
 
-  China_domain:
-    type: http
-    behavior: domain
-    path: ./RuleSet/Extra/China_domain.txt
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
-    interval: 86400 
+  #China_domain:
+  #  type: http
+  #  behavior: domain
+  #  path: ./RuleSet/Extra/China_domain.txt
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
+  #  interval: 86400 
 
   DMM_domain:
     type: http
@@ -773,12 +773,12 @@ rule-providers:
   #  path: ./ruleset/Telegram_domain.yaml
   #  interval: 86400
   
-  Twitch:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Twitch.yaml
-    path: ./ruleset/Twitch.yaml
-    interval: 86400
+  #Twitch:
+  #  type: http
+  #  behavior: classical
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Twitch.yaml
+  #  path: ./ruleset/Twitch.yaml
+  #  interval: 86400
 
   Telegram_ip:
     type: http
@@ -839,7 +839,6 @@ rules:
   
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
-    - RULE-SET,Twitch,🇹🇼Baha #proxy group
 
     - RULE-SET,TikTok,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
@@ -879,7 +878,7 @@ rules:
 
     - RULE-SET,Rockstar,DIRECT
     
-    - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
+    - GEOSITE,cn,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
                                    #仅GEOIP CN 可以完全做到判断大陆网站。
     # custom domestic rules
     - RULE-SET,domestic,DIRECT
