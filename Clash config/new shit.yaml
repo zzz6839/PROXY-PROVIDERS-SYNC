@@ -823,7 +823,8 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
     path: ./ruleset/gfw.txt
     interval: 86400
-  
+
+
   
 # 规则
 rules:
@@ -838,11 +839,11 @@ rules:
   
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
+    - RULE-SET,Twitch,🇹🇼Baha #proxy group
 
     - RULE-SET,TikTok,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
-    - RULE-SET,Twitch,🇹🇼Baha #proxy group
     
     - RULE-SET,E-Hentai_domain,e-hentai #proxy group
     
@@ -853,8 +854,9 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - DOMAIN-KEYWORD,openai,🇺🇸AI
+    - GEOSITE,openai,🇺🇸AI
     - DOMAIN,bard.google.com,🇺🇸AI
+    
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
