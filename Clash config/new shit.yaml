@@ -845,7 +845,7 @@ rules:
     - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
     
-    - RULE-SET,E-Hentai_domain,e-hentai #proxy group
+    - RULE-SET,E-Hentai_domain,e-hentai auto #proxy group
     
     - RULE-SET,Vercel,Vercel #proxy group
     
