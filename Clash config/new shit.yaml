@@ -187,12 +187,11 @@ dns:
       - 223.6.6.6         
   nameserver-policy:
       "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
-      "geosite:cn,private": [223.6.6.6,119.29.29.29]           
-    # - 114.114.114.114 # default value
-    # - 8.8.8.8 # default value
-    # - tls://dns.rubyfish.cn:853 # DNS over TLS
-    # - https://1.1.1.1/dns-query # DNS over HTTPS
-    # - dhcp://en0 # dns from dhcp
+      "domain-set:ProxyDNS": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]
+      "geosite:cn,private": [223.6.6.6,119.29.29.29]
+      "domain-set:DomesticDNS": [223.6.6.6,119.29.29.29]          
+  # "domain-set:global,dns": 8.8.8.8 # global，dns 为 rule-providers 中的名为 global 和 dns 的规则提供器名字，且 behavior 必须为 domain 
+
 
   # When `fallback` is present, the DNS server will send concurrent requests
   # to the servers in this section along with servers in `nameservers`.                         #fallback is a history now, metaclash use nameserver-policy
@@ -658,6 +657,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
     interval: 86400 
   
+  DomesticDNS:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/DomesticDNS.yaml"
+    path: ./ruleset/DomesticDNS.txt
+    interval: 86400 
+  
   Epicgames:
     type: http
     behavior: classical
@@ -808,6 +814,13 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Extra/Proxy.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
+    interval: 86400
+
+  ProxyDNS:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/ProxyDNS.yaml"
+    path: ./ruleset/ProxyDNS.txt
     interval: 86400  
 
   🎮online game:
