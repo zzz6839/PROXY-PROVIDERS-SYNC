@@ -186,10 +186,11 @@ dns:
       - 119.29.29.29      
       - 223.6.6.6         
   nameserver-policy:
+      "rule-set:ProxyDNS": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]
+      "rule-set:DomesticDNS": [223.6.6.6,119.29.29.29]  
       "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
-      "domain-set:ProxyDNS": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]
       "geosite:cn,private": [223.6.6.6,119.29.29.29]
-      "domain-set:DomesticDNS": [223.6.6.6,119.29.29.29]          
+          
   # "domain-set:global,dns": 8.8.8.8 # global，dns 为 rule-providers 中的名为 global 和 dns 的规则提供器名字，且 behavior 必须为 domain 
 
 
@@ -659,9 +660,9 @@ rule-providers:
   
   DomesticDNS:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/DomesticDNS.yaml"
-    path: ./ruleset/DomesticDNS.txt
+    path: ./ruleset/DomesticDNS.yaml
     interval: 86400 
   
   Epicgames:
@@ -818,9 +819,9 @@ rule-providers:
 
   ProxyDNS:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/ProxyDNS.yaml"
-    path: ./ruleset/ProxyDNS.txt
+    path: ./ruleset/ProxyDNS.yaml
     interval: 86400  
 
   🎮online game:
