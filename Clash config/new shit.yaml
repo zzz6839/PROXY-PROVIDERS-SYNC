@@ -870,7 +870,8 @@ rules:
     
     - RULE-SET,bt-trackers,DIRECT
    
-    - RULE-SET,Microsoft,DIRECT
+    - GEOSITE,microsoft@cn,DIRECT
+    - RULE-SET,Microsoft,✈️PROXY
     
     - GEOSITE,apple@cn,DIRECT
     - GEOSITE,apple-cn,DIRECT
