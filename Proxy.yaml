@@ -62,6 +62,12 @@
   - DOMAIN,cp.cloudflare.com
   - DOMAIN,gstatic.com
 
-  # lol esports
+  # lol esports script
   - DOMAIN-SUFFIX,lolesports.com
   - DOMAIN,cdn.rgpub.io
+  - DOMAIN,ddragon.leagueoflegends.com
+  - DOMAIN,login.leagueoflegends.com
+  - DOMAIN,auth.riotgames.com
+  - DOMAIN,authenticate.riotgames.com
+  - DOMAIN,login.riotgames.com
+  - DOMAIN,login.playvalorant.com
