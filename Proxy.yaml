@@ -71,3 +71,7 @@
   - DOMAIN,authenticate.riotgames.com
   - DOMAIN,login.riotgames.com
   - DOMAIN,login.playvalorant.com
+  
+  #JOOX
+  - DOMAIN-SUFFIX,joox.com
+  - DOMAIN-KEYWORD,jooxweb-api
