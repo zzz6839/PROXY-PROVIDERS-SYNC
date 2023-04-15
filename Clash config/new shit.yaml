@@ -706,7 +706,21 @@ rule-providers:
     path: ./RuleSet/Extra/Microsoft.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
     interval: 86400  
+
+  reject:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Reject_domain.txt"
+    path: ./ruleset/reject.txt
+    interval: 86400
   
+  reject_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Reject_ip.yaml"
+    path: ./ruleset/reject_ip.yaml
+    interval: 86400
+    
   Refuse:
     type: http
     behavior: classical
@@ -834,7 +848,9 @@ rules:
     - RULE-SET,Refuse,REJECT
     # lan domain
     - RULE-SET,private,DIRECT
-  
+    #AD block 
+    - RULE-SET,reject,REJECT #59447 rules >
+
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
 
@@ -884,6 +900,8 @@ rules:
 
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+        - RULE-SET,reject_ip,REJECT,no-resolve
+
     # lan ip
     - RULE-SET,lancidr,DIRECT,no-resolve
 
