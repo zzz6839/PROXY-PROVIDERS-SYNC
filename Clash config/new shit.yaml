@@ -557,7 +557,7 @@ proxy-groups:
       - DIRECT
       - ✈️PROXY
   
-  - name: "🎧Unblockneteasemusic"
+  - name: "🎧UnblockNeteasemusic"
     type: select
     proxies:
       - DIRECT
@@ -749,11 +749,11 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Rockstar_domain.yaml
     interval: 86400
   
-  Unblockneteasemusic:
+  UnblockNeteasemusic:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/Unblockneteasemusic.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Unblockneteasemusic.yaml
+    path: ./RuleSet/Extra/UnblockNeteasemusic.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/UnblockNeteasemusic.yaml
     interval: 86400
 
   Vercel:
@@ -925,7 +925,7 @@ rules:
 
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
 
-    - RULE-SET,Unblockneteasemusic,🎧Unblocketeasemusic
+    - RULE-SET,UnblockNeteasemusic,🎧UnblockNeteasemusic
 
     # rest mainland ip resolved
     - GEOIP,CN,DIRECT
