@@ -540,7 +540,8 @@ proxy-groups:
       - ✈️PROXY
       - DIRECT
       - 🎮online game
-      - 🇹🇼Baha
+    use:
+      - Airport B
 
   - name: "🇺🇸AI"
     type: select
