@@ -187,9 +187,9 @@ dns:
       - 223.6.6.6         
   nameserver-policy:
       "rule-set:ProxyDNS": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]
-      "rule-set:DomesticDNS": [223.6.6.6,119.29.29.29]  
+      "rule-set:DomesticDNS": [223.6.6.6,221.12.1.227]  
       "geosite:gfw": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]           #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
-      "geosite:cn,private": [223.6.6.6,119.29.29.29]
+      "geosite:cn,private": [223.6.6.6,221.12.1.227]
           
   # "domain-set:global,dns": 8.8.8.8 # global，dns 为 rule-providers 中的名为 global 和 dns 的规则提供器名字，且 behavior 必须为 domain 
 
