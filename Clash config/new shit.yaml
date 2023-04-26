@@ -909,7 +909,7 @@ rules:
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
     
-    - IP-CIDR,76.76.21.21/32,Vercel,no-resolve #proxy group
+    - IP-CIDR,76.76.21.21/32,✈️PROXY,no-resolve #proxy group
 
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
    
