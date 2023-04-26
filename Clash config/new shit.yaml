@@ -69,7 +69,7 @@ hosts:
   # 'alpha.clash.dev': '::1'
   
   #dns
-  'music.163-my-beloved.com': 76.76.21.21
+  #'music.163-my-beloved.com': 76.76.21.21
   #'dns.google': 8.8.4.4
   #'dns.nextdns.io': 45.11.104.186
   #'1dot1dot1dot1.cloudflare-dns.com': 1.0.0.1
@@ -551,13 +551,20 @@ proxy-groups:
       - Airport A
     filter: "美国|us"
   
-  
   - name: "♿speedtest"
     type: select
     proxies:
       - DIRECT
       - ✈️PROXY
-
+  
+  - name: "🎧Unblockneteasemusic"
+    type: select
+    proxies:
+      - DIRECT
+      - ✈️PROXY
+      - Vercel
+      - REJECT
+      
   # DNS
   - name: "DNS"
     type: load-balance
@@ -742,6 +749,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Rockstar_domain.yaml
     interval: 86400
   
+  Unblockneteasemusic:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Unblockneteasemusic.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Unblockneteasemusic.yaml
+    interval: 86400
+
   Vercel:
     type: http
     behavior: classical
@@ -908,11 +922,11 @@ rules:
 
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
-    
-    - IP-CIDR,76.76.21.21/32,✈️PROXY,no-resolve #unblocknetasemusic
 
-    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
-   
+    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
+
+    - RULE-SET,Unblockneteasemusic,🎧Unblocketeasemusic
+
     # rest mainland ip resolved
     - GEOIP,CN,DIRECT
     # BLACKLIST MDOE
