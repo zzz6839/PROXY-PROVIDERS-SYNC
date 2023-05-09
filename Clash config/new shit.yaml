@@ -861,8 +861,6 @@ rules:
     - RULE-SET,Refuse,REJECT
     # lan domain
     - RULE-SET,private,DIRECT
-    #AD block 
-    - RULE-SET,reject,REJECT #59447 rules >
 
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
