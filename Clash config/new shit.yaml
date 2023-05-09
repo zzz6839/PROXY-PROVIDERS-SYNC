@@ -528,11 +528,8 @@ proxy-groups:
     use:
       - Airport A
     proxies:
-      - ✈️PROXY
       - DIRECT
-      - 🇹🇼Baha
-      - main (Manual)
-    #filter: '游戏|game'
+    filter: '台湾|香港'
   
   #RiotGames
   - name: "👊RiotGames"
@@ -540,7 +537,7 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-      - main(Manual)
+      - main (Manual)
     use:
       - Airport B
     filter: "日|港|新"
