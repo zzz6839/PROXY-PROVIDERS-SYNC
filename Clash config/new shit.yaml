@@ -531,7 +531,7 @@ proxy-groups:
       - ✈️PROXY
       - DIRECT
       - 🇹🇼Baha
-      - main(Manual)
+      - main (Manual)
     #filter: '游戏|game'
   
   #RiotGames
