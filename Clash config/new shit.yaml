@@ -329,7 +329,7 @@ proxy-providers:
     type: http
     url:  ""
     interval: 3600
-    filter: "^((?!(官网|漏洞|倒卖)).)*$"
+    filter: "^((?!(Traffic|Expire)).)*$"
     path: ./Proxy/main.yaml
     health-check:
       enable: true
@@ -341,7 +341,7 @@ proxy-providers:
     type: http
     url:  "" 
     interval: 3600
-    filter: "^((?!(联通|移动)).)*$"
+    filter: "^((?!(每月刷新|com)).)*$"
     path: ./Proxy/backup.yaml
     health-check:
       enable: true
