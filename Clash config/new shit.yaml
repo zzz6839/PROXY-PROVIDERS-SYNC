@@ -530,8 +530,9 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-      - backup (Manual)
-    filter: '游戏|game'
+      - 🇹🇼Baha
+      - main(Manual)
+    #filter: '游戏|game'
   
   #RiotGames
   - name: "👊RiotGames"
@@ -539,9 +540,10 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-      - 🎮online game
+      - main(Manual)
     use:
       - Airport B
+    filter: "日|港|新"
 
   - name: "🇺🇸AI"
     type: select
@@ -564,7 +566,6 @@ proxy-groups:
       - DIRECT
       - ✈️PROXY
       - Vercel
-      - REJECT
       
   # DNS
   - name: "DNS"
