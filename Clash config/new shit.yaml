@@ -571,7 +571,7 @@ proxy-groups:
     use:
       - Airport A 
     #  - Airport B
-    filter: "(?!.*(Tro)).*(港)"
+    filter: "(?!.*(Tro)).*(港|台)"
     url: "https://dns.google"
     interval: 900
     tolerance: 20 
