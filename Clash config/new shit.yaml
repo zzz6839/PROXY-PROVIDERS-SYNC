@@ -570,7 +570,7 @@ proxy-groups:
     strategy: round-robin
     use:
       - Airport A 
-      - Airport B
+    #  - Airport B
     filter: "(?!.*(Tro)).*(港)"
     url: "https://dns.google"
     interval: 900
