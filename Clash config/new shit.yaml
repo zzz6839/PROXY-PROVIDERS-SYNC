@@ -556,13 +556,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - ✈️PROXY
-  
-  - name: "🎧UnblockNeteasemusic"
-    type: select
-    proxies:
-      - DIRECT
-      - ✈️PROXY
-      - Vercel
       
   # DNS
   - name: "DNS"
@@ -748,13 +741,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Rockstar_domain.yaml
     interval: 86400
   
-  UnblockNeteasemusic:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/UnblockNeteasemusic.yaml
-    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/UnblockNeteasemusic.yaml
-    interval: 86400
-
   Vercel:
     type: http
     behavior: classical
@@ -872,7 +858,8 @@ rules:
     - RULE-SET,E-Hentai_domain,e-hentai auto #proxy group
     
     - RULE-SET,Vercel,Vercel #proxy group
-    
+    - DOMAIN,music.163-my-beloved.com,Vercel #proxy group
+
     - GEOSITE,javdb,javdb #proxy group
 
     - RULE-SET,SteamCN,DIRECT 
@@ -918,10 +905,8 @@ rules:
 
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
-
+    - IP-CIDR,76.76.21.21/32,Vercel #proxy group
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
-
-    - RULE-SET,UnblockNeteasemusic,🎧UnblockNeteasemusic
 
     # rest mainland ip resolved
     - GEOIP,CN,DIRECT
