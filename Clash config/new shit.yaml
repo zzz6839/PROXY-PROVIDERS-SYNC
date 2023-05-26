@@ -916,8 +916,8 @@ rules:
     - DST-PORT,80,DST-PORT
     - DST-PORT,443,DST-PORT
     - DST-PORT,22,DST-PORT
-    # FINAL
-    - MATCH,DIRECT
+    # FINAL if bypass CN, then MATCH proxy
+    - MATCH,DIRECT 
   
 
 
