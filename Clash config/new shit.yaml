@@ -845,6 +845,8 @@ rules:
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
     - RULE-SET,Refuse,REJECT
+
+    - DOMAIN,connectivitycheck.gstatic.com,✈️PROXY
     # lan domain
     - RULE-SET,private,DIRECT
 
