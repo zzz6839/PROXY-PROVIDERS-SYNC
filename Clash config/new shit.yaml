@@ -510,7 +510,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:
-     - Airport A
+     - Airport B
     #filter: '日IEPL|日IPLC'
     url: 'https://vercel.app'
     interval: 900
