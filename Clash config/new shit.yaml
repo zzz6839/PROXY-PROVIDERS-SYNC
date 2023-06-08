@@ -878,7 +878,7 @@ rules:
     - GEOSITE,openai,🇺🇸AI
     - DOMAIN,bard.google.com,🇺🇸AI
     
-    - DOMAIN-SUFFIX,ttvnw.net,EsportsVid
+    - DOMAIN-SUFFIX,ttvnw.net,EsportsVid #proxy group
     
     - RULE-SET,🧱gfw,✈️PROXY
 
