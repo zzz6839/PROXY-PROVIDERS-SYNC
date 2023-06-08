@@ -542,6 +542,13 @@ proxy-groups:
     use:
       - Airport B
     filter: "日|港|新"
+  
+  #loot
+  - name: "EsportsVid"
+    type: select
+    proxies:
+      - main(Auto)
+      - backup(Auto)
 
   - name: "🇺🇸AI"
     type: select
@@ -870,6 +877,8 @@ rules:
     
     - GEOSITE,openai,🇺🇸AI
     - DOMAIN,bard.google.com,🇺🇸AI
+    
+    - DOMAIN-SUFFIX,ttvnw.net,EsportsVid
     
     - RULE-SET,🧱gfw,✈️PROXY
 
