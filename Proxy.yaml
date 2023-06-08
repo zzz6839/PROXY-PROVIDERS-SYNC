@@ -25,7 +25,7 @@
   #- DOMAIN-SUFFIX,18comic.vip
   #- DOMAIN-SUFFIX,nyahentai.com
   #- DOMAIN-SUFFIX,hembed.com
-  #- DOMAIN-SUFFIX,up-timely.com
+  - DOMAIN-SUFFIX,up-timely.com
   #- DOMAIN-SUFFIX,sb-cd.com
   #- DOMAIN-SUFFIX,titz.top
   #- DOMAIN-SUFFIX,teknik.app
