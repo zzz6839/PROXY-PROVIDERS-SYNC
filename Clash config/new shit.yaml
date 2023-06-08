@@ -547,8 +547,8 @@ proxy-groups:
   - name: "EsportsVid"
     type: select
     proxies:
-      - main(Auto)
       - backup(Auto)
+      - main(Auto)
 
   - name: "🇺🇸AI"
     type: select
