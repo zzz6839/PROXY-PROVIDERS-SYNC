@@ -444,7 +444,7 @@ proxy-groups:
     interval: 300
     tolerance: 40
     #lazy: true
-    filter: '港|hk|hong'
+    #filter: '港|hk|hong'
    #disable-udp: true
 
   - name: "Manual"
