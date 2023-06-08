@@ -1,55 +1,55 @@
   payload:
-  - DOMAIN-SUFFIX,nyaa.si
-  - DOMAIN-SUFFIX,dmhy.org
-  - DOMAIN-SUFFIX,javbus.com
-  - DOMAIN-SUFFIX,prestige-av.com
-  - DOMAIN-SUFFIX,moodyz.com
-  - DOMAIN-SUFFIX,ideapocket.com
-  - DOMAIN-SUFFIX,faleno.jp
-  - DOMAIN-SUFFIX,xn--p8jr2b2a2b5gvc4ed.com
-  - DOMAIN-SUFFIX,cordcloud.biz
-  - DOMAIN,fast.lycorisrecoil.org
-  - DOMAIN-SUFFIX,ttt.sh
-  - DOMAIN-SUFFIX,cordc.net
-  - DOMAIN-SUFFIX,duyaoss.com
-  - DOMAIN-SUFFIX,playno1.com
-  - DOMAIN-SUFFIX,jkforum.net
-  - DOMAIN-SUFFIX,javdb.com 
-  - DOMAIN-SUFFIX,hanime1.me
-  - DOMAIN-SUFFIX,xhamster19.com
-  - DOMAIN-SUFFIX,jmcomic3.cc
-  - DOMAIN-SUFFIX,18comic.org
-  - DOMAIN-SUFFIX,javlibrary.com
-  - DOMAIN-SUFFIX,cosindex.251.sh
-  - DOMAIN-SUFFIX,e-hentai.org
-  - DOMAIN-SUFFIX,18comic.vip
-  - DOMAIN-SUFFIX,nyahentai.com
-  - DOMAIN-SUFFIX,hembed.com
-  - DOMAIN-SUFFIX,up-timely.com
-  - DOMAIN-SUFFIX,sb-cd.com
-  - DOMAIN-SUFFIX,titz.top
-  - DOMAIN-SUFFIX,teknik.app
-  - DOMAIN-SUFFIX,jits.cc
-  - DOMAIN-SUFFIX,pengu.us
-  - DOMAIN-SUFFIX,stealthshop.cf
-  - DOMAIN-SUFFIX,jits.site
-  - DOMAIN-SUFFIX,nekoshop.cf
-  - DOMAIN-SUFFIX,quotanx.in
-  - DOMAIN-SUFFIX,tiny.cc
-  - DOMAIN-SUFFIX,jits.ga
-  - DOMAIN-SUFFIX,partyshop.xyz
-  - DOMAIN-SUFFIX,rebrand.ly
-  - DOMAIN-SUFFIX,rinuploads.org
-  - DOMAIN-SUFFIX,jdbstatic.com
-  - DOMAIN-SUFFIX,shortpixel.ai
-  - DOMAIN-SUFFIX,cwwatch.net
-  - DOMAIN-SUFFIX,attackers.net
-  - DOMAIN-SUFFIX,hk1lib.org
-  - DOMAIN-SUFFIX,chkaja.com
-  - DOMAIN-SUFFIX,hxcy.moe
-  - DOMAIN,1dot1dot1dot1.cloudflare-dns.com
+  #- DOMAIN-SUFFIX,nyaa.si
+  #- DOMAIN-SUFFIX,dmhy.org
+  #- DOMAIN-SUFFIX,javbus.com
+  #- DOMAIN-SUFFIX,prestige-av.com
+  #- DOMAIN-SUFFIX,moodyz.com
+  #- DOMAIN-SUFFIX,ideapocket.com
+  #- DOMAIN-SUFFIX,faleno.jp
+  #- DOMAIN-SUFFIX,xn--p8jr2b2a2b5gvc4ed.com
+  #- DOMAIN-SUFFIX,cordcloud.biz
+  #- DOMAIN,fast.lycorisrecoil.org
+  #- DOMAIN-SUFFIX,ttt.sh
+  #- DOMAIN-SUFFIX,cordc.net
+  #- DOMAIN-SUFFIX,duyaoss.com
+  #- DOMAIN-SUFFIX,playno1.com
+  #- DOMAIN-SUFFIX,jkforum.net
+  #- DOMAIN-SUFFIX,javdb.com 
+  #- DOMAIN-SUFFIX,hanime1.me
+  #- DOMAIN-SUFFIX,xhamster19.com
+  #- DOMAIN-SUFFIX,jmcomic3.cc
+  #- DOMAIN-SUFFIX,18comic.org
+  #- DOMAIN-SUFFIX,javlibrary.com
+  #- DOMAIN-SUFFIX,cosindex.251.sh
+  #- DOMAIN-SUFFIX,e-hentai.org
+  #- DOMAIN-SUFFIX,18comic.vip
+  #- DOMAIN-SUFFIX,nyahentai.com
+  #- DOMAIN-SUFFIX,hembed.com
+  #- DOMAIN-SUFFIX,up-timely.com
+  #- DOMAIN-SUFFIX,sb-cd.com
+  #- DOMAIN-SUFFIX,titz.top
+  #- DOMAIN-SUFFIX,teknik.app
+  #- DOMAIN-SUFFIX,jits.cc
+  #- DOMAIN-SUFFIX,pengu.us
+  #- DOMAIN-SUFFIX,stealthshop.cf
+  #- DOMAIN-SUFFIX,jits.site
+  #- DOMAIN-SUFFIX,nekoshop.cf
+  #- DOMAIN-SUFFIX,quotanx.in
+  #- DOMAIN-SUFFIX,tiny.cc
+  #- DOMAIN-SUFFIX,jits.ga
+  #- DOMAIN-SUFFIX,partyshop.xyz
+  #- DOMAIN-SUFFIX,rebrand.ly
+  #- DOMAIN-SUFFIX,rinuploads.org
+  #- DOMAIN-SUFFIX,jdbstatic.com
+  #- DOMAIN-SUFFIX,shortpixel.ai
+  #- DOMAIN-SUFFIX,cwwatch.net
+  #- DOMAIN-SUFFIX,attackers.net
+  #- DOMAIN-SUFFIX,hk1lib.org
+  #- DOMAIN-SUFFIX,chkaja.com
+  #- DOMAIN-SUFFIX,hxcy.moe
+  #- DOMAIN,1dot1dot1dot1.cloudflare-dns.com
   
-  - DOMAIN-SUFFIX,vercel.com
+  #- DOMAIN-SUFFIX,vercel.com
   
   # Amazon cloudfront service
   - DOMAIN-SUFFIX,cloudfront.net
@@ -58,9 +58,9 @@
   - DOMAIN-SUFFIX,bing.com
 
   #connectivity test
-  - DOMAIN,captive.apple.com
-  - DOMAIN,cp.cloudflare.com
-  - DOMAIN,gstatic.com
+  #- DOMAIN,captive.apple.com
+  #- DOMAIN,cp.cloudflare.com
+  #- DOMAIN,gstatic.com
 
   # lol esports script
   - DOMAIN-SUFFIX,lolesports.com
