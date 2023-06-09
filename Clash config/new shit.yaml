@@ -517,11 +517,11 @@ proxy-groups:
     tolerance: 50 
 
   # Bilibili国台
-  #- name: "Bilibili国台"
-  #  type: select
-  #  proxies:
-  #    - DIRECT
-  #    - 🇹🇼Baha
+  - name: "Bilibili国台"
+    type: select
+    proxies:
+      - DIRECT
+      - 🇹🇼Baha
   
   # 外服游戏
   - name: "🎮online game"
@@ -616,12 +616,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Bahamut_domain.yaml"
     interval: 86400 
   
-  #BILIBILIHMT_domain:
-  #  type: http
-  #  behavior: classical
-  #  path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
-  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
-  #  interval: 86400 
+  BILIBILIHMT_domain:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
+    interval: 86400 
   
   #BILIBILIHMT_ip:
   #  type: http
@@ -888,7 +888,7 @@ rules:
     
     - RULE-SET,Speedtest,♿speedtest
     # DOMAIN DIRECT
-    #- RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
+    - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
     
     - RULE-SET,Epicgames,DIRECT
     
