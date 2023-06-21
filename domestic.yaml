@@ -24,8 +24,8 @@ payload:
 #  - DOMAIN-SUFFIX,store.leagueoflegends.com
 #  - DOMAIN,am-a.akamaihd.net
 #-------------------qbittorrent----------------------------------
-  - DOMAIN-KEYWORD,bittorrent
-  - DOMAIN-KEYWORD,torrent
+#  - DOMAIN-KEYWORD,bittorrent
+#  - DOMAIN-KEYWORD,torrent
 #-------------------pyncmd---------------------------------- 
 #  - DOMAIN,pyncmd.vercel.app
 #-------------------不规则tracker---------------------------------- 
@@ -61,10 +61,10 @@ payload:
   #unblockneteasemusic
   #- DOMAIN,music.163-my-beloved.com
  #dns test
-  - DOMAIN-SUFFIX,dnsleaktest.com
-  - DOMAIN-SUFFIX,dnsperf.com
-  - DOMAIN-SUFFIX,perfops.net
-  - DOMAIN-SUFFIX,ipleak.net
+ # - DOMAIN-SUFFIX,dnsleaktest.com
+ # - DOMAIN-SUFFIX,dnsperf.com
+ # - DOMAIN-SUFFIX,perfops.net
+ # - DOMAIN-SUFFIX,ipleak.net
   #vercel pollution
   #- DOMAIN,music.163-my-beloved.com #no https
   - DOMAIN-SUFFIX,YUC.WIKI
