@@ -1,14 +1,14 @@
 # Port of HTTP(S) proxy server on the local end
-# port: 7890
+port: 7890
 
 # Port of SOCKS5 proxy server on the local end
-# socks-port: 7891
+socks-port: 7891
 
 # Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
-# redir-port: 7892
+redir-port: 7892
 
 # Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
-# tproxy-port: 7893
+tproxy-port: 7893
 
 # HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
 mixed-port: 7890
@@ -36,10 +36,10 @@ mode: rule
 
 # Clash by default prints logs to STDOUT
 # info / warning / error / debug / silent
-log-level: info
+log-level: error
 
 # When set to false, resolver won't translate hostnames to IPv6 addresses
-ipv6: false
+ipv6: true
 
 # RESTful web API listening address
 external-controller: 127.0.0.1:9090
@@ -67,31 +67,39 @@ hosts:
   # '*.clash.dev': 127.0.0.1
   # '.dev': 127.0.0.1
   # 'alpha.clash.dev': '::1'
-
-  # Firebase Cloud Messaging
-  'mtalk.google.com': 108.177.125.188
-  # Google Dl
-  'dl.google.com': 180.163.151.161
-  'dl.l.google.com': 180.163.151.161
+  
+  #dns
+  'music.163-my-beloved.com': 76.76.21.21
+  'msftconnecttest.com': 127.0.0.1
+  #'dns.google': 8.8.4.4
+  #'dns.nextdns.io': 45.11.104.186
+  #'1dot1dot1dot1.cloudflare-dns.com': 1.0.0.1
+#
+  ## Firebase Cloud Messaging
+  #'mtalk.google.com': 108.177.125.188
+  ## Google Dl
+  #'dl.google.com': 180.163.151.161
+  #'dl.l.google.com': 180.163.151.161
 
 profile:
   # Store the `select` results in $HOME/.config/clash/.cache
   # set false If you don't want this behavior
   # when two different configurations have groups with the same name, the selected values are shared
-  store-selected: false
+  store-selected: true
 
 # DNS server settings
 # This section is optional. When not present, the DNS server will be disabled.
 dns:
-  enable: false
-  listen: 0.0.0.0:53
+  enable: true
+  listen: 0.0.0.0:7874
   # ipv6: false # when the false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
   # Specify IP addresses only
-  default-nameserver:
-    - 119.29.29.29
-  enhanced-mode: redir-host # or fake-ip
+  #default-nameserver:
+  #  - 119.29.29.29
+  #  - 223.5.5.5
+  enhanced-mode: fake-ip # or fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   # use-hosts: true # lookup hosts and return IP record
   
@@ -113,38 +121,103 @@ dns:
     - '*.blzstatic.cn'
     - '*.battle.net'
     - '*.wegame.com.cn'
-  
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.edu.cn
+    - time.*.gov
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - stun.*.*
+    - stun.*.*.*
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - "+.dns.google"
+    #bark 
+    #- "+.api.day.app"
+    ##放行tracker和torrent
+    #- "tracker.*.*"
+    #- "*.tracker.*"
+    #- "*.tracker.*.*"
+    ##Qbittorrent推送
+    #- "+.alpinelinux.org"
+    #- "download.db-ip.com"
+    #- "cf.trackerslist.com"
+    #二维码问题
+    #- "+.tencent.com"
+    #- "+.qq.com"
+
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
+  default-nameserver: #parse DOH/DOT/DOQ dns
+      - 223.6.6.6       
+      - 119.29.29.29
   nameserver:
-    - 119.29.29.29
-    # - 114.114.114.114 # default value
-    # - 8.8.8.8 # default value
-    # - tls://dns.rubyfish.cn:853 # DNS over TLS
-    # - https://1.1.1.1/dns-query # DNS over HTTPS
-    # - dhcp://en0 # dns from dhcp
+      - tls://dns.google#DNS
+      #- tls://1dot1dot1dot1.cloudflare-dns.com
+      - quic://dns.nextdns.io#DNS
+  proxy-server-nameserver:
+      - 119.29.29.29      
+      - 223.6.6.6         
+  nameserver-policy:
+      #"rule-set:ProxyDNS": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]
+      #"rule-set:DomesticDNS": [223.6.6.6,119.29.29.29]   #with your local isp dns server, not fixed    #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
+      "geosite:cn,private,microsoft@cn,apple@cn,apple-cn": [223.6.6.6,119.29.29.29]
+      "rule-set:SteamCN,Speedtest,BILIBILIHMT_domain,Epicgames,Rockstar,domestic": [223.6.6.6,119.29.29.29]
+  # "domain-set:global,dns": 8.8.8.8 # global，dns 为 rule-providers 中的名为 global 和 dns 的规则提供器名字，且 behavior 必须为 domain 
+
 
   # When `fallback` is present, the DNS server will send concurrent requests
-  # to the servers in this section along with servers in `nameservers`.
+  # to the servers in this section along with servers in `nameservers`.                         #fallback is a history now, metaclash use nameserver-policy
+  #                                                                                             #for better DNS routing 
   # The answers from fallback servers are used when the GEOIP country
   # is not `CN`.
-  # fallback:
-  #   - tcp://1.1.1.1
-
-  # If IP addresses resolved with servers in `nameservers` are in the specified
-  # subnets below, they are considered invalid and results from `fallback`
-  # servers are used instead.
-  #
-  # IP address resolved with servers in `nameserver` is used when
-  # `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
-  #
-  # If `fallback-filter.geoip` is false, results from `nameserver` nameservers
-  # are always used if not match `fallback-filter.ipcidr`.
-  #
-  # This is a countermeasure against DNS pollution attacks.
-  # fallback-filter:
+  #fallback:
+  #   - tls://1dot1dot1dot1.cloudflare-dns.com#✈️PROXY
+  #   - tls://dns.google#✈️PROXY
+  ## If IP addresses resolved with servers in `nameservers` are in the specified
+  ## subnets below, they are considered invalid and results from `fallback`
+  ## servers are used instead.
+  ##
+  ## IP address resolved with servers in `nameserver` is used when
+  ## `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
+  ##
+  ## If `fallback-filter.geoip` is false, results from `nameserver` nameservers
+  ## are always used if not match `fallback-filter.ipcidr`.
+  ##
+  ## This is a countermeasure against DNS pollution attacks.
+  #fallback-filter:
   #   geoip: true
+  #   geosite:
+  #     - "!cn"
+  #     - gfw
   #   geoip-code: CN
   #   ipcidr:
   #     - 240.0.0.0/4
@@ -160,7 +233,9 @@ dns:
  
 #
 # https://github.com/Dreamacro/clash/wiki/premium-core-features
-#
+# 
+#interface-name: en0
+
 # tun:
 #   enable: true
 #   stack: system # or gvisor
@@ -220,13 +295,6 @@ proxies:
   #   #   - http/1.1
   #   # skip-cert-verify: true
 #-
-#  name: '中国-日本 沪日IEPL传输 Equinix-TY8 A01 Netflix'
-#  type: ss
-#  server: jp01.serenazuma.com
-#  port: 44483
-#  cipher: rc4-md5
-#  password: kvjlxxldfq
-#  udp: true
 
 
 # 服务器节点订阅
@@ -254,99 +322,32 @@ proxy-providers:
   #   health-check:
   #     enable: true
   #     interval: 600
-  #     url: http://www.gstatic.com/generate_204
+  #     url: https://www.youtube.com/generate_204
   # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删除
 
-  SSRCLOUD CNIX: 
+  Airport A: 
     type: http
-    url:  " "
-    interval: 21600
+    url:  ""
+    interval: 3600
+    filter: "^((?!(Traffic|Expire)).)*$"
     path: ./Proxy/main.yaml
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204
+      url: https://www.youtube.com/generate_204
   
-  #bihai:      
-  #  type: http
-  #  url:  "https://proxies.bihai.cf/clash/proxies?c=HK,TW,KR,JP"  
-  #  interval: 3600
-  #  path: ./Proxy/free.yaml
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204    
-  
-  Leon406/SubCrawler:      
+
+  Airport B:      
     type: http
-    url:  "https://v1.mk/uEBT3u1"   
+    url:  "" 
     interval: 3600
-    path: ./Proxy/free2.yaml
+    filter: "^((?!(每月刷新|com)).)*$"
+    path: ./Proxy/backup.yaml
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204    
-  #free1:      
-  #  type: http
-  #  url:  "http://ss.pythonic.life/full/subscribe" 
-  #  interval: 3600
-  #  path: ./Proxy/free1.yaml 
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204  
-  #
-  #free2:      
-  #  type: http
-  #  url:  "https://raw.githubusercontent.com/learnhard-cn/free_proxy_ss/main/clash/clash.provider.yaml" 
-  #  interval: 3600
-  #  path: ./Proxy/free2.yaml 
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204  
-  #
-  #free3:      
-  #  type: http
-  #  url:  "https://raw.githubusercontent.com/zhlx2835/freefq/main/clash.yaml" 
-  #  interval: 3600
-  #  path: ./Proxy/free3.yaml 
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204  
-  #
-  #free4:      
-  #  type: http
-  #  url:  "https://raw.githubusercontent.com/kxswa/k/k/clash" 
-  #  interval: 3600
-  #  path: ./Proxy/free4.yaml 
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204  
-#
-  #free5:      
-  #  type: http
-  #  url:  "https://raw.githubusercontent.com/freefq/free/master/v2" 
-  #  interval: 3600
-  #  path: ./Proxy/free5.yaml 
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204  
-  #
-  #free6:      
-  #  type: http
-  #  url:  "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all" 
-  #  interval: 3600
-  #  path: ./Proxy/free6.yaml
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: http://www.gstatic.com/generate_204  
-
-
+      url: https://www.youtube.com/generate_204    
+ 
   #MIXED US:      
   #  type: http
   #  url:  ""
@@ -356,7 +357,7 @@ proxy-providers:
   #  health-check:
   #    enable: true
   #    interval: 600
-  #    url: http://www.gstatic.com/generate_204    
+  #    url: https://www.youtube.com/generate_204    
   
 
 proxy-groups:
@@ -419,141 +420,161 @@ proxy-groups:
     type: fallback
     proxies:
       - main(Auto)
-      - free(Auto)
-    url: 'http://www.gstatic.com/generate_204'
+      - backup(Auto)
+    url: 'https://www.youtube.com/generate_204'
     interval: 300 
 
   - name: "main(Auto)"
     type: url-test
     use:
-      - SSRCLOUD CNIX
-    url: 'http://www.gstatic.com/generate_204'
+      - Airport A
+    url: 'https://www.youtube.com/generate_204'
     interval: 300
     tolerance: 40
-    filter: '香港'
-   #lazy: true
-   #disable-udp: true
+    filter: '香港|hk|hong'
+    lazy: false
+    #disable-udp: true
 
-  - name: "free(Auto)"
+  - name: "backup(Auto)"
     type: url-test
     use:
-      #- bihai
-      - Leon406/SubCrawler
-    url: 'http://www.youtube.com/generate_204'
+      - Airport B
+    url: 'https://www.youtube.com/generate_204'
     interval: 300
-    tolerance: 60
-    lazy: true
-   #filter: ''
+    tolerance: 40
+    #lazy: true
+    #filter: '港|hk|hong'
    #disable-udp: true
 
   - name: "Manual"
     type: select
     proxies:
       - main (Manual)
-      - free(Manual)
-      - main(load-balance)
-      - free(load-balance)
+      - backup (Manual)
 
   - name: "main (Manual)"
     type: select
     use:    
-     - SSRCLOUD CNIX
+     - Airport A
+
+  - name: "backup (Manual)"
+    type: select
+    use:    
+     - Airport B 
+  #########################################################Safe protection
   
-  - name: "free(Manual)"
-    type: select
-    use:    
-      #- bihai
-      - Leon406/SubCrawler
 
-  - name: "main(load-balance)"
-    type: load-balance
-    strategy: consistent-hashing
-    use:    
-      - SSRCLOUD CNIX
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    lazy: true
-
-  - name: "free(load-balance)"
-    type: load-balance
-    strategy: round-robin
-    use:    
-      - Leon406/SubCrawler
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    lazy: true
-    
-  # Bilibili国台
-  - name: "TW/CN"
-    type: select
-    proxies:
-      - DIRECT
-    use:
-      - SSRCLOUD CNIX
-    filter: "台湾|TW"
-
-  # tiktok服务/baha
-  - name: "TW"
+  # baha
+  - name: "🇹🇼Baha"
     type: url-test
     use:
-     - SSRCLOUD CNIX
-    filter: '台湾|TW'
-    url: 'https://www.tiktok.com/@minami_aizawa_'
+     - Airport A
+    filter: '(?!.*(游戏)).*(台湾|taiwan|TW)'
+    url: 'https://ani.gamer.com.tw/'
     interval: 900
+    lazy: true
     tolerance: 50  
 
-   #GITHUB
-  - name: "GITHUB"
+  - name: "e-hentai auto"
     type: load-balance
-    strategy: consistent-hashing
+    strategy: round-robin
     use:
-     - SSRCLOUD CNIX
-    filter: '日IEPL|日IPLC'
-    url: 'http://github-debug.com/generate_204'
+     - Airport A
+    url: 'https://e-hentai.org'
     interval: 900
     tolerance: 50 
 
+  - name: "javdb"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    filter: '^(?!.*(日|Japan|jp))'
+    url: 'https://javdb.com'
+    interval: 900
+    tolerance: 50 
+
+  - name: "🇯🇵DMM/Mgstage/Tiktok"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    filter: '日|Japan|jp'
+    url: 'https://dmm.co.jp'
+    interval: 900
+    tolerance: 50 
+
+   #Vercel
+  - name: "Vercel"
+    type: load-balance
+    strategy: round-robin
+    use:
+     - Airport A
+    #filter: '日IEPL|日IPLC'
+    url: 'https://vercel.app'
+    interval: 900
+    tolerance: 50 
+
+  # Bilibili国台
+  - name: "Bilibili国台"
+    type: select
+    proxies:
+      - DIRECT
+      - 🇹🇼Baha
+  
   # 外服游戏
   - name: "🎮online game"
     type: select
     use:
-      - SSRCLOUD CNIX 
-    filter: '游戏'
-
-  # Beat Saber/e-hentai
-  #- name: "e-hentai"
-  #  type:  select
-  #  use:
-  #   - SSRCLOUD CNIX
-  #  Proxies:
-  #   - Manual
-  #  #filter: '美国'
-  - name: "e-hentai"
-    type: load-balance
-    strategy: round-robin
-    use:
-     - SSRCLOUD CNIX
-    #filter: '日IEPL|日IPLC'
-    url: 'http://e-hentai.org'
-    interval: 900
-    tolerance: 50 
+      - Airport A
+    proxies:
+      - DIRECT
+    filter: '台湾|香港'
   
+  #RiotGames
+  - name: "👊RiotGames"
+    type: select
+    proxies:
+      - ✈️PROXY
+      - DIRECT
+      - main (Manual)
+    use:
+      - Airport B
+    filter: "日|港|新"
+  
+  #loot
+  - name: "EsportsVid"
+    type: select
+    proxies:
+      - backup(Auto)
+      - main(Auto)
 
-  # DMM/mgstage
-  #- name: "JP"
-  #  type: select
-  #  use:
-  #    - SSRCLOUD CNIX
-  #  filter: '日本'
-  - name: "JP"
+  - name: "🇺🇸AI"
+    type: select
+    proxies:
+      - DIRECT
+      - Manual
+    use:
+      - Airport A
+    filter: "美国|us"
+  
+  - name: "♿speedtest"
+    type: select
+    proxies:
+      - DIRECT
+      - ✈️PROXY
+      
+  # DNS
+  - name: "DNS"
     type: load-balance
     strategy: round-robin
     use:
-     - SSRCLOUD CNIX
-    filter: '日IEPL|日IPLC'
-    url: 'http://dmm.co.jp'
+      - Airport A 
+    #  - Airport B
+    filter: "(?!.*(Tro)).*(港|台)"
+    url: "https://dns.google"
     interval: 900
-    tolerance: 50 
+    tolerance: 20 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
@@ -561,7 +582,6 @@ proxy-groups:
     proxies:
      - ✈️PROXY
      - DIRECT
-
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
@@ -581,12 +601,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_domain.yaml"
     interval: 86400
 
-  🍎Apple_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Apple_ip.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
-    interval: 86400
+  #🍎Apple_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/Apple_ip.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
+  #  interval: 86400
 
   baha:
     type: http
@@ -602,12 +622,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
     interval: 86400 
   
-  BILIBILIHMT_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/BILIBILIHMT_ip.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_ip.yaml"
-    interval: 86400 
+  #BILIBILIHMT_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/BILIBILIHMT_ip.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_ip.yaml"
+  #  interval: 86400 
 
   bt-trackers:
     type: http
@@ -616,12 +636,12 @@ rule-providers:
     path: ./ruleset/bt-trackers.txt
     interval: 86400
 
-  China_domain:
-    type: http
-    behavior: domain
-    path: ./RuleSet/Extra/China_domain.txt
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
-    interval: 86400 
+  #China_domain:
+  #  type: http
+  #  behavior: domain
+  #  path: ./RuleSet/Extra/China_domain.txt
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/China_domain.txt"
+  #  interval: 86400 
 
   DMM_domain:
     type: http
@@ -630,18 +650,25 @@ rule-providers:
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_domain.yaml
     interval: 86400 
 
-  DMM_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/DMM_ip.yaml
-    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
-    interval: 86400 
+  #DMM_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/DMM_ip.yaml
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
+  #  interval: 86400 
 
   domestic:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/domestic.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/domestic.yaml
+    interval: 86400 
+  
+  DomesticDNS:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/DomesticDNS.yaml"
+    path: ./ruleset/DomesticDNS.yaml
     interval: 86400 
   
   Epicgames:
@@ -658,12 +685,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_domain.yaml"
     interval: 86400
 
-  E-Hentai_ip:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/Ehentai_ip.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_ip.yaml"
-    interval: 86400
+  #E-Hentai_ip:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/Ehentai_ip.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Ehentai_ip.yaml"
+  #  interval: 86400
 
   GITHUB:
     type: http
@@ -685,19 +712,47 @@ rule-providers:
     path: ./RuleSet/Extra/Microsoft.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Microsoft_domain.yaml
     interval: 86400  
-  
+
   reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Reject_domain.txt"
+    path: ./ruleset/reject.txt
     interval: 86400
   
+  reject_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Reject_ip.yaml"
+    path: ./ruleset/reject_ip.yaml
+    interval: 86400
+    
+  Refuse:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Refuse.yaml
+    url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/refuse.yaml
+    interval: 86400
+  
+  RiotGames:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/RiotGames.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/RiotGames.yaml
+    interval: 86400
+
   Rockstar:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/Rockstar.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Rockstar_domain.yaml
+    interval: 86400
+  
+  Vercel:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Vercel.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Vercel/Vercel.yaml
     interval: 86400
 
   #Steam CN domain
@@ -715,17 +770,32 @@ rule-providers:
     path: ./RuleSet/Extra/Steam.yaml
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Steam_domain.yaml
     interval: 86400
-
-  Telegram_domain:
+  
+  #Steam
+  Speedtest:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_domain.yaml
-    path: ./ruleset/Telegram_domain.yaml
+    path: ./RuleSet/Extra/Speedtest.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Speedtest.yaml
     interval: 86400
+
+  #Telegram_domain:
+  #  type: http
+  #  behavior: classical
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_domain.yaml
+  #  path: ./ruleset/Telegram_domain.yaml
+  #  interval: 86400
+  
+  #Twitch:
+  #  type: http
+  #  behavior: classical
+  #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Twitch.yaml
+  #  path: ./ruleset/Twitch.yaml
+  #  interval: 86400
 
   Telegram_ip:
     type: http
-    behavior: classical
+    behavior: ipcidr
     url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Telegram_ip.yaml
     path: ./ruleset/Telegram_ip.yaml
     interval: 86400
@@ -751,6 +821,13 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Extra/Proxy.yaml
     url: https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/Proxy.yaml
+    interval: 86400
+
+  ProxyDNS:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/zzz6839/PROXY-PROVIDERS-SYNC/zzz6839-patch-1/ProxyDNS.yaml"
+    path: ./ruleset/ProxyDNS.yaml
     interval: 86400  
 
   🎮online game:
@@ -766,91 +843,87 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
     path: ./ruleset/gfw.txt
     interval: 86400
-  
+
 
   
-  
-
 # 规则
 rules:
     # less rules the better, more reasonable sequence the better.
     # DOMAIN PROXY > DOMAIN DIRECT = IP PROXY / DIRECT
 
-    
-    #AD block 
-    - RULE-SET,reject,REJECT #59447 rules >
+    - RULE-SET,Refuse,REJECT
 
-    - DOMAIN-SUFFIX,playstation.com,REJECT
-    - DOMAIN-SUFFIX,playstation.net,REJECT
-    - DOMAIN-SUFFIX,playstation.org,REJECT
-    - DOMAIN,playstation.sony.akadns.net,REJECT
-    - DOMAIN,a192.d.akamai.net,REJECT
+    - DOMAIN,connectivitycheck.gstatic.com,✈️PROXY
+    # lan domain
+    - RULE-SET,private,DIRECT
+
     # proxy domain
-    - RULE-SET,GITHUB,GITHUB  #proxy-group
+    - RULE-SET,baha,🇹🇼Baha #proxy group
 
-    - RULE-SET,baha,TW #proxy group
-    - RULE-SET,TikTok,TW #proxy group
+    - RULE-SET,TikTok,🇯🇵DMM/Mgstage/Tiktok #proxy group
+    - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
+    - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
     
-    - RULE-SET,DMM_domain,JP #proxy group
+    - RULE-SET,E-Hentai_domain,e-hentai auto #proxy group
+    
+    - RULE-SET,Vercel,Vercel #proxy group
+    - DOMAIN,music.163-my-beloved.com,Vercel #proxy group
 
-    - RULE-SET,E-Hentai_domain,e-hentai #proxy group
+    - GEOSITE,javdb,javdb #proxy group
 
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - RULE-SET,Telegram_domain,✈️PROXY
+    - GEOSITE,openai,🇺🇸AI
+    - DOMAIN,bard.google.com,🇺🇸AI
+    
+    - DOMAIN-SUFFIX,ttvnw.net,EsportsVid #proxy group
     
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
 
-    # lan domain
-    - RULE-SET,private,DIRECT
+    - RULE-SET,RiotGames,👊RiotGames #proxy group
+    
+    - RULE-SET,Speedtest,♿speedtest #proxy group between dom/intl
     # DOMAIN DIRECT
-    - RULE-SET,BILIBILIHMT_domain,TW/CN #proxy group
-
+    - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group between dom/intl
+    
+    - RULE-SET,Epicgames,DIRECT
+    
     - RULE-SET,bt-trackers,DIRECT
    
-    - RULE-SET,Microsoft,DIRECT
-  
-    - RULE-SET,🍎Apple_domain,DIRECT
-   
-    - RULE-SET,Epicgames,DIRECT
-   
-    - RULE-SET,Rockstar,DIRECT
+    - GEOSITE,microsoft@cn,DIRECT
+    - RULE-SET,Microsoft,✈️PROXY
+    
+    - GEOSITE,apple@cn,DIRECT
+    - GEOSITE,apple-cn,DIRECT
+    - RULE-SET,🍎Apple_domain,✈️PROXY
 
+    - RULE-SET,Rockstar,DIRECT
+    # custom domestic rules
     - RULE-SET,domestic,DIRECT
 
-    - RULE-SET,China_domain,DIRECT #4000+ rules 常用可直连域名,目前所有的china domain list（blackmatrix/geosite）都是不准确的（如：无http://irreader.fatecore.com/ ,这一大陆domain）
-                                   #仅GEOIP CN 可以完全做到判断大陆网站。
-    
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+    - RULE-SET,reject_ip,REJECT,no-resolve
+
     # lan ip
     - RULE-SET,lancidr,DIRECT,no-resolve
 
     # IP PROXY
     - RULE-SET,🎮online game,🎮online game,no-resolve #proxy group
-
-    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve 
-
-    - RULE-SET,BILIBILIHMT_ip,TW/CN,no-resolve #proxy group
-
-    - RULE-SET,DMM_ip,JP #proxy group
-
-    - RULE-SET,E-Hentai_ip,e-hentai #proxy group
- 
-    # IP DIRECT
-    - IP-CIDR,1.0.0.1/15,DIRECT
-    - IP-CIDR,8.8.8.8/32,DIRECT
-
-    - RULE-SET,🍎Apple_ip,DIRECT
+    - IP-CIDR,76.76.21.21/32,Vercel #proxy group
+    - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
 
     - GEOIP,CN,DIRECT
-    # !CN WEBSITE GO PROXY/ BLACKLIST MDOE? 
+
+    # BLACKLIST MDOE
     - DST-PORT,80,DST-PORT
     - DST-PORT,443,DST-PORT
     - DST-PORT,22,DST-PORT
-    # FINAL
-    - MATCH,DIRECT
+    # FINAL if bypass CN, then MATCH proxy
+    - MATCH,✈️PROXY
   
+
+
