@@ -74,6 +74,9 @@ payload:
   - DOMAIN-SUFFIX,rinuploads.org
 
   - DOMAIN,818f63.dns.nextdns.io
+  
+  #switch game stop
+  - DOMAIN-SUFFIX,teknik.app
 
   - DOMAIN,rito-news.iamantosik.me
   - DOMAIN,d1isb7f40vy8e5.cloudfront.net
