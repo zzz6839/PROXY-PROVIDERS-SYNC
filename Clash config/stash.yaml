@@ -120,13 +120,51 @@ dns:
     - '*.blzstatic.cn'
     - '*.battle.net'
     - '*.wegame.com.cn'
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.edu.cn
+    - time.*.gov
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - stun.*.*
+    - stun.*.*.*
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - "+.dns.google"
   
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
-    - 119.29.29.29
     - 223.5.5.5
+    - system
     # - 114.114.114.114 # default value
     # - 8.8.8.8 # default value
     # - tls://dns.rubyfish.cn:853 # DNS over TLS
@@ -138,8 +176,8 @@ dns:
   # The answers from fallback servers are used when the GEOIP country
   # is not `CN`.
   fallback:
-     - tls://1dot1dot1dot1.cloudflare-dns.com
-     - tls://dns.google
+     - quic://dns.nextdns.io
+     - https://doh.apad.pro/dns-query
   # If IP addresses resolved with servers in `nameservers` are in the specified
   # subnets below, they are considered invalid and results from `fallback`
   # servers are used instead.
@@ -258,30 +296,31 @@ proxy-providers:
   #   health-check:
   #     enable: true
   #     interval: 600
-  #     url: https://www.gstatic.com/generate_204
+  #     url: https://www.youtube.com/generate_204
   # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删除
 
   Airport A: 
     type: http
     url:  ""
     interval: 3600
-    filter: '^((?!(官网|漏洞|倒卖)).)*$'
+    filter: "^((?!(Traffic|Expire)).)*$"
     path: ./Proxy/main.yaml
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204
+      url: https://www.youtube.com/generate_204
   
 
   Airport B:      
     type: http
     url:  "" 
     interval: 3600
+    filter: "^((?!(每月刷新|com)).)*$"
     path: ./Proxy/backup.yaml
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204    
+      url: https://www.youtube.com/generate_204    
  
   Netease:
     type: http
@@ -291,7 +330,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: https://www.gstatic.com/generate_204    
+      url: https://www.youtube.com/generate_204    
   
 
 proxy-groups:
@@ -355,17 +394,17 @@ proxy-groups:
     proxies:
       - main(Auto)
       - backup(Auto)
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300 
+    url: 'https://www.youtube.com/generate_204'
+    interval: 150 
 
   - name: "main(Auto)"
     type: url-test
     use:
       - Airport A
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'https://www.youtube.com/generate_204'
     interval: 300
     tolerance: 40
-    filter: '港|hk|hong'
+    filter: '港|台'
    #lazy: true
    #disable-udp: true
 
@@ -373,11 +412,11 @@ proxy-groups:
     type: url-test
     use:
       - Airport B
-    url: 'https://www.gstatic.com/generate_204'
+    url: 'https://www.youtube.com/generate_204'
     interval: 300
     tolerance: 40
     lazy: true
-    filter: '港|hk|hong'
+    #filter: '港|hk|hong'
    #disable-udp: true
 
   - name: "Manual"
@@ -409,6 +448,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+      - main(Auto)
     url: 'https://e-hentai.org'
     interval: 900
     tolerance: 50 
@@ -418,6 +459,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+      - main(Auto)
     filter: '^(?!.*(日|Japan|jp))'
     url: 'https://javdb.com'
     interval: 900
@@ -428,6 +471,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+      - main(Auto)
     filter: '日|Japan|jp'
     url: 'https://dmm.co.jp'
     interval: 900
@@ -445,21 +490,19 @@ proxy-groups:
   #  tolerance: 50 
 
   # Bilibili国台
-  - name: "Bilibili国台"
-    type: select
-    proxies:
-      - DIRECT
-    use:
-      - Airport A
-    filter: "台湾|TW|taiwan"
+  #- name: "Bilibili国台"
+  #  type: select
+  #  proxies:
+  #    - DIRECT
+  #  use:
+  #    - Airport A
+  #  filter: "台湾|TW|taiwan"
   
   #Unblockneteasemusic
   - name: "网抑云🎵"
     type: select
     use:
       - Netease
-    proxy:
-      - DIRECT 
     filter: '解锁'
   
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
@@ -494,12 +537,12 @@ rule-providers:
   #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Apple_ip.yaml"
   #  interval: 86400
   
-  BILIBILIHMT_domain:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
-    interval: 86400 
+  #BILIBILIHMT_domain:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
+  #  interval: 86400 
   
   #BILIBILIHMT_ip:
   #  type: http
@@ -714,7 +757,7 @@ rules:
     - DST-PORT,443,DST-PORT
     - DST-PORT,22,DST-PORT
     # FINAL
-    - MATCH,DIRECT
+    - MATCH,✈️PROXY
   
 
 
