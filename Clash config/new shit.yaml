@@ -423,7 +423,7 @@ proxy-groups:
       - main(Auto)
       - backup(Auto)
     url: 'https://www.youtube.com/generate_204'
-    interval: 300 
+    interval: 60 
 
   - name: "main(Auto)"
     type: url-test
