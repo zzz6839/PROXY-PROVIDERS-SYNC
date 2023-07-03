@@ -504,6 +504,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+     - backup(Auto)
     filter: '日|Japan|jp'
     url: 'https://dmm.co.jp'
     interval: 900
