@@ -481,6 +481,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+     - backup(Auto)
     url: 'https://e-hentai.org'
     interval: 900
     tolerance: 50 
@@ -490,6 +492,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+     - backup(Auto)
     filter: '^(?!.*(日|Japan|jp))'
     url: 'https://javdb.com'
     interval: 900
@@ -511,6 +515,8 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
+    proxies:
+     - backup(Auto)
     #filter: '日IEPL|日IPLC'
     url: 'https://vercel.app'
     interval: 900
@@ -572,6 +578,8 @@ proxy-groups:
     use:
       - Airport A 
     #  - Airport B
+    proxies:
+     - backup(Auto)
     filter: "(?!.*(Tro)).*(港|台)"
     url: "https://dns.google"
     interval: 900
