@@ -728,7 +728,7 @@ rules:
     - RULE-SET,Proxy,✈️PROXY
 
     # DOMAIN DIRECT
-    - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
+    #- RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group
     - RULE-SET,Epicgames,DIRECT
    
     - RULE-SET,Microsoft,DIRECT
