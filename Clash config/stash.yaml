@@ -178,7 +178,6 @@ dns:
   fallback:
      - https://doh.opendns.com/dns-query
      - tls://8.8.4.4
-     - tls://1.0.0.1
   # If IP addresses resolved with servers in `nameservers` are in the specified
   # subnets below, they are considered invalid and results from `fallback`
   # servers are used instead.
