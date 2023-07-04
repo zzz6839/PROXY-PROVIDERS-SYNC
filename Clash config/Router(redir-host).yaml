@@ -180,9 +180,10 @@ dns:
       - 223.6.6.6       
       - 119.29.29.29
   nameserver:
-      - tls://dns.google#DNS
-      #- tls://1dot1dot1dot1.cloudflare-dns.com
-      - quic://dns.nextdns.io#DNS
+      - quic://dns.adguard-dns.com#DIRECT
+      #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
+      #- tls://dns.google#DNS
+      - quic://dns.nextdns.io#DIRECT
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
@@ -190,8 +191,7 @@ dns:
       #"rule-set:ProxyDNS": [tls://dns.google#DNS,quic://dns.nextdns.io#DIRECT]
       #"rule-set:DomesticDNS": [223.6.6.6,119.29.29.29]   #with your local isp dns server, not fixed    #[https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
       "geosite:cn,private,microsoft@cn,apple@cn,apple-cn": [223.6.6.6,119.29.29.29]
-      "rule-set:SteamCN,Speedtest,BILIBILIHMT_domain,Epicgames,Rockstar,domestic": [223.6.6.6,119.29.29.29]
-      "rule-set:bt-trackers": [223.6.6.6,quic://dns.nextdns.io#DIRECT]
+      "rule-set:SteamCN,Speedtest,BILIBILIHMT_domain,Epicgames,Rockstar,domestic,bt-trackers": [223.6.6.6,119.29.29.29]
   # "domain-set:global,dns": 8.8.8.8 # global，dns 为 rule-providers 中的名为 global 和 dns 的规则提供器名字，且 behavior 必须为 domain 
 
 
