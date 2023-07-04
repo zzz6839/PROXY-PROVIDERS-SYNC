@@ -183,7 +183,7 @@ dns:
       - https://doh.opendns.com/dns-query#DIRECT
       #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
       #- tls://dns.google#DNS
-      - quic://dns.nextdns.io#DIRECT
+      - tls://8.8.4.4#DIRECT
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         

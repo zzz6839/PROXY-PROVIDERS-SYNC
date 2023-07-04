@@ -176,8 +176,9 @@ dns:
   # The answers from fallback servers are used when the GEOIP country
   # is not `CN`.
   fallback:
-     - quic://dns.nextdns.io
-     - https://doh.apad.pro/dns-query
+     - https://doh.opendns.com/dns-query
+     - tls://8.8.4.4
+     - tls://1.0.0.1
   # If IP addresses resolved with servers in `nameservers` are in the specified
   # subnets below, they are considered invalid and results from `fallback`
   # servers are used instead.
