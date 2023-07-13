@@ -72,4 +72,6 @@
   - DOMAIN,login.riotgames.com
   - DOMAIN,login.playvalorant.com
 
+  - DOMAIN-SUFFIX,bangumi.moe
+  - DOMAIN-SUFFIX,mikanani.me
   
