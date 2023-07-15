@@ -1,0 +1,6 @@
+payload:
+  
+    - GEOSITE,openai,🇺🇸AI
+    - DOMAIN,bard.google.com,🇺🇸AI
+    - DOMAIN-SUFFIX,anthropic.com,🇺🇸AI
+    - DOMAIN-SUFFIX,claude.ai,🇺🇸AI
