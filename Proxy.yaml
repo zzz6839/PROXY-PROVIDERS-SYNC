@@ -26,19 +26,19 @@
   #- DOMAIN-SUFFIX,nyahentai.com
   #- DOMAIN-SUFFIX,hembed.com
   - DOMAIN-SUFFIX,up-timely.com
-  #- DOMAIN-SUFFIX,sb-cd.com
-  #- DOMAIN-SUFFIX,titz.top
-  #- DOMAIN-SUFFIX,teknik.app
-  #- DOMAIN-SUFFIX,jits.cc
-  #- DOMAIN-SUFFIX,pengu.us
-  #- DOMAIN-SUFFIX,stealthshop.cf
-  #- DOMAIN-SUFFIX,jits.site
-  #- DOMAIN-SUFFIX,nekoshop.cf
-  #- DOMAIN-SUFFIX,quotanx.in
-  #- DOMAIN-SUFFIX,tiny.cc
-  #- DOMAIN-SUFFIX,jits.ga
-  #- DOMAIN-SUFFIX,partyshop.xyz
-  #- DOMAIN-SUFFIX,rebrand.ly
+  - DOMAIN-SUFFIX,sb-cd.com
+  - DOMAIN-SUFFIX,titz.top
+  - DOMAIN-SUFFIX,teknik.app
+  - DOMAIN-SUFFIX,jits.cc
+  - DOMAIN-SUFFIX,pengu.us
+  - DOMAIN-SUFFIX,stealthshop.cf
+  - DOMAIN-SUFFIX,jits.site
+  - DOMAIN-SUFFIX,nekoshop.cf
+  - DOMAIN-SUFFIX,quotanx.in
+  - DOMAIN-SUFFIX,tiny.cc
+  - DOMAIN-SUFFIX,jits.ga
+  - DOMAIN-SUFFIX,partyshop.xyz
+  - DOMAIN-SUFFIX,rebrand.ly
   #- DOMAIN-SUFFIX,rinuploads.org
   #- DOMAIN-SUFFIX,jdbstatic.com
   #- DOMAIN-SUFFIX,shortpixel.ai
