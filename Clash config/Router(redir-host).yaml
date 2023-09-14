@@ -70,7 +70,7 @@ hosts:
   
   #dns
   'music.163-my-beloved.com': 76.76.21.21
-  'msftconnecttest.com': 127.0.0.1
+  #'msftconnecttest.com': 127.0.0.1
   #'dns.google': 8.8.4.4
   #'dns.nextdns.io': 45.11.104.186
   #'1dot1dot1dot1.cloudflare-dns.com': 1.0.0.1
