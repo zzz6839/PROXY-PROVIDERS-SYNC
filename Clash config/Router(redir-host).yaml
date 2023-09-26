@@ -341,7 +341,7 @@ proxy-providers:
     type: http
     url:  "" 
     interval: 3600
-    filter: "^((?!(每月刷新|com)).)*$"
+    filter: "^((?!(每月刷新|com|机场)).)*$"
     path: ./Proxy/backup.yaml
     health-check:
       enable: true
