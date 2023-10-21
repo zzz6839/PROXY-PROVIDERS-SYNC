@@ -63,7 +63,7 @@
   #- DOMAIN,gstatic.com
 
   # lol esports script
-  - DOMAIN-SUFFIX,lolesports.com
+  #- DOMAIN-SUFFIX,lolesports.com
   - DOMAIN,cdn.rgpub.io
   - DOMAIN,ddragon.leagueoflegends.com
   - DOMAIN,login.leagueoflegends.com
