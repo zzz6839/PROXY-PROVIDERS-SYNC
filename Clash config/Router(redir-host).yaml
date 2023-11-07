@@ -907,6 +907,7 @@ rules:
     - RULE-SET,bt-trackers,DIRECT
    
     - GEOSITE,microsoft@cn,DIRECT
+    - DOMAIN,time.windows.com,DIRECT
     - RULE-SET,Microsoft,✈️PROXY
     
     - GEOSITE,apple@cn,DIRECT
