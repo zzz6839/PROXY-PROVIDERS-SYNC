@@ -932,7 +932,8 @@ rules:
     - RULE-SET,Telegram_ip,✈️PROXY,no-resolve
 
     - GEOIP,CN,DIRECT
-
+    
+    - AND,((DOMAIN-KEYWORD,DERP),(DOMAIN-SUFFIX,tailscale.com)),DIRECT
     # BLACKLIST MDOE
     - DST-PORT,80,DST-PORT
     - DST-PORT,443,DST-PORT
