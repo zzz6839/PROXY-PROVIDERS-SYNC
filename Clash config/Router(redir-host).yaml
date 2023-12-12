@@ -933,6 +933,7 @@ rules:
 
     - GEOIP,CN,DIRECT
     
+    # derp for tailscale 
     - AND,((DOMAIN-KEYWORD,DERP),(DOMAIN-SUFFIX,tailscale.com)),DIRECT
     # BLACKLIST MDOE
     - DST-PORT,80,DST-PORT
