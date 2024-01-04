@@ -89,6 +89,9 @@ payload:
 
   #- DOMAIN,rito-news.iamantosik.me
   #- DOMAIN,d1isb7f40vy8e5.cloudfront.net
-
+  
+  # DIRECT DOWNLOAD 
+  - DOMAIN-SUFFIX,1fichier.com
+  
   - DOMAIN,music.desperadoj.com
 
