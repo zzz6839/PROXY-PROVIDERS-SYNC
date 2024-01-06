@@ -2,21 +2,12 @@
     #- DOMAIN,ws.infinitynewtab.com
     - DOMAIN,basic-static-server.inftab.com
     #- DOMAIN,www.msftconnecttest.com
-    #block PS5 update
-    - DOMAIN,duk01.ps5.update.playstation.net
-    - DOMAIN,fuk01.ps5.update.playstation.net
-    - DOMAIN,dus01.ps5.update.playstation.net
-    - DOMAIN,fus01.ps5.update.playstation.net
-    - DOMAIN,feu01.ps5.update.playstation.net
-    - DOMAIN,dau01.ps5.update.playstation.net
-    - DOMAIN,fau01.ps5.update.playstation.net
-    - DOMAIN,djp01.ps5.update.playstation.net
-    - DOMAIN,fjp01.ps5.update.playstation.net
-    - DOMAIN,fsa01.ps5.update.playstation.net
-    - DOMAIN,dsa01.ps5.update.playstation.net
+    #block Playstation update
+    - DOMAIN-SUFFIX,update.playstation.net
+    # block playstation game update
     - DOMAIN,sgst.prod.dl.playstation.net
     - DOMAIN,gs2.ww.prod.dl.playstation.net
-    
+
     # 薅叔叔羊毛
     - DOMAIN-SUFFIX,mcdn.bilivideo.cn
     - DOMAIN,stun-5.chat.bilibili.com
