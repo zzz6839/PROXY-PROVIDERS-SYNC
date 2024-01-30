@@ -71,7 +71,8 @@
   #- DOMAIN,authenticate.riotgames.com
   #- DOMAIN,login.riotgames.com
   #- DOMAIN,login.playvalorant.com
-
+  - IP-CIDR,107.175.254.24/32
+  
   - DOMAIN-SUFFIX,bangumi.moe
   - DOMAIN-SUFFIX,mikanani.me
 
