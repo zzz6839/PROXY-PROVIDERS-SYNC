@@ -556,6 +556,7 @@ proxy-groups:
     proxies:
       - backup(Auto)
       - main(Auto)
+      - DIRECT
 
   - name: "🇺🇸AI"
     type: select
