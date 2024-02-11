@@ -184,6 +184,7 @@ dns:
       #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
       #- tls://dns.google#DNS
       - tls://dns.google
+      #- https://doh.apad.pro/dns-query
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
@@ -545,11 +546,17 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-      - main (Manual)
-    use:
-      - Airport B
-    filter: "日|港|新"
   
+  #loot
+  - name: "lolesports"
+    type: select
+    proxies:
+      - ✈️PROXY
+      - DIRECT
+    use:
+      - Airport A
+    filter: "智利|巴西|墨西哥|哥斯达黎加|阿根廷"
+    
   #loot
   - name: "EsportsVid"
     type: select
@@ -574,18 +581,18 @@ proxy-groups:
       - ✈️PROXY
       
   # DNS
-  - name: "DNS"
-    type: load-balance
-    strategy: round-robin
-    use:
-      - Airport A 
-    #  - Airport B
-    proxies:
-     - backup(Auto)
-    filter: "(?!.*(Tro)).*(港|台)"
-    url: "https://dns.google"
-    interval: 900
-    tolerance: 20 
+  #- name: "DNS"
+  #  type: load-balance
+  #  strategy: round-robin
+  #  use:
+  #    - Airport A 
+  #  #  - Airport B
+  #  proxies:
+  #   - backup(Auto)
+  #  filter: "(?!.*(Tro)).*(港|台)"
+  #  url: "https://dns.google"
+  #  interval: 900
+  #  tolerance: 20 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
@@ -897,6 +904,7 @@ rules:
 
     - RULE-SET,Proxy,✈️PROXY
 
+    - DOMAIN,rex.rewards.lolesports.com,lolesports #proxy group
     - RULE-SET,RiotGames,👊RiotGames #proxy group
     
     - RULE-SET,Speedtest,♿speedtest #proxy group between dom/intl
@@ -913,7 +921,7 @@ rules:
     
     - GEOSITE,apple@cn,DIRECT
     - GEOSITE,apple-cn,DIRECT
-    - IP-CIDR,17.0.0.0/8,DIRECT
+    - DOMAIN,apac-china-courier-4.push-apple.com.akadns.net,DIRECT
     - RULE-SET,🍎Apple_domain,✈️PROXY
 
     - RULE-SET,Rockstar,DIRECT
