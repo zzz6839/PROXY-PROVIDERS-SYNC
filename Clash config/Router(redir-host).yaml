@@ -69,7 +69,7 @@ hosts:
   # 'alpha.clash.dev': '::1'
   
   #dns
-  'music.163-my-beloved.com': 76.76.21.21
+  #'music.163-my-beloved.com': 76.76.21.21
   #'msftconnecttest.com': 127.0.0.1
   #'dns.google': 8.8.4.4
   #'dns.nextdns.io': 45.11.104.186
@@ -546,17 +546,7 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
-  
-  #loot
-  - name: "lolesports"
-    type: select
-    proxies:
-      - ✈️PROXY
-      - DIRECT
-    use:
-      - Airport A
-    filter: "智利|巴西|墨西哥|哥斯达黎加|阿根廷"
-    
+
   #loot
   - name: "EsportsVid"
     type: select
@@ -579,7 +569,13 @@ proxy-groups:
     proxies:
       - DIRECT
       - ✈️PROXY
-      
+  
+  - name: "docker"
+    type: select
+    proxies:
+      - DIRECT
+      - ✈️PROXY
+      - backup(Auto)
   # DNS
   #- name: "DNS"
   #  type: load-balance
@@ -674,6 +670,13 @@ rule-providers:
   #  path: ./RuleSet/Extra/DMM_ip.yaml
   #  url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/DMM_ip.yaml
   #  interval: 86400 
+  
+  docker:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/docker.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/02e21190b7850bca9d6ad8946b27aa7548863e21/rule/Clash/Docker/Docker.yaml
+    interval: 86400 
 
   domestic:
     type: http
@@ -871,7 +874,6 @@ rules:
 
     - RULE-SET,Refuse,REJECT
 
-    - DOMAIN,connectivitycheck.gstatic.com,✈️PROXY
     # lan domain
     - RULE-SET,private,DIRECT
 
@@ -885,7 +887,6 @@ rules:
     - RULE-SET,E-Hentai_domain,e-hentai auto #proxy group
     
     - RULE-SET,Vercel,Vercel #proxy group
-    - DOMAIN,music.163-my-beloved.com,Vercel #proxy group
 
     - GEOSITE,javdb,javdb #proxy group
 
@@ -898,14 +899,14 @@ rules:
     - DOMAIN-SUFFIX,anthropic.com,🇺🇸AI
     - DOMAIN-SUFFIX,claude.ai,🇺🇸AI
 
-    
+    - RULE-SET,docker,docker #proxy group
+
     - DOMAIN-SUFFIX,ttvnw.net,EsportsVid #proxy group
     
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
 
-    - DOMAIN,rex.rewards.lolesports.com,lolesports #proxy group
     - RULE-SET,RiotGames,👊RiotGames #proxy group
     
     - RULE-SET,Speedtest,♿speedtest #proxy group between dom/intl
