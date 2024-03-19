@@ -183,8 +183,9 @@ dns:
       - https://fdyhoqa   .cloudflare-gateway.com/dns-query
       #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
       #- tls://dns.google#DNS
-      - tls://dns.google
+      #- tls://dns.google
       #- https://doh.apad.pro/dns-query
+      - https:// .dandanplay-blacksheepwall.workers.dev/ -all#vless(Auto)     
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
@@ -349,16 +350,16 @@ proxy-providers:
       interval: 600
       url: https://www.youtube.com/generate_204    
  
-  #MIXED US:      
-  #  type: http
-  #  url:  ""
-  #  interval: 3600
-  #  path: ./Proxy/us.yaml
-  #  filter: '美国'
-  #  health-check:
-  #    enable: true
-  #    interval: 600
-  #    url: https://www.youtube.com/generate_204    
+  Vless:
+    type: http
+    url:  "https:// .blacksheepwall.dynv6.net/{ }" 
+    interval: 3600
+    filter: "^((?!(加入)).)*$"
+    path: ./Proxy/vless.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.youtube.com/generate_204
   
 
 proxy-groups:
@@ -422,17 +423,22 @@ proxy-groups:
     proxies:
       - main(Auto)
       - backup(Auto)
+      - vless(Auto)
     url: 'https://www.youtube.com/generate_204'
-    interval: 300 
+    expected-status: 204
+    interval: 60
+    hidden: true 
 
   - name: "main(Auto)"
     type: url-test
     use:
       - Airport A
     url: 'https://www.youtube.com/generate_204'
+    expected-status: 204
     interval: 300
     tolerance: 40
-    filter: '香港|hk|hong'
+    filter: '香港|hk|hong|台湾|日本|jp|japan'
+    hidden: true
     lazy: false
     #disable-udp: true
 
@@ -441,17 +447,31 @@ proxy-groups:
     use:
       - Airport B
     url: 'https://www.youtube.com/generate_204'
+    expected-status: 204
     interval: 300
     tolerance: 40
+    hidden: true
     #lazy: true
     #filter: '港|hk|hong'
    #disable-udp: true
+
+  - name: "vless(Auto)"
+    type: load-balance
+    strategy: consistent-hashing
+    use:
+     - Vless
+    url: 'https://www.youtube.com/generate_204'
+    expected-status: 204
+    interval: 900
+    tolerance: 50
+    hidden: true
 
   - name: "Manual"
     type: select
     proxies:
       - main (Manual)
       - backup (Manual)
+      - vless(Auto)
 
   - name: "main (Manual)"
     type: select
@@ -462,6 +482,11 @@ proxy-groups:
     type: select
     use:    
      - Airport B 
+     
+  - name: "vless (Manual)"
+    type: select
+    use:    
+     - Vless 
   #########################################################Safe protection
   
 
@@ -474,42 +499,41 @@ proxy-groups:
     url: 'https://ani.gamer.com.tw/'
     interval: 900
     lazy: true
-    tolerance: 50  
+    tolerance: 50
+    hidden: true  
 
   - name: "e-hentai auto"
     type: load-balance
     strategy: round-robin
     use:
      - Airport A
-    proxies:
-     - backup(Auto)
     url: 'https://e-hentai.org'
     interval: 900
-    tolerance: 50 
+    tolerance: 50
+    hidden: true
 
   - name: "javdb"
     type: load-balance
     strategy: round-robin
     use:
      - Airport A
-    proxies:
-     - backup(Auto)
     filter: '^(?!.*(日|Japan|jp))'
     url: 'https://javdb.com'
     interval: 900
     tolerance: 50 
+    hidden: true
+    
 
   - name: "🇯🇵DMM/Mgstage/Tiktok"
     type: load-balance
     strategy: round-robin
     use:
      - Airport A
-    proxies:
-     - backup(Auto)
     filter: '日|Japan|jp'
     url: 'https://dmm.co.jp'
     interval: 900
-    tolerance: 50 
+    tolerance: 50
+    hidden: true 
 
    #Vercel
   - name: "Vercel"
@@ -517,12 +541,11 @@ proxy-groups:
     strategy: round-robin
     use:
      - Airport A
-    proxies:
-     - backup(Auto)
     #filter: '日IEPL|日IPLC'
     url: 'https://vercel.app'
     interval: 900
-    tolerance: 50 
+    tolerance: 50
+    hidden: true 
 
   # Bilibili国台
   - name: "Bilibili国台"
@@ -546,6 +569,7 @@ proxy-groups:
     proxies:
       - ✈️PROXY
       - DIRECT
+      - backup(Auto)
 
   #loot
   - name: "EsportsVid"
@@ -580,15 +604,15 @@ proxy-groups:
   #- name: "DNS"
   #  type: load-balance
   #  strategy: round-robin
-  #  use:
-  #    - Airport A 
-  #  #  - Airport B
-  #  proxies:
-  #   - backup(Auto)
-  #  filter: "(?!.*(Tro)).*(港|台)"
-  #  url: "https://dns.google"
-  #  interval: 900
-  #  tolerance: 20 
+   # use:
+    #  - Airport A
+   # proxies:
+    # - backup(Auto) 
+    #  - Airport B
+   # filter: "(?!.*(Tro)).*(港|台)"
+   # url: "https://dns.google"
+   # interval: 900
+   # tolerance: 20 
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
@@ -902,10 +926,11 @@ rules:
     - RULE-SET,docker,docker #proxy group
 
     - DOMAIN-SUFFIX,ttvnw.net,EsportsVid #proxy group
-    
+
     - RULE-SET,🧱gfw,✈️PROXY
 
     - RULE-SET,Proxy,✈️PROXY
+    
 
     - RULE-SET,RiotGames,👊RiotGames #proxy group
     
