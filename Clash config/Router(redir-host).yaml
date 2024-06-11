@@ -579,14 +579,11 @@ proxy-groups:
       - main(Auto)
       - DIRECT
 
-  - name: "🇺🇸AI"
+  - name: "AI"
     type: select
     proxies:
-      - DIRECT
-      - Manual
-    use:
-      - Airport A
-    filter: "美国|us"
+      - 🇹🇼Baha
+      - 🇯🇵DMM/Mgstage/Tiktok
   
   - name: "♿speedtest"
     type: select
@@ -917,11 +914,11 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
-    - GEOSITE,openai,🇺🇸AI
-    - DOMAIN,bard.google.com,🇺🇸AI
-    - DOMAIN-SUFFIX,gemini.google.com,🇺🇸AI
-    - DOMAIN-SUFFIX,anthropic.com,🇺🇸AI
-    - DOMAIN-SUFFIX,claude.ai,🇺🇸AI
+    - GEOSITE,openai,AI
+    - DOMAIN,bard.google.com,AI
+    - DOMAIN-SUFFIX,gemini.google.com,AI
+    - DOMAIN-SUFFIX,anthropic.com,AI
+    - DOMAIN-SUFFIX,claude.ai,AI
 
     - RULE-SET,docker,docker #proxy group
 
