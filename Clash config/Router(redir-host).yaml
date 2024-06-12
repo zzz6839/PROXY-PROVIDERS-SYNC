@@ -741,6 +741,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Github_domain.yaml"
     interval: 86400 
 
+  GameDownload:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/GameDownload.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/GameDownload.yaml"
+    interval: 86400
+
   lancidr:
     type: http
     behavior: ipcidr
@@ -928,14 +935,14 @@ rules:
 
     - RULE-SET,Proxy,✈️PROXY
     
-
     - RULE-SET,RiotGames,👊RiotGames #proxy group
     
     - RULE-SET,Speedtest,♿speedtest #proxy group between dom/intl
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group between dom/intl
     
-    - RULE-SET,Epicgames,DIRECT
+    - RULE-SET,GameDownload,DIRECT
+    - RULE-SET,Epicgames,✈️PROXY
     
     - RULE-SET,bt-trackers,DIRECT
    
@@ -948,7 +955,7 @@ rules:
     - DOMAIN,apac-china-courier-4.push-apple.com.akadns.net,DIRECT
     - RULE-SET,🍎Apple_domain,✈️PROXY
 
-    - RULE-SET,Rockstar,DIRECT
+    - RULE-SET,Rockstar,✈️PROXY
     # custom domestic rules
     - RULE-SET,domestic,DIRECT
 
