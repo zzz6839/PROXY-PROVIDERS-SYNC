@@ -94,6 +94,15 @@ dns:
   listen: 0.0.0.0:7874
   # ipv6: false # when the false, response to AAAA questions will be empty
   cache-algorithm: arc
+  prefer-h3: false
+
+  # 配置后面的nameserver、fallback和nameserver-policy向dns服务器的连接过程是否遵守遵守rules规则
+  # 如果为false（默认值）则这三部分的dns服务器在未特别指定的情况下会直连
+  # 如果为true，将会按照rules的规则匹配链接方式（走代理或直连），如果有特别指定则任然以指定值为准
+  # 仅当proxy-server-nameserver非空时可以开启此选项, 强烈不建议和prefer-h3一起使用
+  # 此外，这三者配置中的dns服务器如果出现域名会采用default-nameserver配置项解析，也请确保正确配置default-nameserver
+  respect-rules: false
+  
   # These nameservers are used to resolve the DNS nameserver hostnames below.
   # Specify IP addresses only
   #default-nameserver:
@@ -180,7 +189,7 @@ dns:
       - 223.6.6.6       
       - 119.29.29.29
   nameserver:
-      - https://fdyhoqa   .cloudflare-gateway.com/dns-query
+      - https://fdyhoqa   .cloudflare-gateway.com/dns-query#DIRECT
       #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
       #- tls://dns.google#DNS
       #- tls://dns.google
@@ -192,7 +201,7 @@ dns:
   nameserver-policy:
       #"rule-set:ProxyDNS": [tls://dns.google,https://fdyhoqa   .cloudflare-gateway.com/dns-query]
       "geosite:cn,private,microsoft@cn,apple@cn,apple-cn": [223.6.6.6,119.29.29.29]
-      "rule-set:SteamCN,Epicgames,Rockstar,DomesticDNS": [223.6.6.6,119.29.29.29]
+      "rule-set:SteamCN,DomesticDNS": [223.6.6.6,119.29.29.29]
   # "domain-set:global,dns": 8.8.8.8 # global，dns 为 rule-providers 中的名为 global 和 dns 的规则提供器名字，且 behavior 必须为 domain 
 
 
@@ -741,12 +750,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Github_domain.yaml"
     interval: 86400 
 
-  GameDownload:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/GameDownload.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/GameDownload.yaml"
-    interval: 86400
+  #GameDownload:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/GameDownload.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/GameDownload.yaml"
+  #  interval: 86400
 
   lancidr:
     type: http
@@ -941,8 +950,7 @@ rules:
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group between dom/intl
     
-    - RULE-SET,GameDownload,DIRECT
-    - RULE-SET,Epicgames,✈️PROXY
+    - RULE-SET,Epicgames,DIRECT
     
     - RULE-SET,bt-trackers,DIRECT
    
@@ -955,7 +963,7 @@ rules:
     - DOMAIN,apac-china-courier-4.push-apple.com.akadns.net,DIRECT
     - RULE-SET,🍎Apple_domain,✈️PROXY
 
-    - RULE-SET,Rockstar,✈️PROXY
+    - RULE-SET,Rockstar,DIRECT
     # custom domestic rules
     - RULE-SET,domestic,DIRECT
 
