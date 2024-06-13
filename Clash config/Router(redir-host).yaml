@@ -469,7 +469,7 @@ proxy-groups:
     strategy: consistent-hashing
     use:
      - Vless
-    url: 'https://www.youtube.com/generate_204'
+    url: 'https://cp.cloudflare.com/generate_204'
     expected-status: 204
     interval: 900
     tolerance: 50
