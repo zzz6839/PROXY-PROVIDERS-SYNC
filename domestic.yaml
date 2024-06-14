@@ -45,10 +45,9 @@ payload:
   #- DOMAIN-SUFFIX,akamai.net
   #- DOMAIN-SUFFIX,akamaihd.net
 #steam discount
-  #- DOMAIN-SUFFIX,greenmangaming.com
-  - DOMAIN,www.greenmangaming.com
-  #- DOMAIN,static-eu.payments-amazon.com
-  #- DOMAIN,checkoutshopper-live.adyen.com
+  - DOMAIN-SUFFIX,greenmangaming.com
+  - DOMAIN,static-eu.payments-amazon.com
+  - DOMAIN,checkoutshopper-live.adyen.com
   #gearbox
   #- DOMAIN-KEYWORD,gearboxsoftware
   #dns
