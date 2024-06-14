@@ -28,6 +28,6 @@ payload:
   #- IP-CIDR,43.156.222.0/24
 
 #steam discount
-  - DOMAIN-SUFFIX,greenmangaming.com
-  - DOMAIN,static-eu.payments-amazon.com
-  - DOMAIN,checkoutshopper-live.adyen.com
+#  - DOMAIN-SUFFIX,greenmangaming.com
+#  - DOMAIN,static-eu.payments-amazon.com
+#  - DOMAIN,checkoutshopper-live.adyen.com
