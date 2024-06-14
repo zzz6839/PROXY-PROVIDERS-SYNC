@@ -96,9 +96,9 @@ payload:
   - DOMAIN-SUFFIX,6bt0.com
 
   #lolesports
-  - DOMAIN,ikhsnhix8l.execute-api.us-west-2.amazonaws.com
+  #- DOMAIN,ikhsnhix8l.execute-api.us-west-2.amazonaws.com
   
-  - DOMAIN,music.desperadoj.com
+  #- DOMAIN,music.desperadoj.com
 
   # twitch
   #- DOMAIN-SUFFIX,ext-twitch.tv
@@ -110,3 +110,7 @@ payload:
   #- DOMAIN-SUFFIX,twitchcdn.net
   #- DOMAIN-SUFFIX,twitchsvc.net
   #- DOMAIN-KEYWORD,ttvnw
+
+  #epicgames download
+  - DOMAIN,cloudflare.epicgamescdn.com
+
