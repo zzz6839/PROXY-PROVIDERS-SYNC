@@ -45,9 +45,9 @@ payload:
   #- DOMAIN-SUFFIX,akamai.net
   #- DOMAIN-SUFFIX,akamaihd.net
 #steam discount
-  - DOMAIN-SUFFIX,greenmangaming.com
-  - DOMAIN,static-eu.payments-amazon.com
-  - DOMAIN,checkoutshopper-live.adyen.com
+  #- DOMAIN-SUFFIX,greenmangaming.com
+  #- DOMAIN,static-eu.payments-amazon.com
+  #- DOMAIN,checkoutshopper-live.adyen.com
   #gearbox
   #- DOMAIN-KEYWORD,gearboxsoftware
   #dns
@@ -81,9 +81,9 @@ payload:
   #- DOMAIN-SUFFIX,docker.com
   #- DOMAIN-SUFFIX,docker.io
   #- DOMAIN-SUFFIX,dockerhub.com
-  - DOMAIN,production.cloudflare.docker.com
+  #- DOMAIN,production.cloudflare.docker.com
 
-  - DOMAIN-SUFFIX,qbittorrent.org
+  #- DOMAIN-SUFFIX,qbittorrent.org
   #switch game stop
   #- DOMAIN-SUFFIX,teknik.app
 
