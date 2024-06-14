@@ -115,5 +115,5 @@ payload:
   - DOMAIN,cloudflare.epicgamescdn.com
 
   #ROCKSTAR DOWNLOAD
-  - DOMAIN,gamedownloads.rockstargames.com
-
+  - DOMAIN-SUFFIX,gamedownloads.rockstargames.com
+  #- DOMAIN,gamedownloads-rockstargames-com.akamaized.net
