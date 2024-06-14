@@ -750,12 +750,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Github_domain.yaml"
     interval: 86400 
 
-  #GameDownload:
-  #  type: http
-  #  behavior: classical
-  #  path: ./RuleSet/Extra/GameDownload.yaml
-  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/GameDownload.yaml"
-  #  interval: 86400
+  GameDownload:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/GameDownload.yaml
+    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/GameDownload.yaml"
+    interval: 86400
 
   lancidr:
     type: http
@@ -914,6 +914,9 @@ rules:
     # lan domain
     - RULE-SET,private,DIRECT
 
+    # custom domestic rules
+    - RULE-SET,domestic,DIRECT
+
     # proxy domain
     - RULE-SET,baha,🇹🇼Baha #proxy group
 
@@ -930,6 +933,10 @@ rules:
     - RULE-SET,SteamCN,DIRECT 
     - RULE-SET,Steam,✈️PROXY  
     
+    - RULE-SET,Rockstar,✈️PROXY
+    
+    - RULE-SET,Epicgames,✈️PROXY
+
     - GEOSITE,openai,AI
     - DOMAIN,bard.google.com,AI
     - DOMAIN-SUFFIX,gemini.google.com,AI
@@ -950,8 +957,6 @@ rules:
     # DOMAIN DIRECT
     - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group between dom/intl
     
-    - RULE-SET,Epicgames,DIRECT
-    
     - RULE-SET,bt-trackers,DIRECT
    
     - GEOSITE,microsoft@cn,DIRECT
@@ -963,9 +968,6 @@ rules:
     - DOMAIN,apac-china-courier-4.push-apple.com.akadns.net,DIRECT
     - RULE-SET,🍎Apple_domain,✈️PROXY
 
-    - RULE-SET,Rockstar,DIRECT
-    # custom domestic rules
-    - RULE-SET,domestic,DIRECT
 
     # IP REJECT
     - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
