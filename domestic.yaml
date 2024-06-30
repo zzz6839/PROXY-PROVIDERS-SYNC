@@ -92,7 +92,7 @@ payload:
   
   # DIRECT DOWNLOAD 
   - DOMAIN-SUFFIX,1fichier.com
-
+  - DOMAIN-SUFFIX,userscloud.com
   - DOMAIN-SUFFIX,6bt0.com
 
   #lolesports
@@ -118,3 +118,4 @@ payload:
   #ROCKSTAR DOWNLOAD
   - DOMAIN,gamedownloads.rockstargames.com
   - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
+
