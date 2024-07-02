@@ -965,7 +965,7 @@ rules:
     
     - GEOSITE,apple@cn,DIRECT
     - GEOSITE,apple-cn,DIRECT
-    - DOMAIN,apac-china-courier-4.push-apple.com.akadns.net,DIRECT
+    #- DOMAIN,apac-china-courier-4.push-apple.com.akadns.net,DIRECT
     - RULE-SET,🍎Apple_domain,✈️PROXY
 
 
