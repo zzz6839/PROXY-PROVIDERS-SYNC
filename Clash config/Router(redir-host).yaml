@@ -189,11 +189,13 @@ dns:
       - 223.6.6.6       
       - 119.29.29.29
   nameserver:
-      - https://fdyhoqa   .cloudflare-gateway.com/dns-query#DIRECT
+      #- https://fdyhoqa   .cloudflare-gateway.com/dns-query#DIRECT
       #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
       #- tls://dns.google#DNS
       #- tls://dns.google
       #- https://doh.apad.pro/dns-query
+      - https://dns11.quad9.net/dns-query	
+      #- https://doh.sandbox.opendns.com/dns-query	
       - https:// .dandanplay-blacksheepwall.workers.dev/ -all#vless(Auto)     
   proxy-server-nameserver:
       - 119.29.29.29      
