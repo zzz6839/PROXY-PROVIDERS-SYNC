@@ -120,3 +120,7 @@ payload:
   - DOMAIN,gamedownloads.rockstargames.com
   - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
 
+  #看漫画
+  - DOMAIN-SUFFIX,hamreus.com
+  - DOMAIN-SUFFIX,manhuagui.com
+
