@@ -189,14 +189,14 @@ dns:
       - 223.6.6.6       
       - 119.29.29.29
   nameserver:
-      #- https://fdyhoqa   .cloudflare-gateway.com/dns-query#DIRECT
+      - https://fdyhoqa   .cloudflare-gateway.com/dns-query#DIRECT
       #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
       #- tls://dns.google#DNS
       #- tls://dns.google
       #- https://doh.apad.pro/dns-query
-      - https://dns11.quad9.net/dns-query	
+      #- https://dns11.quad9.net/dns-query	
       #- https://doh.sandbox.opendns.com/dns-query	
-      - https:// .dandanplay-blacksheepwall.workers.dev/ -all#vless(Auto)     
+      - https:// .dandanplay-blacksheepwall.workers.dev/ -all#DNS     
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
@@ -471,7 +471,7 @@ proxy-groups:
     strategy: consistent-hashing
     use:
      - Vless
-    url: 'https://cp.cloudflare.com/generate_204'
+    url: 'https://www.youtube.com/generate_204'
     expected-status: 204
     interval: 900
     tolerance: 50
@@ -559,12 +559,12 @@ proxy-groups:
     hidden: true 
 
   # Bilibili国台
-  - name: "Bilibili国台"
-    type: select
-    proxies:
-      - DIRECT
-      - 🇹🇼Baha
-  
+  #- name: "Bilibili国台"
+  #  type: select
+  #  proxies:
+  #    - DIRECT
+  #    - 🇹🇼Baha
+  #
   # 外服游戏
   - name: "🎮online game"
     type: select
@@ -608,19 +608,20 @@ proxy-groups:
       - DIRECT
       - ✈️PROXY
       - backup(Auto)
+
   # DNS
-  #- name: "DNS"
-  #  type: load-balance
-  #  strategy: round-robin
-   # use:
-    #  - Airport A
-   # proxies:
-    # - backup(Auto) 
-    #  - Airport B
-   # filter: "(?!.*(Tro)).*(港|台)"
-   # url: "https://dns.google"
-   # interval: 900
-   # tolerance: 20 
+  - name: "DNS"
+    type: url-test
+    use:
+      - Airport A
+      - Airport B
+      - Vless
+    filter: "港|台|HK|CMCC|TW|Hong|Taiwan"
+    url: 'https://cp.cloudflare.com/generate_204'
+    expected-status: 204
+    interval: 900
+    tolerance: 50
+    hidden: true
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "DST-PORT"
@@ -661,12 +662,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Bahamut_domain.yaml"
     interval: 86400 
   
-  BILIBILIHMT_domain:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
-    url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
-    interval: 86400 
+  #BILIBILIHMT_domain:
+  #  type: http
+  #  behavior: classical
+  #  path: ./RuleSet/Extra/BILIBILIHMT_domain.yaml
+  #  url: "https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/BilibiliHMT_domain.yaml"
+  #  interval: 86400 
   
   #BILIBILIHMT_ip:
   #  type: http
@@ -707,7 +708,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/docker.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/02e21190b7850bca9d6ad8946b27aa7548863e21/rule/Clash/Docker/Docker.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Docker.yaml
     interval: 86400 
 
   domestic:
@@ -812,7 +813,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/Vercel.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Vercel/Vercel.yaml
+    url: https://raw.githubusercontent.com/zzz6839/CUSTOM_CLASH_RULESET/release/Vercel.yaml
     interval: 86400
 
   #Steam CN domain
@@ -957,7 +958,7 @@ rules:
     
     - RULE-SET,Speedtest,♿speedtest #proxy group between dom/intl
     # DOMAIN DIRECT
-    - RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group between dom/intl
+    #- RULE-SET,BILIBILIHMT_domain,Bilibili国台 #proxy group between dom/intl
     
     - RULE-SET,bt-trackers,DIRECT
    
