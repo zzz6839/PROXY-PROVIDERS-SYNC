@@ -925,6 +925,7 @@ rules:
 
     - RULE-SET,TikTok,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - DOMAIN-SUFFIX,mgstage.com,🇯🇵DMM/Mgstage/Tiktok #proxy group
+    - DOMAIN-SUFFIX,prestige-av,🇯🇵DMM/Mgstage/Tiktok #proxy group
     - RULE-SET,DMM_domain,🇯🇵DMM/Mgstage/Tiktok #proxy group
     
     - RULE-SET,E-Hentai_domain,e-hentai auto #proxy group
