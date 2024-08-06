@@ -121,7 +121,9 @@ payload:
   - DOMAIN,gamedownloads-rockstargames-com.akamaized.net
 
   #Riot download
-  - DOMAIN,lol.dyn.riotcdn.net
+  #- DOMAIN,lol.dyn.riotcdn.net
+  - DOMAIN-SUFFIX,dyn.riotcdn.net
+
 
   #LOL VOICE
   #- DOMAIN,lolsnxp.www.vivox.com
