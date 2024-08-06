@@ -123,6 +123,9 @@ payload:
   #Riot download
   - DOMAIN,lol.dyn.riotcdn.net
 
+  #LOL VOICE
+  - DOMAIN,lolsnxp.www.vivox.com
+
   #看漫画
   #- DOMAIN-SUFFIX,hamreus.com
   - DOMAIN-SUFFIX,manhuagui.com
