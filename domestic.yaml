@@ -132,6 +132,7 @@ payload:
 
   #NVIDIA download
   - DOMAIN,ota-downloads.nvidia.com
+  - DOMAIN-SUFFIX,download.nvidia.com
   #AMD download
   - DOMAIN,drivers.amd.com
   
