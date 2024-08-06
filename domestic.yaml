@@ -127,6 +127,8 @@ payload:
   - DOMAIN,lolsnxp.www.vivox.com
   - DOMAIN,lolsnxp.vivox.com
 
+  #NVIDIA download
+  - DOMAIN,ota-downloads.nvidia.com
   #看漫画
   #- DOMAIN-SUFFIX,hamreus.com
   - DOMAIN-SUFFIX,manhuagui.com
