@@ -454,13 +454,14 @@ proxy-groups:
     #disable-udp: true
 
   - name: "backup(Auto)"
-    type: url-test
+    type: load-balance
+    strategy: consistent-hashing
     use:
       - Airport B
     url: 'https://www.youtube.com/generate_204'
     expected-status: 204
-    interval: 300
-    tolerance: 40
+    interval: 900
+    tolerance: 50
     hidden: true
     #lazy: true
     #filter: '港|hk|hong'
@@ -468,7 +469,7 @@ proxy-groups:
 
   - name: "vless(Auto)"
     type: load-balance
-    strategy: consistent-hashing
+    strategy: round-robin
     use:
      - Vless
     url: 'https://www.youtube.com/generate_204'
