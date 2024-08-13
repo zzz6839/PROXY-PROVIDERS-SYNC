@@ -115,6 +115,8 @@ payload:
   #epicgames download
   - DOMAIN,cloudflare.epicgamescdn.com
   - DOMAIN,ipv4.egdownload.fastly-edge.com
+  - DOMAIN,epicgames-download1.akamaized.net
+
   
   #ROCKSTAR DOWNLOAD
   - DOMAIN,gamedownloads.rockstargames.com
