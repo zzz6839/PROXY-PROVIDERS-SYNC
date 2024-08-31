@@ -951,6 +951,7 @@ rules:
     - RULE-SET,docker,docker #proxy group
 
     - DOMAIN-SUFFIX,ttvnw.net,EsportsVid #proxy group
+    - AND,((DOMAIN-KEYWORD,ttvnw),(DOMAIN-SUFFIX,akamaized.net)),EsportsVid
 
     - RULE-SET,🧱gfw,✈️PROXY
 
