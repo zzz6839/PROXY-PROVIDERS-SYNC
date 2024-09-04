@@ -139,6 +139,6 @@ payload:
   - DOMAIN,drivers.amd.com
   
   #看漫画
-  - DOMAIN-SUFFIX,hamreus.com
-  - DOMAIN-SUFFIX,manhuagui.com
+  #- DOMAIN-SUFFIX,hamreus.com
+  #- DOMAIN-SUFFIX,manhuagui.com
 
