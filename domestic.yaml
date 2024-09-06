@@ -94,7 +94,7 @@ payload:
   - DOMAIN-SUFFIX,1fichier.com
   - DOMAIN-SUFFIX,userscloud.net
   - DOMAIN-SUFFIX,userscloud.com
-  - DOMAIN-SUFFIX,6bt0.com
+  #- DOMAIN-SUFFIX,6bt0.com
 
   #lolesports
   #- DOMAIN,ikhsnhix8l.execute-api.us-west-2.amazonaws.com
