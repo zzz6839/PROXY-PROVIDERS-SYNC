@@ -141,4 +141,6 @@ payload:
   #看漫画
   - DOMAIN-SUFFIX,hamreus.com
   - DOMAIN-SUFFIX,manhuagui.com
-
+  
+  # LLM download
+  - DOMAIN-SUFFIX,cloudflarestorage.com
