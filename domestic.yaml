@@ -146,4 +146,4 @@ payload:
   - DOMAIN-SUFFIX,cloudflarestorage.com
 
   # twitch
-  - DOMAIN,d3aqoihi2n8ty8.cloudfront.net
+  #- DOMAIN,d3aqoihi2n8ty8.cloudfront.net
