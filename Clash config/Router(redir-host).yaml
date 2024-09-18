@@ -189,14 +189,10 @@ dns:
       - 223.6.6.6       
       - 119.29.29.29
   nameserver:
-      - https://fdyhoqa   .cloudflare-gateway.com/dns-query#DIRECT
-      #- tls://1dot1dot1dot1.cloudflare-dns.com#DNS
-      #- tls://dns.google#DNS
-      #- tls://dns.google
+      - https://fdyhoqa   .cloudflare-gateway.com/dns-query#DNS&ecs= #local isp dns address/24&ecs-override=true
+      - https://dns.google/dns-query#DNS&ecs= #local isp dns address/24&ecs-override=true
       #- https://doh.apad.pro/dns-query
-      #- https://dns11.quad9.net/dns-query	
-      #- https://doh.sandbox.opendns.com/dns-query	
-      - https:// .dandanplay-blacksheepwall.workers.dev/ -all#DNS     
+      #- https:// .dandanplay-blacksheepwall.workers.dev/ -all#DNS     
   proxy-server-nameserver:
       - 119.29.29.29      
       - 223.6.6.6         
@@ -347,31 +343,35 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: https://www.youtube.com/generate_204
-  
-
+      url: https://clients3.google.com/generate_204
+      expected-status: 204
+ 
+  #聚合机场
   Airport B:      
     type: http
-    url:  "" 
+    url:  "http://192.168.1.1:25500/sub?target=clash&tfo=true&udp=true&url=" 
     interval: 3600
     filter: "^((?!(每月刷新|com|机场)).)*$"
     path: ./Proxy/backup.yaml
     health-check:
       enable: true
       interval: 600
-      url: https://www.youtube.com/generate_204    
+      url: https://clients3.google.com/generate_204
+      expected-status: 204
+      
  
   Vless:
     type: http
-    url:  "https:// .blacksheepwall.dynv6.net/{ }" 
+    url:  "https:// .query.dns.army" 
     interval: 3600
     filter: "^((?!(加入)).)*$"
     path: ./Proxy/vless.yaml
     health-check:
       enable: true
       interval: 600
-      url: https://www.youtube.com/generate_204
-  
+      url: https://clients3.google.com/generate_204
+      expected-status: 204
+
 
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/wiki/configuration
@@ -435,7 +435,7 @@ proxy-groups:
       - main(Auto)
       - backup(Auto)
       - vless(Auto)
-    url: 'https://www.youtube.com/generate_204'
+    url: 'https://clients3.google.com/generate_204'
     expected-status: 204
     interval: 60
     hidden: true 
@@ -447,8 +447,8 @@ proxy-groups:
     url: 'https://www.youtube.com/generate_204'
     expected-status: 204
     interval: 300
-    tolerance: 40
-    filter: '香港|hk|hong|台湾|日本|jp|japan'
+    tolerance: 35
+    filter: '香港|hk|hong|台湾|TW|Taiwan|日本|jp|japan|SG|Singapore'
     hidden: true
     lazy: false
     #disable-udp: true
@@ -458,10 +458,10 @@ proxy-groups:
     strategy: consistent-hashing
     use:
       - Airport B
-    url: 'https://www.youtube.com/generate_204'
+    url: 'https://redirector.googlevideo.com/generate_204'
     expected-status: 204
     interval: 900
-    tolerance: 50
+    tolerance: 100
     hidden: true
     #lazy: true
     #filter: '港|hk|hong'
@@ -472,10 +472,10 @@ proxy-groups:
     strategy: round-robin
     use:
      - Vless
-    url: 'https://www.youtube.com/generate_204'
+    url: 'https://redirector.googlevideo.com/generate_204'
     expected-status: 204
     interval: 900
-    tolerance: 50
+    tolerance: 100
     hidden: true
 
   - name: "Manual"
@@ -587,9 +587,9 @@ proxy-groups:
   - name: "EsportsVid"
     type: select
     proxies:
-      - backup(Auto)
       - main(Auto)
-      - DIRECT
+      - backup(Auto)
+      - vless(Auto)
 
   - name: "AI"
     type: select
@@ -606,20 +606,22 @@ proxy-groups:
   - name: "docker"
     type: select
     proxies:
-      - DIRECT
+      - vless(Auto)
       - ✈️PROXY
       - backup(Auto)
+      - DIRECT
 
   # DNS
   - name: "DNS"
-    type: url-test
+    type: load-balance
+    strategy: round-robin
     use:
       - Airport A
       - Airport B
       - Vless
-    filter: "港|台|HK|CMCC|TW|Hong|Taiwan"
-    url: 'https://cp.cloudflare.com/generate_204'
-    expected-status: 204
+    #filter: "港|台|HK|CMCC|TW|Hong|Taiwan"
+    url: 'https://dns.google'
+    expected-status: 200
     interval: 900
     tolerance: 50
     hidden: true
