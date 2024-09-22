@@ -160,3 +160,6 @@ payload:
   #- DOMAIN-SUFFIX,music.apple.com
 
   - DOMAIN-SUFFIX,buzzheavier.com
+
+  # Switch game
+  - DOMAIN-SUFFIX,ghostland.at
