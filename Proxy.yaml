@@ -80,4 +80,4 @@
 
   # league of legend official website
   - DOMAIN-SUFFIX,leagueoflegends.com
-  - DOMAIN,auth.riotgames.com
+  - DOMAIN-SUFFIX,auth.riotgames.com
