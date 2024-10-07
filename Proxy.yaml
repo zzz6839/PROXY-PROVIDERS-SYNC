@@ -79,5 +79,5 @@
   - DOMAIN-SUFFIX,ipleak.net
 
   # league of legend official website
-  - DOMAIN-SUFFIX,leagueoflegends.com
-  - DOMAIN-SUFFIX,auth.riotgames.com
+  #- DOMAIN-SUFFIX,leagueoflegends.com
+  #- DOMAIN-SUFFIX,auth.riotgames.com
