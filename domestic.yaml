@@ -50,38 +50,15 @@ payload:
   - DOMAIN,checkoutshopper-live.adyen.com
   #gearbox
   #- DOMAIN-KEYWORD,gearboxsoftware
-  #dns
-  #- DOMAIN-SUFFIX,dns.google
-  #- DOMAIN-SUFFIX,1.1.1.1
-  #- DOMAIN-SUFFIX,8.8.8.8
-  #- DOMAIN-SUFFIX,dns.cloudflare.com
-  #- DOMAIN,i.passcloud.xyz
-  #- DOMAIN-SUFFIX,doh.opendns.com
-  #- DOMAIN,i.iqiqcloud.com
-  #unblockneteasemusic
-  #- DOMAIN,music.163-my-beloved.com
- #dns test
- # - DOMAIN-SUFFIX,dnsleaktest.com
- # - DOMAIN-SUFFIX,dnsperf.com
- # - DOMAIN-SUFFIX,perfops.net
- # - DOMAIN-SUFFIX,ipleak.net
+
   #vercel pollution
-  #- DOMAIN,music.163-my-beloved.com #no https
+  #- DOMAIN,music.163-my-beloved.com 
+
   - DOMAIN-SUFFIX,YUC.WIKI
 
   - DOMAIN-SUFFIX,greasyfork.org
 
   - DOMAIN-SUFFIX,rinuploads.org
-
-  #docker
-  #- DOMAIN,d1q6f0aelx0por.cloudfront.net
-  #- DOMAIN,d2wy8f7a9ursnm.cloudfront.net
-  #- DOMAIN,d36jcksde1wxzq.cloudfront.net
-  #- DOMAIN-SUFFIX,compose-spec.io
-  #- DOMAIN-SUFFIX,docker.com
-  #- DOMAIN-SUFFIX,docker.io
-  #- DOMAIN-SUFFIX,dockerhub.com
-  #- DOMAIN,production.cloudflare.docker.com
 
   #- DOMAIN-SUFFIX,qbittorrent.org
   #switch game stop
@@ -100,17 +77,6 @@ payload:
   #- DOMAIN,ikhsnhix8l.execute-api.us-west-2.amazonaws.com
   
   #- DOMAIN,music.desperadoj.com
-
-  # twitch
-  #- DOMAIN-SUFFIX,ext-twitch.tv
-  #- DOMAIN-SUFFIX,jtvnw.net
-  #- DOMAIN-SUFFIX,live-video.net
-  #- DOMAIN-SUFFIX,ttvnw.net
-  #- DOMAIN-SUFFIX,twitch-ext.rootonline.de
-  #- DOMAIN-SUFFIX,twitch.tv
-  #- DOMAIN-SUFFIX,twitchcdn.net
-  #- DOMAIN-SUFFIX,twitchsvc.net
-  #- DOMAIN-KEYWORD,ttvnw
 
   #epicgames download
   - DOMAIN,cloudflare.epicgamescdn.com
