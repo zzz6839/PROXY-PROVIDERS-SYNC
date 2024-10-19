@@ -90,7 +90,7 @@ payload:
 
   #Riot download
   #- DOMAIN,lol.dyn.riotcdn.net
-  - DOMAIN-SUFFIX,dyn.riotcdn.net
+  #- DOMAIN-SUFFIX,dyn.riotcdn.net
 
 
   #LOL VOICE
