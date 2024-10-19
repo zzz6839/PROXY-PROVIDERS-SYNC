@@ -96,7 +96,7 @@ payload:
   #LOL VOICE
   #- DOMAIN,lolsnxp.www.vivox.com
   #- DOMAIN,lolsnxp.vivox.com
-  - DOMAIN-SUFFIX,vivox.com
+  #- DOMAIN-SUFFIX,vivox.com
 
   #NVIDIA download
   - DOMAIN,ota-downloads.nvidia.com
