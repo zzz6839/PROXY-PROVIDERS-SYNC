@@ -129,3 +129,5 @@ payload:
 
   # Switch game
   - DOMAIN-SUFFIX,ghostland.at
+
+  - DOMAIN-SUFFIX,hembed.com
