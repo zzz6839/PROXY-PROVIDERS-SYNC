@@ -18,4 +18,6 @@ payload:
 
 #Maplestory-TW
   - '202.80.104.0/24'
+# ET accesslarator
+  - '156.231.120.66/24'
   
