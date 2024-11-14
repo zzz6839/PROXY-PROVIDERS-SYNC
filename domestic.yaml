@@ -133,6 +133,6 @@ payload:
   #- DOMAIN-SUFFIX,hembed.com
 
   #tailscale
-  - DOMAIN-SUFFIX,tailscale.com
-  - DOMAIN-SUFFIX,tailscale.io
-  - DOMAIN-SUFFIX,ts.net
+  #- DOMAIN-SUFFIX,tailscale.com
+  #- DOMAIN-SUFFIX,tailscale.io
+  #- DOMAIN-SUFFIX,ts.net
