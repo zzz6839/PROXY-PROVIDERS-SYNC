@@ -131,3 +131,8 @@ payload:
   - DOMAIN-SUFFIX,ghostland.at
 
   #- DOMAIN-SUFFIX,hembed.com
+
+  #tailscale
+  - DOMAIN-SUFFIX,tailscale.com
+  - DOMAIN-SUFFIX,tailscale.io
+  - DOMAIN-SUFFIX,ts.net
