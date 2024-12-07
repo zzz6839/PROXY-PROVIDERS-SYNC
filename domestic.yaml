@@ -71,12 +71,9 @@ payload:
   - DOMAIN-SUFFIX,1fichier.com
   - DOMAIN-SUFFIX,userscloud.net
   - DOMAIN-SUFFIX,userscloud.com
-  #- DOMAIN-SUFFIX,6bt0.com
-
-  #lolesports
-  #- DOMAIN,ikhsnhix8l.execute-api.us-west-2.amazonaws.com
+  - DOMAIN-SUFFIX,spyderrock.com
+  - DOMAIN-SUFFIX,gofile.io
   
-  #- DOMAIN,music.desperadoj.com
 
   #epicgames download
   - DOMAIN,cloudflare.epicgamescdn.com
@@ -137,5 +134,3 @@ payload:
   #- DOMAIN-SUFFIX,tailscale.io
   #- DOMAIN-SUFFIX,ts.net
 
-  #download
-  - DOMAIN-SUFFIX,spyderrock.com
