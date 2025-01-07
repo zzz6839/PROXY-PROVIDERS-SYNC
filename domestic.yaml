@@ -68,7 +68,7 @@ payload:
   #- DOMAIN,d1isb7f40vy8e5.cloudfront.net
   
   # DIRECT DOWNLOAD 
-  - DOMAIN-SUFFIX,1fichier.com
+  #- DOMAIN-SUFFIX,1fichier.com
   - DOMAIN-SUFFIX,userscloud.net
   - DOMAIN-SUFFIX,userscloud.com
   - DOMAIN-SUFFIX,spyderrock.com
