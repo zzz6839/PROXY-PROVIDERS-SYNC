@@ -31,7 +31,7 @@ payload:
 #-------------------不规则tracker---------------------------------- 
   - DOMAIN-SUFFIX,mediaclub.tv
 #iplocation
-  - DOMAIN-SUFFIX,iplocation.io
+#  - DOMAIN-SUFFIX,iplocation.io
 #omofun.tv
   - DOMAIN-SUFFIX,omofun.tv
 #iacg
