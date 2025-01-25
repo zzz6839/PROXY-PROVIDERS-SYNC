@@ -83,4 +83,4 @@
   #- DOMAIN-SUFFIX,auth.riotgames.com
   
   # Deepseek
-  - DOMAIN-SUFFIX,deepseek.com
+  #- DOMAIN-SUFFIX,deepseek.com
