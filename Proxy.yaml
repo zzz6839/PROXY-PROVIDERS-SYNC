@@ -81,3 +81,6 @@
   # league of legend official website
   #- DOMAIN-SUFFIX,leagueoflegends.com
   #- DOMAIN-SUFFIX,auth.riotgames.com
+  
+  # Deepseek
+  - DOMAIN-SUFFIX,deepseek.com
