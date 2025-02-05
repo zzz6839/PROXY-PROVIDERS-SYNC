@@ -138,3 +138,6 @@ payload:
   #dandanplay download
    - DOMAIN-SUFFIX,dandanplay.com
    - DOMAIN-SUFFIX,dandanplay.net
+    #whisper speech-to-text
+   - DOMAIN,openaipublic.azureedge.net
+
