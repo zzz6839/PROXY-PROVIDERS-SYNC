@@ -56,7 +56,7 @@ payload:
 
   - DOMAIN-SUFFIX,YUC.WIKI
 
-  - DOMAIN-SUFFIX,greasyfork.org
+  #- DOMAIN-SUFFIX,greasyfork.org
 
   - DOMAIN-SUFFIX,rinuploads.org
 
@@ -100,7 +100,7 @@ payload:
   - DOMAIN,ota-downloads.nvidia.com
   - DOMAIN-SUFFIX,download.nvidia.com
   #AMD download
-  - DOMAIN,drivers.amd.com
+  - DOMAIN,drivers.amd.com`
   
   #看漫画
   - DOMAIN-SUFFIX,hamreus.com
