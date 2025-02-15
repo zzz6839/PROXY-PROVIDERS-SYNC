@@ -84,3 +84,7 @@
   
   # Deepseek
   #- DOMAIN-SUFFIX,deepseek.com
+  
+  #linkedin
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,linkedin.cn
