@@ -1,250 +1,250 @@
-# Clash FAQ – League of Legends Support
+# Clash常見問答 – 《英雄聯盟》客服
 
-1. [League of Legends Support](https://support-leagueoflegends.riotgames.com/hc/en-us)
-2. [Ranked gameplay, honor, & rewards](https://support-leagueoflegends.riotgames.com/hc/en-us/categories/115001239808-Ranked-gameplay-honor-rewards)
-3. [LCS, community tournaments, & Clash FAQs](https://support-leagueoflegends.riotgames.com/hc/en-us/sections/115002164328-LCS-community-tournaments-Clash-FAQs)
+1. [《英雄聯盟》客服](https://support-leagueoflegends.riotgames.com/hc/zh-tw)
+2. [積分對戰玩法、榮譽和獎勵](https://support-leagueoflegends.riotgames.com/hc/zh-tw/categories/115001239808-%E7%A9%8D%E5%88%86%E5%B0%8D%E6%88%B0%E7%8E%A9%E6%B3%95-%E6%A6%AE%E8%AD%BD%E5%92%8C%E7%8D%8E%E5%8B%B5)
+3. [LCS、社群聯賽和Clash的常見問答](https://support-leagueoflegends.riotgames.com/hc/zh-tw/sections/115002164328-LCS-%E7%A4%BE%E7%BE%A4%E8%81%AF%E8%B3%BD%E5%92%8CClash%E7%9A%84%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94)
 
-What is Clash?
+決勝時刻
 
-- [What is Clash?](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#what-is-clash--0-0)
-- [Clash Schedule (2025)](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#clash-schedule-2025--0-1)
-- [Creating Your Team](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#creating-your-team-0-2)
-- [Clash Placement](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#clash-placement-0-3)
-- [Verification and Smurfing](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#verification-and-smurfing-0-4)
-- [Bracket Format](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#bracket-format-0-5)
-- [Locking In](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#locking-in-0-6)
-- [Matchmaking Tiers](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#matchmaking-tiers-0-7)
-- [Scouting](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#scouting-0-8)
-- [Champ Select](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#champ-select-0-9)
-- [Sudden Death](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#sudden-death-0-10)
-- [/pauses and /remakes](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#-pauses-and-remakes-0-11)
-- [Tickets](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#tickets-0-12)
-- [Prizes](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#prizes-0-13)
-- [Victory Points & Banner Frames](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#victory-points-banner-frames-0-14)
-- [Orbs and Capsules](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ#orbs-and-capsules-0-15)
+- [什麼是Clash模式？](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E4%BB%80%E9%BA%BC%E6%98%AFclash%E6%A8%A1%E5%BC%8F%EF%BC%9F-0-0)
+- [Clash賽程表(2025)](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#clash%E8%B3%BD%E7%A8%8B%E8%A1%A8-2025--0-1)
+- [建立隊伍](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E5%BB%BA%E7%AB%8B%E9%9A%8A%E4%BC%8D-0-2)
+- [Clash排位](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#clash%E6%8E%92%E4%BD%8D-0-3)
+- [驗證與開小帳](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E9%A9%97%E8%AD%89%E8%88%87%E9%96%8B%E5%B0%8F%E5%B8%B3-0-4)
+- [分組賽賽制](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E5%88%86%E7%B5%84%E8%B3%BD%E8%B3%BD%E5%88%B6-0-5)
+- [隊伍鎖定](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E9%9A%8A%E4%BC%8D%E9%8E%96%E5%AE%9A-0-6)
+- [配對等級](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E9%85%8D%E5%B0%8D%E7%AD%89%E7%B4%9A-0-7)
+- [偵察](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E5%81%B5%E5%AF%9F-0-8)
+- [英雄選擇](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E8%8B%B1%E9%9B%84%E9%81%B8%E6%93%87-0-9)
+- [決勝時刻](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E6%B1%BA%E5%8B%9D%E6%99%82%E5%88%BB-0-10)
+- [暫停(/pause)和提前結束(/remake)](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E6%9A%AB%E5%81%9C-pause-%E5%92%8C%E6%8F%90%E5%89%8D%E7%B5%90%E6%9D%9F-remake--0-11)
+- [入場券](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E5%85%A5%E5%A0%B4%E5%88%B8-0-12)
+- [獎賞](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E7%8D%8E%E8%B3%9E-0-13)
+- [勝利積分&旗幟架](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E5%8B%9D%E5%88%A9%E7%A9%8D%E5%88%86-%E6%97%97%E5%B9%9F%E6%9E%B6-0-14)
+- [晶球和典藏罐](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E6%99%B6%E7%90%83%E5%92%8C%E5%85%B8%E8%97%8F%E7%BD%90-0-15)
 
-# Clash FAQ
+# Clash常見問答
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/Avatar.jpg)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/Avatar.jpg)
 
 **Isto**
 
-March 20, 2025 at 4:48 AM
+2025年3月26日 上午1:54
 
 - 
 - 
 - 
 - 
 
-## What is Clash?
+## 什麼是Clash模式？
 
-When Champions meet, a Clash is inevitable (and loads of fun). Clash is a monthly tournament. This competitive game mode sees you and four fellow players team up to compete against other teams at your skill level.
+英雄遇英雄時，雖然衝突難免，但樂趣也隨之而生。Clash是每月一次的競賽。在這個競技遊戲模式中，你能夠和其他四位玩家組隊，與其他實力相當的隊伍一較高下。
 
-You can begin forming your team on Monday of Clash Week, but matches will take place on Saturday and/or Sunday. Your team can join an 8-team bracket on either day (or on both!) If you win all three games, you'll get a trophy **and** awesome prizes! The more games you win, the better your prizes will be! And, if your team loses the first round, you can still play consolation games to keep improving your prize pool.
+在Clash競賽週的週一，你就可以開始組隊，不過比賽會在週末才正式開始。比賽期間，隊伍將參與8隊分組賽，選擇參戰一天或兩天都可以！只要三場對戰全勝，就能取得獎盃**以及**超棒獎勵！勝場越多，得到的獎勵就越豐厚！另外，如果你的所屬隊伍在第一輪就輸了，還是可以繼續參與敗部賽，爭取更好的獎勵。
 
-Your team can only join one Clash bracket each day, and once you've joined, that team is locked in for the entire bracket. However, if things don't go well for you on Saturday, you can still come back Sunday and try again (with the same team, or even a new one!)
+每支隊伍每天只能參加一輪Clash分組賽，而且加入之後，這支隊伍就會被鎖定，直到打完全部賽程。不過，如果隊伍在週六打得不順利，歡迎以同一陣容出戰或重組新隊在週日捲土重來！
 
-## Clash Schedule (2025)
+## Clash賽程表(2025)
 
-Coordinating five players to play an evening of Clash can be like wrangling poros, but at least with this schedule you'll be able to plan ahead.
+協調五名玩家共同玩Clash一整個晚上，可能會像一次跟好幾個普羅吵架，但有了賽程表，至少你能夠提前計畫。
 
-| Clash Event | Patch | Team Formation Begins | Tournament Days |
+| Clash活動 | 更新版本 | 戰隊編組開始日期 | 賽事日期 |
 | --- | --- | --- | --- |
-| **ARURF Cup** | 25.04 | February 24 | March 1–2 |
-| **Summoner's Rift Cup** | 25.08 | April 14 | April 19–20 |
-| **Summoner's Rift Cup** | 25.10 | May 19 | May 24–25 |
-| **MSI** | 25.12 | June 16 | June 21–22 |
-| **Summoner's Rift Cup** | 25.14 | July 14 | July 19–20 |
-| **ARAM Cup** | 25.16 | August 11 | August 16–17 |
-| **Summoner's Rift Cup** | 25.18 | September 8 | September 13–14 |
-| **Worlds** | 25.21 | October 13 | October 18–19 |
-| **ARAM Cup** | 25.23 | November 17 | November 22–23 |
-| **Summoner's Rift Cup** | 25.24 | December 8 | December 13–14 |
+| **阿福快打盃** | 25.04 | 2月24日 | 3月1至2日 |
+| **召喚峽谷盃** | 25.08 | 4月14日 | 4月19至20日 |
+| **召喚峽谷盃** | 25.10 | 5月19日 | 5月24至25日 |
+| **季中邀請賽** | 25.12 | 6月16日 | 6月21至22日 |
+| **召喚峽谷盃** | 25.14 | 7月14日 | 7月19至20日 |
+| **隨機單中盃** | 25.16 | 8月11日 | 8月16至17日 |
+| **召喚峽谷盃** | 25.18 | 9月8日 | 9月13至14日 |
+| **世界大賽** | 25.21 | 10月13日 | 10月18至19日 |
+| **隨機單中盃** | 25.23 | 11月17日 | 11月22至23日 |
+| **隨機單中盃** | 25.24 | 12月8日 | 12月13至14日 |
 
-Dates can sometimes change, so always check in-client for the latest, most accurate information.
+日期可能會發生變化，因此請務必隨時從用戶端查看最新且最準確的資訊。
 
-## Creating Your Team
+## 建立隊伍
 
-To join or create a Summoner's Rift Clash team, you need to have:
+如果想加入或自行建立召喚峽谷Clash隊伍，你必須：
 
-- Reached level 30
-- Completed placements in at least one Summoner's Rift ranked queue **this year or the year before**.
-- [Verified your League account by SMS](https://support-leagueoflegends.riotgames.com/hc/articles/360000991627) (this is a new Clash-specific feature, and **only mobile/prepaid numbers will be accepted**. Internet numbers [VOIP] like Google Voice will not work.)
+- 達到等級30
+- **今年或去年**，在至少一種召喚峽谷積分模式中有牌階。
+- [《英雄聯盟》帳號必須經過簡訊驗證](https://support-leagueoflegends.riotgames.com/hc/articles/360000991627)（此為配合Clash推出的全新功能，**僅接受手機／預付卡門號**。Google Voice等網路虛擬門號〔網路電話〕並不適用。）
 
-ARAM and ARURF Clash still have the same account level 30 and SMS verification requirements, but you don’t have to play any Ranked to participate. ARAM/ARURF mains rejoice!
+要玩隨機單中和阿福快打Clash，一樣必須達成帳號等級30和簡訊驗證的條件，但不需要進行積分對戰即可參加。隨機單中/阿福快打大師站出來！
 
-### Please Note:
+### 請注意：
 
-There is no Honor Level restriction for Clash.
+Clash模式沒有榮譽等級限制。
 
-Each team has a captain who is responsible for adding or removing members, and setting up their team for Clash. Captains can start inviting their squad from the Monday before a Clash tournament. In the Clash tab, they'll pick a team name, logo, and tag to represent their team for the weekend. If more than one teammate owns a specific team logo, you'll unlock chromas of that logo.
+每支隊伍都要有一名隊長，負責加入或移除隊員，以及替隊伍安排參加Clash競賽。隊長可以從Clash競賽週的週一開始召集隊員。在Clash頁面中，隊長可以為隊伍取名、選擇隊徽，以及在當週用來代表隊伍的標籤。如果有超過一位隊員持有特定隊徽，就能解鎖該隊徽的炫彩包。
 
-Your team will also be assigned a Tier based on your skill. Tier I is the highest, and Tier IV is the lowest. Tiers are based on everyone on the team's Rank, but it is weighted more heavily towards the best player on the team. Your Tier determines who you'll be matched against but also when you can lock-in for your Clash Bracket.
+隊伍會依據實力分配到一個等級，最高為等級I，最低為等級IV。等級的分配會綜合評估所有隊員的牌階，不過隊伍裡牌階最高的隊員權重會更佔更高。等級會決定你們的對手，也會決定隊伍鎖定並排進Clash分組賽的時間點。
 
-Every team member must submit at least one ticket to enter Clash (read more below).
+每位隊員都要交出至少一張入場券，才能參與Clash模式（詳見後文說明）。
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/clashbeta_teamcreation.png)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/clashbeta_teamcreation.png)
 
-When you've been entered into a bracket, you'll compete with that team for the whole bracket.
+隊伍進入分組賽之後，必須以相同的隊員組成打完全部賽程。
 
-## Clash Placement
+## Clash排位
 
-Your Clash placement is based on your previous season's Clash MMR. If you've never played Clash before or didn't play last season, you'll be placed according to your Ranked MMR. Unfortunately, you cannot participate in Clash if you were unranked last season. Be sure to play at least your placements this season if you think you'll want to play Clash in the next one!
+Clash排位是根據上一季的Clash MMR隱分決定的。如果你從來沒打過Clash，或是上一季沒有參與過的話，就會根據你的積分對戰隱分決定排位。不過如果你上一季未進行積分對戰或未有牌階，就無法參加Clash了。如果下一季想要參與Clash模式的話，別忘了在這一季結束前打完積分排位戰！
 
-## Verification and Smurfing
+## 驗證與開小帳
 
-### Mobile or Prepaid Numbers ONLY!
+### 限用手機或預付卡門號！
 
-Please note that we only accept verified mobile or prepaid phone numbers for SMS verification. Internet numbers (i.e. VOIP) like Google Voice will not work.
+請注意，我們的簡訊驗證僅支援已驗證的手機或預付卡門號。Google Voice等網路虛擬門號（即網路電話）並不適用。
 
-As a measure against smurfing, you're required to input a valid mobile phone number to participate in Clash. You can remove your number from your account at any time. Just keep in mind that a 6 month waiting period begins the moment you **unlink** your account. If you ever want to re-link the same number, you'll have to first unlink and then wait 6 months before linking again (no jumping between multiple accounts). When you enter a phone number, you'll be sent a code to verify your account. Repeated incorrect code entries will temporarily lock you out of the verification step. This feature is for Clash only, and is not considered multi-factor authentication.
+為了防範小號，我們會要求輸入有效的手機號碼進行驗證，才能參與Clash模式。你隨時可以從帳號中移除手機號碼。但要記得，**解除帳號連結**的那一刻起，就開始計算6個月的等待期。如果未來你想把帳號重新連結到同一個手機號碼，必須先解除帳號連結，等待6個月後再次連結帳號，而且不能透過切換不同帳號來加速進程。輸入手機號碼之後，你就會收到一組驗證碼，用來驗證帳號。如果輸入驗證碼時多次輸入錯誤，將會暫時無法進行驗證程序。這項功能只供Clash模式使用，且並不屬於多重驗證的一環。
 
-You'll need to add your country code to your number. You can find country codes [here](https://countrycode.org/).
+請在手機號碼前加上國家地區代碼。國家地區代碼可[在此](https://countrycode.org/)查詢。
 
-You can verify your account through SMS in the Settings menu or in the Clash tab.
+你可以使用設定選單的簡訊驗證功能，或在Clash分頁認證你的帳號。
 
-A Clash tournament is only competitive if you get to play against people of your skill level. Smurfing is something we take very seriously in Clash. You can read more about smurfing [here](https://support-leagueoflegends.riotgames.com/hc/articles/360001259787). If you play on multiple accounts, be sure to only SMS link your highest-ranked account.
+為了Clash競賽的公平公正，我們必須確保玩家與對手程度相當。小帳是我們在Clash模式中非常嚴肅以對的問題。你可以在[這裡](https://support-leagueoflegends.riotgames.com/hc/articles/360001259787)進一步瞭解開小帳。如果你有好幾個帳號，請你用牌階最高的帳號進行簡訊認證。
 
-For more information, check out our page on [SMS Verification](https://support-leagueoflegends.riotgames.com/hc/articles/360000991627).
+如需更多資訊，請參閱我們的[簡訊驗證](https://support-leagueoflegends.riotgames.com/hc/articles/360000991627)說明頁面。
 
-## Bracket Format
+## 分組賽賽制
 
-When your team enters Clash, you’ll be placed into a single-elimination 8-team bracket against teams at the same skill level. Whether your team wins that bracket or not, you can still come back the next day and try again in another 8-team bracket!
+隊伍進入Clash模式後，會列入由8個隊伍組成的單淘汰分組賽程中，對手都是實力相當的隊伍。無論當天的結果是贏或輸，隔天都可以回來進行另一場8隊分組賽！
 
-On each day, there is also a consolation (lower) bracket held for teams who lost the first match of each day to continue playing. Those teams will face off against the other teams that lost to earn better prizes.
+比賽期間，每天都會有敗部排名賽，讓第一場對戰中落敗的隊伍有機會繼續參與。落敗隊伍會在敗部賽中一較高下，爭取更好的獎勵。
 
-Participation is flexible--you can enter on any day of the tournament. If you win Saturday, but can't play Sunday, that's cool. You can still earn the best prizes in one day (though you'd earn more if you won on both days).
+比賽為彈性參與，在賽事期間的任一天開始參加都可以。如果隊伍在週六贏了，但是週日無法參加，那也無妨，你還是能拿到單日最好的獎勵（當然，連贏兩天的獎勵更豐厚）。
 
-## Locking In
+## 隊伍鎖定
 
-Your team can lock-in at any time after Lock-in opens for your Tier. Tier IV can lock-in at any time of the two-hour lock-in window, Tier III can lock-in a half hour later, Tier II can lock in after another half hour, and Tier I can only lock-in for the last half hour. These restrictions help ensure we have enough teams to make quality brackets for everyone.
+只要隊伍相應的等級進入鎖定排程，你的隊伍即可加入。等級IV的鎖定時間為兩個小時，等級III的鎖定排程晚半小時開放，等級II再晚半小時，而等級I只能在最後的半小時內進行鎖定。這些限制是為了確保有足夠的隊伍參賽，讓大家都能享受優質的競賽。
 
-### SEA Clash
+### 東南亞地區Clash
 
-In SEA regions, **all tiers can lock in 1 hour before Clash begins**.
+在東南亞地區，**所有等級均可在Clash開始前1小時鎖定**。
 
-## Matchmaking Tiers
+## 配對等級
 
-Unlike ranked, teams will be assigned a tier for the duration of the weekend. The tiers will roughly divide teams into four sections - Tier IV at the lowest and Tier I at the highest. These tiers are “bottom-weighted”, so there’ll be more players in Tier IV. You’ll see your team’s tier adjust as you add or remove players.
+和積分模式不同，Clash模式中各隊的等級會固定一整個週末，不會浮動。參與隊伍大致分成四組，最低為等級IV，最高為等級I。各等級隊伍數呈金字塔型分布，所以等級IV的玩家數最多。在隊伍中新增或移除玩家時，會看到隊伍等級的變動。
 
-Individual tiers are determined by your Flex or Solo/Duo ranking - and at launch, you’ll also have a rating that is derived from your previous Clash history. Team tiers take a weighted average of the roster, but it heavily prioritizes the highest-skill players—so it’s likely that comps of players with vastly different skills may have some tougher matches ahead. You’ll see a popup if your team has a mixed skillset.
+個人等級由彈性積分和單／雙排積分的牌階決定，Clash模式開始之後，過去參與Clash競賽的戰績也會成為衡量標準之一。隊伍等級會依照隊員陣容取加權平均，但牌階最高的隊員權重最高，所以隊伍中如果玩家實力相差較大，對戰過程可能也會相對較艱辛。如果你所在隊伍實力相差較大，會有彈出視窗提醒。
 
-Teams of different tiers won’t meet during the same weekend—consider each tier a totally separate tournament.
+在比賽期間，你只會遇到同等級的隊伍，每個等級就像是不同的聯賽。
 
-## Scouting
+## 偵察
 
-Before the match begins, you'll encounter several features to help you figure out the best strategy to claim victory. First up is the scouting page, where you can check out stats and info about your opponents to help your pick/ban strategy.
+在對戰開始之前，你可以幫助隊伍找出取勝的最佳戰略。首先是偵察頁面，這裡能查看對手的數據和資訊，有助於決定選角和禁角的戰略。
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/clashbeta_scouting.png)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/clashbeta_scouting.png)
 
-You'll see your opponents' win rates and KDAs with their most-played champions in ranked, their best champs in terms of mastery, and their previous Clash data, too.
+你們可以看到對手的勝率和KDA數據，以及他們在積分模式常玩的英雄、專精的英雄，以及過去參與Clash模式的數據。
 
-## Champ Select
+## 英雄選擇
 
-Next up, in champ select, you'll be using the draft format you may have seen from competitive play--two ban phases, and two pick phases. Don't get caught off-guard! The team captain makes all the ban decisions for the team.
+接下來，在英雄選擇階段，目前採用的模式和正式比賽一樣：禁角和選角各有兩階段。這部分也要謹慎以對，隊長會代表全隊決定禁用角色。
 
-All champions are unlocked in Clash, so don't worry about figuring out that complicated three-person trade from solo queue.
+Clash模式中所有英雄都可以選用，所以不用像單排時一樣，需要思考隊員之間複雜的角色交換。
 
-Unlike regular games, not declaring or hovering a champion will lock in a random champion for you—we want you to avoid dodging where possible. Hovering a champion will lock in the same one where possible.
+和一般對戰不同的是，如果沒有鎖定或預選角色，系統會直接隨機分配英雄給你，因為我們希望玩家不要隨意中離。如果預選了某個角色但沒鎖定，在可行的情況下，系統會分配該角色給你。
 
-## Sudden Death
+## 決勝時刻
 
-Clash also features a "sudden death" mode to keep matches at a fixed length. After 60 minutes (40 minutes for ARURF), towers will become more fragile and easy to push. Five minutes later, structures will start to damage themselves at a fixed rate in order (towers in order, then inhibitors, then nexus turrets, then the nexus). After another five minutes, one team will have won the game. This is considered a last resort and is very unlikely to happen, but we need to give all Clash matches a fixed maximum length.
+Clash模式中還有決勝時刻「殊死戰」環節，確保對戰時間不會拖得太長。對戰開始60分鐘（若是阿福快打則為40分鐘）後，防禦塔會變得更脆弱，更容易擊垮。5分鐘後，建築物會以固定速率依序自我破壞（順序為防禦塔→水晶兵營→主堡防禦塔→主堡）。再經過5分鐘後，系統會宣告其中一支隊伍獲勝。這是不得已的最後手段，通常不會真的用到，只是我們必須將所有Clash對戰維持在限定的時間內。
 
-## /pauses and /remakes
+## 暫停(/pause)和提前結束(/remake)
 
-/pause and /remake are disabled in Clash. We know this isn't an ideal experience, but matches cannot be overrun or be remade to prevent extended days of play. There's a potential for griefing or trolling through abuse of these features.
+/pause和/remake這兩個功能在Clash模式中無法使用。我們知道這會影響遊戲體驗，但是為了避免賽程天數拉長，對戰不得拖延或提前結束。若這兩個功能遭到濫用，比賽可能遭到干擾或破壞。
 
-## Tickets
+## 入場券
 
-You'll need either a Basic or Premium Ticket to enter Clash. A Basic Ticket lets you participate, but if you're confident, a Premium Ticket will offer even greater prizes. Each teammate chooses their own Ticket entry and their individual rewards scale off that. Once your Basic or Premium Ticket is set (when your full team locks in before a match), your entry can't be changed.
+想進入Clash模式，需要一張「基礎入場券」或「尊爵入場券」。有基礎入場券就能參賽，不過如果你有信心取勝，使用尊爵入場券拿到的獎勵會更豐厚。每位隊員會各自選擇自己要交付的入場券，獎勵也會依照入場券類型分別發放。在對戰開始前的全隊鎖定階段，確定交出基本或尊爵入場券後即無法再變更。
 
-You can get tickets from missions, a teammate, or the store. Every two tournaments (once per theme), completing the Clash mission unlocks a ticket. A teammate can offer a ticket to anyone else on their team roster. In the store, you can purchase Basic Tickets with Blue Essence or RP, and Premium Tickets at a higher RP cost.
+入場券的取得方式包含由任務獲得、隊友贈與、或是在商店購買。每兩次聯賽（同一個主題）會開放Clash任務，完成就能獲得入場券。只要同隊，玩家就可以提供隊友入場券。在商店，可以用藍色結晶粉末或聯盟幣購買基礎入場券，而尊爵入場券則需要花費較多聯盟幣購買。
 
-Tickets are a method of entry unique to Clash. We're introducing ticket entry for a couple reasons. We hope that all teams are committed to see each tournament through, and tickets are a way to keep the games high-stakes.
+入場券是Clash模式獨有的參與方式。之所以會採用入場券有幾個原因，我們希望所有隊伍都能如約參加比賽，而且入場券能維持Clash高風險高報酬的價值。
 
-The only difference between Basic and Premium Tickets is the prize pool you're playing for. A Basic Ticket nets basic rewards, and a Premium Ticket upgrades your prize (read more below).
+基本與尊爵入場券唯一的差異就是獎勵。基礎入場券可得到基本獎勵，尊爵入場券則能升級獎勵內容（詳見後文說明）。
 
-You can always go [here](https://na.leagueoflegends.com/en/featured/clash#/) to get your ticket!
+隨時都能到[這裡](https://na.leagueoflegends.com/en/featured/clash#/)取得入場券！
 
-## Prizes
+## 獎賞
 
-Rewards in Clash come in three main forms: Trophies, Victory Points (VP), Orbs, and Capsules.
+Clash模式的獎勵主要分成以下幾種形式：獎盃、勝利積分、晶球和典藏罐。
 
-Winning a bracket earns you a Trophy of the corresponding tournament theme:
+在分組賽取得勝利時，你會贏得對應競賽主題的獎盃：
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/Clash%20Trophies.jpg)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/Clash%20Trophies.jpg)
 
-Your highest-level trophy shows up at the nexus for all your Summoner's Rift games for two weeks after the tournament ends. After that, it's time to win a new one! Trophies from the current season will also display on your profile page.
+競賽結束後，你所贏得的最高等級獎盃，會在所有召喚峽谷對戰中展示於你的主堡上，為期兩週。當獎盃消失的時候，就該再去贏一個新的回來了！當下賽季的獎盃也會顯示在你的個人檔案頁面。
 
-## Victory Points & Banner Frames
+## 勝利積分&旗幟架
 
-Every time you win, you'll earn 400 Victory Points, which you'll use to unlock Banners. Banners are a type of reward which shows up on Summoner's Rift and in your profile.
+贏得一場對戰能獲得400點勝利積分，可用來解鎖旗幟。旗幟會顯示在召喚峽谷和你的個人檔案裡。
 
-| Victory Points | Reward |
+| 勝利積分 | 獎勵 |
 | --- | --- |
-| 400 VP | Banner Level 1 |
-| 600 VP | Theme Logo 1 |
-| 1000 VP | Banner Level 2 |
-| 1400 VP | Banner Level 3 |
-| 2000 VP | Theme Logo 2 |
+| 400點勝利積分 | 旗幟等級1 |
+| 600點勝利積分 | 主題標誌1 |
+| 1000點勝利積分 | 旗幟等級2 |
+| 1400點勝利積分 | 旗幟等級3 |
+| 2000點勝利積分 | 主題標誌2 |
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/Demacia%20Banners.jpg)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/Demacia%20Banners.jpg)
 
-Your VP scales on the tier your team plays in (higher tiers earn a first-win VP bonus) and your personal ticket entry. As you progress, your VP totals up over the Clash Weekend, and you can unlock banners and new team icons.
+你所獲得的勝利積分取決於隊伍等級（較高等級能額外獲得首勝獎勵積分），以及你個人的入場券類型。隨著你的進度推進，你的勝利積分會在兩次Clash週末後加總起來，讓你解鎖旗幟和新的隊伍頭像。
 
-### First-Win VP Bonus
+### 首勝額外勝利積分
 
-| Tier | First-Win Bonus VP Reward |
+| 等級 | 首勝額外勝利積分獎勵 |
 | --- | --- |
-| 1 | **150 VP** for the first win during a Clash day (players can get the first-win bonus once per day, each Clash day) |
-| **2** | **100 VP** for the first win during a Clash day (players can get the first-win bonus once per day, each Clash day) |
-| 3 | **50 VP** for the first win during a Clash day (players can get the first-win bonus once per day, each Clash day) |
-| 4 | None |
+| 1 | **150點勝利積分**獎勵，在Clash比賽日獲得首勝即可獲得（玩家在每個Clash比賽日能獲得一次首勝獎勵） |
+| **2** | **100點勝利積分**獎勵，在Clash比賽日獲得首勝即可獲得（玩家在每個Clash比賽日能獲得一次首勝獎勵） |
+| 3 | **50點勝利積分**獎勵，在Clash比賽日獲得首勝即可獲得（玩家在每個Clash比賽日能獲得一次首勝獎勵） |
+| 4 | 無 |
 
-Remember, even if you lose, you can re-enter the next day for more chances at VP! Your VP will not persist past the theme, but you're automatically granted any rewards you meet the threshold for. Any banners you unlock will display on your Summoner's Rift games in your chosen lane. Also, as you collect banners over the course of the season, you'll upgrade the appearance of the frame that holds the banner in place.
+別忘了，就算輸掉比賽，隔天還是可以再參賽，爭取累積勝利積分的機會！主題變更後，你的勝利積分隨即失效，但系統會自動發放已達到積分門檻的獎勵。你解鎖的旗幟會在召喚峽谷對戰中，顯示於你所選的路線上。另外，在賽季中持續收集旗幟，就能為固定旗幟的旗幟架升級外觀。
 
-[Untitled](Untitled%201d62a83683a28103b11ffcf63744e933.csv)
+[Untitled](Untitled%201db2a83683a2812991c0eb6218ce434d.csv)
 
-## Orbs and Capsules
+## 晶球和典藏罐
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/blobid5.png)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/blobid5.png)
 
-![](https://www.notion.so./Clash%20FAQ%20–%20League%20of%20Legends%20Support_files/blobid6.png)
+![](https://www.notion.so./Clash常見問答%20–%20《英雄聯盟》客服_files/blobid6.png)
 
-Every player who enters into Clash will receive a Clash Orb or Clash Capsule when you exit the bracket (when you lose or end up winning the whole thing). The Orb or Capsule earned will be based on the total number of wins and losses during the tournament.
+每位參與Clash模式的玩家在結束分組賽（戰敗或一路贏到最後）時，都會得到一個Clash晶球或Clash典藏罐。獲得的晶球或典藏罐取決於賽事期間的勝敗場總數。
 
-The capsule contents upgrade depending on your ticket entry and how far you get into a tournament.
+典藏罐的內容物會依照入場券類型與勝場數升級。
 
-### Basic Ticket Orb
+### 基礎入場券晶球
 
-| **0 Wins,3 Losses** | 3 Win XP Boost, 1 Clash Logo, 1 Mystery Icon |
+| **0勝，3敗** | 3勝經驗加成、1個Clash標誌、1個神秘頭像 |
 | --- | --- |
-| **1 Win,2 Losses** | 1 Mystery Emote, 1 Clash Logo, 640 Ward Skin Shard |
-| **2 Wins,1 Loss** | 1 Mystery Emote, 1 Mystery Icon, 1 Clash Logo, 640 Ward Skin Shard, 975 Skin Shard, 1 Basic Ticket |
-| **3 Wins,0 Losses** | 1 Mystery Emote, 1 Mystery Icon, 1 Clash Logo, 1 Chibi Icon, 640 Ward Skin Shard, 975 Skin Shard, 1350 Skin Shard, 1 Basic Ticket |
+| **1勝，2敗** | 1個神秘表情、1個Clash標誌、640塊守衛造型碎片 |
+| **2勝，1敗** | 1個神秘表情、1個神秘頭像、1個Clash標誌、640塊守衛造型碎片、975塊造型碎片、1張基礎入場券 |
+| **3勝，0敗** | 1個神秘表情、1個神秘頭像、1個Clash標誌、1個Q版頭像、640塊守衛造型碎片、975塊造型碎片、1350造型碎片、1張基礎入場券 |
 
 ### 
 
-### Premium Ticket Capsule
+### 尊爵入場券典藏罐
 
-| **0 Wins,3 Losses** | 1 Basic Ticket, 500 OE, 750 Skin Shard, 1 Logo |
+| **0勝，3敗** | 1張基礎入場券、500橘色結晶粉末、750塊造型碎片、1個標誌 |
 | --- | --- |
-| **1 Win,2 Losses** | 1 Basic Ticket, 500 OE, 750 Skin Shard, 975 Skin Shard, 1350 Skin Shard, 1 Logo |
-| **2 Wins,1 Loss** | 1 Basic Ticket, 750 OE, 750 Skin Shard, 975 Skin Shard, 1350 Skin Shard, 1820 Skin Shard, 1 Logo |
-| **3 Wins,0 Losses** | 1 Basic Ticket, 750 OE, 750 Skin Shard, 975 Skin Shard, 1350 Skin Shard, 1820 Skin Shard, 1 Chibi Icon, 10 Mythic Essence, 1350 Skin, 1 Logo |
+| **1勝，2敗** | 1張基礎入場券、500橘色結晶粉末、750塊造型碎片、975塊造型碎片、1350塊造型碎片、1個標誌 |
+| **2勝，1敗** | 1張基礎入場券、750橘色結晶粉末、750塊造型碎片、975塊造型碎片、1350塊造型碎片、1820塊造型碎片、1個標誌 |
+| **3勝，0敗** | 1張基礎入場券、750橘色結晶粉末、750塊造型碎片、975塊造型碎片、1350塊造型碎片、1820塊造型碎片、1個Q版頭像、10神話結晶粉末、1350造型、1個標誌 |
 
-Was this article helpful?
+這篇文章是否有幫助？
 
-### Related articles
+### 相關文章
 
-Most PopularMost Recent
+熱門文章近期文章
 
-- [Clash FAQ](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ)
-- [Clash - SMS Verification](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000991627-Clash-SMS-Verification)
-- [Riot Tournament Modes - Unlink Your Phone Number](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/10953286887315-Riot-Tournament-Modes-Unlink-Your-Phone-Number)
-- [Clash FAQ](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000951548-Clash-FAQ)
-- [Riot Tournament Modes - Unlink Your Phone Number](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/10953286887315-Riot-Tournament-Modes-Unlink-Your-Phone-Number)
-- [Clash - SMS Verification](https://support-leagueoflegends.riotgames.com/hc/en-us/articles/360000991627-Clash-SMS-Verification)
+- [Clash常見問答](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548)
+- [Clash：簡訊驗證](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000991627)
+- [Riot錦標賽模式 - 解除綁定手機號碼](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/10953286887315)
+- [Clash常見問答](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548)
+- [Riot錦標賽模式 - 解除綁定手機號碼](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/10953286887315)
+- [Clash：簡訊驗證](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000991627)
 
-[/ View All](https://support-leagueoflegends.riotgames.com/hc/en-us/sections/115002164328-LCS-community-tournaments-Clash-FAQs)
+[/ 檢視全部](https://support-leagueoflegends.riotgames.com/hc/zh-tw/sections/115002164328-LCS-%E7%A4%BE%E7%BE%A4%E8%81%AF%E8%B3%BD%E5%92%8CClash%E7%9A%84%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94)
