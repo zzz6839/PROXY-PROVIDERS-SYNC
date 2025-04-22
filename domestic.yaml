@@ -142,5 +142,6 @@ payload:
   - DOMAIN,openaipublic.azureedge.net
    #hf LLM download
   - DOMAIN,cdn-lfs-us-1.hf.co
+  - DOMAIN-SUFFIX,hf.co
    #ubuntu
   - DOMAIN-KEYWORD,ubuntu
