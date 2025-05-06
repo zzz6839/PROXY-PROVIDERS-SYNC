@@ -58,7 +58,7 @@ payload:
 
   #- DOMAIN-SUFFIX,greasyfork.org
 
-  - DOMAIN-SUFFIX,rinuploads.org
+  #- DOMAIN-SUFFIX,rinuploads.org
 
   #- DOMAIN-SUFFIX,qbittorrent.org
   #switch game stop
