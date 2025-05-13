@@ -145,3 +145,7 @@ payload:
   - DOMAIN-SUFFIX,hf.co
    #ubuntu
   - DOMAIN-KEYWORD,ubuntu
+
+  # op.gg
+  - DOMAIN-SUFFIX,op.gg
+  - DOMAIN-SUFFIX,opgg-static.akamaized.net
