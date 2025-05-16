@@ -149,3 +149,6 @@ payload:
   # op.gg
   - DOMAIN-SUFFIX,op.gg
   - DOMAIN-SUFFIX,opgg-static.akamaized.net
+
+  # lagrange
+  - DOMAIN,sign.lagrangecore.org
