@@ -152,3 +152,6 @@ payload:
 
   # lagrange
   - DOMAIN,sign.lagrangecore.org
+
+  # openrouter
+  - DOMAIN-SUFFIX,openrouter.ai
