@@ -159,3 +159,6 @@ payload:
   # bark
   - DOMAIN-SUFFIX,bbark.top
 
+  #astrbot
+  - DOMAIN-SUFFIX,soulter.top
+
