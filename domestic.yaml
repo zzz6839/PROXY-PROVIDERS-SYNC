@@ -155,3 +155,7 @@ payload:
 
   # openrouter
   - DOMAIN-SUFFIX,openrouter.ai
+
+  # bark
+  - DOMAIN-SUFFIX,bbark.top
+
