@@ -18,7 +18,7 @@
     - DOMAIN,stun.chat.bilibili.com
     - DOMAIN-KEYWORD,pcdn
     # test youtube video on UDP
-    #- AND,((DOMAIN-SUFFIX,googlevideo.com),(NETWORK,UDP))
+    - AND,((DOMAIN-SUFFIX,googlevideo.com),(NETWORK,UDP))
 
     - DOMAIN,public.tracker.vraphim.com
 
