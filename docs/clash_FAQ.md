@@ -1,5 +1,5 @@
 Clash常見問答 – 《英雄聯盟》客服
-.
+
 ===============
 
 Opens in a new window Opens an external website Opens an external website in a new window
