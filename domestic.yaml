@@ -162,3 +162,5 @@ payload:
   #astrbot
   - DOMAIN-SUFFIX,soulter.top
 
+  #try to speed up unlock cloudflare
+  - DOMAIN,challenges.cloudflare.com
