@@ -88,7 +88,7 @@
   #linkedin
   - DOMAIN-SUFFIX,linkedin.com
   #BT
-  - DOMAIN-SUFFIX,bt4gprx.com
+  #- DOMAIN-SUFFIX,bt4gprx.com
   #astrbot
   #- DOMAIN-SUFFIX,soulter.top
 
