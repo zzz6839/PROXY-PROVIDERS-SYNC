@@ -154,7 +154,7 @@ payload:
   - DOMAIN,sign.lagrangecore.org
 
   # openrouter
-  - DOMAIN-SUFFIX,openrouter.ai
+  #- DOMAIN-SUFFIX,openrouter.ai
 
   # bark
   - DOMAIN-SUFFIX,bbark.top
