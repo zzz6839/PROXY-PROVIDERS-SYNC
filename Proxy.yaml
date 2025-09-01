@@ -101,3 +101,6 @@
   - DOMAIN-SUFFIX,notion.site
   - DOMAIN-SUFFIX,notion.so
   - DOMAIN-SUFFIX,notionusercontent.com
+
+  #deepwiki
+  - DOMAIN-SUFFIX,deepwiki.com
