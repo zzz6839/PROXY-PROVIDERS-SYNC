@@ -89,8 +89,10 @@
   - DOMAIN-SUFFIX,linkedin.com
   #BT
   #- DOMAIN-SUFFIX,bt4gprx.com
+  
   #astrbot
-  #- DOMAIN-SUFFIX,soulter.top
+  - DOMAIN-SUFFIX,soulter.top
+  - DOMAIN-SUFFIX,astrbot.app
 
   - DOMAIN,vless.query.dns.army
 
