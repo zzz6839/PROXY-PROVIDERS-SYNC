@@ -160,7 +160,7 @@ payload:
   - DOMAIN-SUFFIX,bbark.top
 
   #astrbot
-  - DOMAIN-SUFFIX,soulter.top
+  #- DOMAIN-SUFFIX,soulter.top
 
   #try to speed up unlock cloudflare
   - DOMAIN,challenges.cloudflare.com
