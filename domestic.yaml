@@ -128,7 +128,7 @@ payload:
   # Switch game
   - DOMAIN-SUFFIX,ghostland.at
 
-  - DOMAIN-SUFFIX,hembed.com
+  #- DOMAIN-SUFFIX,hembed.com
 
   #tailscale
   #- DOMAIN-SUFFIX,tailscale.com
