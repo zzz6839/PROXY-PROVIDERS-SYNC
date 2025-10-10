@@ -165,5 +165,5 @@ payload:
   #try to speed up unlock cloudflare
   - DOMAIN,challenges.cloudflare.com
 
-  #try to speed up steamdb
-  - DOMAIN-SUFFIX,steamdb.info
+  # dont try to speed up steamdb （monitor showa）
+  #- DOMAIN-SUFFIX,steamdb.info
