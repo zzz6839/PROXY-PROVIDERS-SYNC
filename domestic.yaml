@@ -166,4 +166,4 @@ payload:
   - DOMAIN,challenges.cloudflare.com
 
   # dont try to speed up steamdb （monitor showa）
-  #- DOMAIN-SUFFIX,steamdb.info
+  - DOMAIN-SUFFIX,steamdb.info
