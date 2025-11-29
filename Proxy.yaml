@@ -108,4 +108,8 @@
   - DOMAIN-SUFFIX,tavily.com
 
   #deepwiki
+
   - DOMAIN-SUFFIX,deepwiki.com
+
+  #unblockneteasemusic
+  - DOMAIN,music-api.gdstudio.xyz
