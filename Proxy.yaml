@@ -113,3 +113,7 @@
 
   #unblockneteasemusic
   - DOMAIN,music-api.gdstudio.xyz
+
+  # op.gg
+  - DOMAIN-SUFFIX,op.gg
+  - DOMAIN-SUFFIX,opgg-static.akamaized.net
