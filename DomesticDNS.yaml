@@ -31,3 +31,9 @@ payload:
 #  - DOMAIN-SUFFIX,greenmangaming.com
 #  - DOMAIN,static-eu.payments-amazon.com
 #  - DOMAIN,checkoutshopper-live.adyen.com
+
+#imessage
+
+  - DOMAIN-SUFFIX,push.apple.com
+  - DOMAIN-SUFFIX,identity.apple.com
+  - DOMAIN-SUFFIX,ess.apple.com
