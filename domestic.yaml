@@ -167,3 +167,8 @@ payload:
 
   # dont try to speed up steamdb （monitor showa）
   - DOMAIN-SUFFIX,steamdb.info
+
+  # imessage
+  - DOMAIN-SUFFIX,push.apple.com
+  - DOMAIN-SUFFIX,identity.apple.com
+  - DOMAIN-SUFFIX,ess.apple.com
