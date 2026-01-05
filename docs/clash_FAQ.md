@@ -330,7 +330,7 @@ Clash模式的獎勵主要分成以下幾種形式：獎盃、勝利積分、晶
 
 ![Riot Games](https://cdn.playersupport.riotgames.com/support-site/images/general/riot-logo.svg)
 
-© 2025 Riot Games Inc. 版權所有。《英雄聯盟》以及Riot Games Inc.皆為Riot Games, Inc.的商標或註冊商標。
+© 2026 Riot Games Inc. 版權所有。《英雄聯盟》以及Riot Games Inc.皆為Riot Games, Inc.的商標或註冊商標。
 
 [facebook](https://www.facebook.com/Leagueoflegendstw)[instagram](https://www.instagram.com/leagueoflegendstw/)[youtube](https://www.youtube.com/@leagueoflegendstaiwan)[x](https://twitter.com/leagueoflegends)[twitch](https://www.twitch.tv/leagueoflegends)
 
@@ -378,3 +378,38 @@ Clash模式的獎勵主要分成以下幾種形式：獎盃、勝利積分、晶
 - [《符文大地傳說》](https://support-legendsofruneterra.riotgames.com/hc/zh-tw/requests/new)
 - [Riot Forge](https://support-riotforge.riotgames.com/hc/zh-tw/requests/new)
 - [2XKO](https://support-2xko.riotgames.com/hc/zh-tw/requests/new)
+
+[《英雄聯盟》客服](https://support-leagueoflegends.riotgames.com/hc/zh-tw)
+
+[客服](https://support.riotgames.com/hc/zh-tw)
+
+遊戲總覽
+
+- [League of Legends](https://support-leagueoflegends.riotgames.com/hc/zh-tw)
+- [VALORANT](https://support-valorant.riotgames.com/hc/zh-tw)
+- [Teamfight Tactics](https://support-teamfighttactics.riotgames.com/hc/zh-tw)
+- [Legends of Runeterra](https://support-legendsofruneterra.riotgames.com/hc/zh-tw)
+- [LOL: Wild Rift](https://support-wildrift.riotgames.com/hc/zh-tw)
+- [2XKO](https://support-2xko.riotgames.com/hc/zh-tw)
+
+提交表單
+
+我的表單
+
+服務狀態
+
+[停權與檢舉](https://support.riotgames.com/hc/zh-tw/p/bans-and-reports)
+
+[《英雄聯盟》客服](https://support-leagueoflegends.riotgames.com/hc/zh-tw)
+
+[遊戲總覽](https://support.riotgames.com/hc/zh-tw) [提交表單](https://support-leagueoflegends.riotgames.com/hc/zh-tw/requests/new) [我的表單](https://support-leagueoflegends.riotgames.com/hc/zh-tw/requests) [服務狀態](https://status.riotgames.com/) [停權與檢舉](https://support.riotgames.com/hc/zh-tw/p/bans-and-reports)
+
+登入
+
+登入
+
+Check Session IFrame
+
+OIDC OP Iframe
+
+Riot Owned IFrame
