@@ -117,3 +117,10 @@
   # op.gg
   - DOMAIN-SUFFIX,op.gg
   - DOMAIN-SUFFIX,opgg-static.akamaized.net
+
+  #nv
+  - DOMAIN,integrate.api.nvidia.com
+  - DOMAIN,build.nvidia.com
+  - DOMAIN,authn.nvidia.com
+  - DOMAIN,api.ngc.nvidia.com
+  - DOMAIN,org.ngc.nvidia.com
