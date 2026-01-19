@@ -123,3 +123,7 @@
 
   #brightdata
   - DOMAIN-SUFFIX,brightdata.com
+
+  #NV nim api
+  - DOMAIN,integrate.api.nvidia.com
+
