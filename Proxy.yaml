@@ -117,3 +117,9 @@
   # op.gg
   - DOMAIN-SUFFIX,op.gg
   - DOMAIN-SUFFIX,opgg-static.akamaized.net
+
+  #apify
+  - DOMAIN-SUFFIX,apify.com
+
+  #brightdata
+  - DOMAIN-SUFFIX,brightdata.com
