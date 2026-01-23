@@ -406,7 +406,3 @@ Clash獎勵的主要形式包括獎盃、勝利積分、晶球和榮譽典藏罐
 登入
 
 Check Session IFrame
-
-OIDC OP Iframe
-
-Riot Owned IFrame
