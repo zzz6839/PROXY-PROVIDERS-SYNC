@@ -72,6 +72,10 @@ ${data.activeCategory.name}
 
 - [${category.name}](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94)
 
+「蒂瑪西亞崛起」進度與伺服器轉移
+
+我們正在修復一項問題，當你切換伺服器時，「蒂瑪西亞崛起」的進度不會同步轉移。該錯誤修復前，如果你遇到此問題，請傳送表單給我們，我們會盡快幫你復原進度。
+
 什麼是Clash模式？
 
 - [什麼是Clash模式？](https://support-leagueoflegends.riotgames.com/hc/zh-tw/articles/360000951548-Clash%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94#%E4%BB%80%E9%BA%BC%E6%98%AFclash%E6%A8%A1%E5%BC%8F%EF%BC%9F-0-0)
@@ -406,3 +410,7 @@ Clash獎勵的主要形式包括獎盃、勝利積分、晶球和榮譽典藏罐
 登入
 
 Check Session IFrame
+
+OIDC OP Iframe
+
+Riot Owned IFrame
