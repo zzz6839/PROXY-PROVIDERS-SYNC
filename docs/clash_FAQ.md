@@ -52,7 +52,7 @@ Türkçe
 
 Tiếng Việt
 
-[登入](https://support-leagueoflegends.riotgames.com/hc/zh-tw/signin?return_to=https%3A%2F%2Fsupport-leagueoflegends.riotgames.com%2Fhc%2Fzh-tw%2Farticles%2F360000951548-Clash%25E5%25B8%25B8%25E8%25A6%258B%25E5%2595%258F%25E7%25AD%2594&locale=zh-tw "開啟對話方塊")
+[登入](https://riotgames.zendesk.com/access?locale=zh-tw&brand_id=416614&return_to=https%3A%2F%2Fsupport-leagueoflegends.riotgames.com%2Fhc%2Fzh-tw%2Farticles%2F360000951548-Clash%25E5%25B8%25B8%25E8%25A6%258B%25E5%2595%258F%25E7%25AD%2594&locale=zh-tw "開啟對話方塊")
 
 ### 疑難解答
 
@@ -410,7 +410,3 @@ Clash獎勵的主要形式包括獎盃、勝利積分、晶球和榮譽典藏罐
 登入
 
 Check Session IFrame
-
-OIDC OP Iframe
-
-Riot Owned IFrame
