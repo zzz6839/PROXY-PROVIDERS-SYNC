@@ -77,9 +77,9 @@ payload:
   
 
   #epicgames download
-  - DOMAIN,cloudflare.epicgamescdn.com
-  - DOMAIN,ipv4.egdownload.fastly-edge.com
-  - DOMAIN,epicgames-download1.akamaized.net
+  #- DOMAIN,cloudflare.epicgamescdn.com
+  #- DOMAIN,ipv4.egdownload.fastly-edge.com
+  #- DOMAIN,epicgames-download1.akamaized.net
 
   
   #ROCKSTAR DOWNLOAD
@@ -97,10 +97,10 @@ payload:
   #- DOMAIN-SUFFIX,vivox.com
 
   #NVIDIA download
-  - DOMAIN,ota-downloads.nvidia.com
-  - DOMAIN-SUFFIX,download.nvidia.com
+  #- DOMAIN,ota-downloads.nvidia.com
+  #- DOMAIN-SUFFIX,download.nvidia.com
   #AMD download
-  - DOMAIN,drivers.amd.com`
+  #- DOMAIN,drivers.amd.com`
   
   #看漫画
   - DOMAIN-SUFFIX,hamreus.com
@@ -141,8 +141,8 @@ payload:
    #whisper speech-to-text
   - DOMAIN,openaipublic.azureedge.net
    #hf LLM download
-  - DOMAIN,cdn-lfs-us-1.hf.co
-  - DOMAIN-SUFFIX,hf.co
+  #- DOMAIN,cdn-lfs-us-1.hf.co
+  #- DOMAIN-SUFFIX,hf.co
    #ubuntu
   - DOMAIN-KEYWORD,ubuntu
 
