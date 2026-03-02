@@ -141,7 +141,7 @@ payload:
    #whisper speech-to-text
   - DOMAIN,openaipublic.azureedge.net
    #hf LLM download
-  - DOMAIN-SUFFIX,hf.co
+  #- DOMAIN-SUFFIX,hf.co
    #ubuntu
   - DOMAIN-KEYWORD,ubuntu
 
