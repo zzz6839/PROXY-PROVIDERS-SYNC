@@ -177,3 +177,6 @@ payload:
   - DOMAIN-SUFFIX,hub.rat.dev
   - DOMAIN-SUFFIX,dockerproxy.net
   - DOMAIN-SUFFIX,proxy.vvvv.ee
+
+  # tw2 riot
+  - DOMAIN,tw2.api.riotgames.com
