@@ -180,3 +180,6 @@ payload:
 
   # tw2 riot
   - DOMAIN,tw2.api.riotgames.com
+  
+  # unblockmusic
+  - DOMAIN,music-api.gdstudio.xyz
