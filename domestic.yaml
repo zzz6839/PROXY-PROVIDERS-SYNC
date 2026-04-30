@@ -179,7 +179,7 @@ payload:
   - DOMAIN-SUFFIX,proxy.vvvv.ee
 
   # tw2 riot
-  - DOMAIN,tw2.api.riotgames.com
+  #- DOMAIN,tw2.api.riotgames.com
   
   # unblockmusic
-  - DOMAIN,music-api.gdstudio.xyz
+  #- DOMAIN,music-api.gdstudio.xyz
