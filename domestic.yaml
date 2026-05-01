@@ -168,9 +168,9 @@ payload:
   - DOMAIN-SUFFIX,steamdb.info
 
   # imessage
-  - DOMAIN-SUFFIX,push.apple.com
-  - DOMAIN-SUFFIX,identity.apple.com
-  - DOMAIN-SUFFIX,ess.apple.com
+  #- DOMAIN-SUFFIX,push.apple.com
+  #- DOMAIN-SUFFIX,identity.apple.com
+  #- DOMAIN-SUFFIX,ess.apple.com
 
   # docker image mirror
   - DOMAIN-SUFFIX,docker.1ms.run
