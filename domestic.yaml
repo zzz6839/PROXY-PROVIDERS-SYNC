@@ -183,3 +183,6 @@ payload:
   
   # unblockmusic
   #- DOMAIN,music-api.gdstudio.xyz
+
+  #NV nim api
+  - DOMAIN,integrate.api.nvidia.com

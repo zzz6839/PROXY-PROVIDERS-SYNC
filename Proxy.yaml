@@ -125,7 +125,7 @@
   - DOMAIN-SUFFIX,brightdata.com
 
   #NV nim api
-  - DOMAIN,integrate.api.nvidia.com
+  #- DOMAIN,integrate.api.nvidia.com
 
   #APN
   - DOMAIN,identity.apple.com
