@@ -186,3 +186,6 @@ payload:
 
   #NV nim api
   - DOMAIN,integrate.api.nvidia.com
+
+  #opencode.ai
+  - DOMAIN-SUFFIX,opencode.ai
