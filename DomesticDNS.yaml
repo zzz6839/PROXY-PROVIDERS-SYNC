@@ -34,6 +34,6 @@ payload:
 
 #imessage
 
-  - DOMAIN-SUFFIX,push.apple.com
-  - DOMAIN-SUFFIX,identity.apple.com
-  - DOMAIN-SUFFIX,ess.apple.com
+  #- DOMAIN-SUFFIX,push.apple.com
+  #- DOMAIN-SUFFIX,identity.apple.com
+  #- DOMAIN-SUFFIX,ess.apple.com
