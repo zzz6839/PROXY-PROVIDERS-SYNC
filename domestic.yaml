@@ -185,7 +185,7 @@ payload:
   #- DOMAIN,music-api.gdstudio.xyz
 
   #NV nim api
-  - DOMAIN,integrate.api.nvidia.com
+  #- DOMAIN,integrate.api.nvidia.com
 
   #opencode.ai
   - DOMAIN-SUFFIX,opencode.ai
