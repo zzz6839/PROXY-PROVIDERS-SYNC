@@ -188,4 +188,4 @@ payload:
   #- DOMAIN,integrate.api.nvidia.com
 
   #opencode.ai
-  - DOMAIN-SUFFIX,opencode.ai
+  #- DOMAIN-SUFFIX,opencode.ai
